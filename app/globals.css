@@ -26,7 +26,7 @@ body{
 @layer base {
 
   body {
-   @apply bg-[#ecf0f3] text-[#0b0c0e] tracking-wide
+   @apply bg-[#ffffff] text-[#0b0c0e] tracking-wide
   }
 
   *{

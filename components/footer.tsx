@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="container m-auto">
             <div className='flex justify-between items-center py-4'>
               <div>
-                <span className='text-gray-600'>�� 2022 <span className='text-[#18F0F0]'>Pressed</span><span className='text-gray-600'>
+                <span className='text-gray-600'>&#169; 2022 <span className='text-[#18F0F0]'>Pressed</span><span className='text-gray-600'>
                 Perfect.</span> All rights reserved.</span>
               </div>
               <div className='flex'>

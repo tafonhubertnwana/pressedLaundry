@@ -139,71 +139,71 @@ const Faq = () => {
           </div>
         </div> 
         <div className="flex flex-col items-center py-6">
-        <div className='text-center md:w-[50%] py-4'>
+         <div className='text-center md:w-[50%] py-4'>
             <h2>Ask Your Question</h2>
             <p className='text-lg py-4'>We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.</p>
           </div>
         </div> 
         <div className="md:w-[50%] m-auto">
-              <div className="p-4">
-                <form>
+          <div className="p-4">
+            <form>
+              <div className="flex flex-col py-2">
+                <label htmlFor="name" className="uppercase text-sm py-2 dark:text-white">Your Name</label>
+                <input
+                  type="text"
+                  name="senderName"
+                  id="name"
+                  className="border-2 rounded-lg p-3 flex border-gray-300"
+                  required
+                />
+              </div>
+              <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col py-2">
-                    <label htmlFor="name" className="uppercase text-sm py-2 dark:text-white">Your Name</label>
+                    <label htmlFor="email" className="uppercase text-sm py-2 dark:text-white">E-mail</label>
                     <input
-                      type="text"
-                      name="senderName"
-                      id="name"
+                      type="email"
+                      name="senderEmail"
+                      id="email"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       required
                     />
                   </div>
-                  <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                      <div className="flex flex-col py-2">
-                        <label htmlFor="email" className="uppercase text-sm py-2 dark:text-white">E-mail</label>
-                        <input
-                          type="email"
-                          name="senderEmail"
-                          id="email"
-                          className="border-2 rounded-lg p-3 flex border-gray-300"
-                          required
-                        />
-                      </div>
-                    <div className="flex flex-col py-2">
-                      <label htmlFor="phone" className="uppercase text-sm py-2 dark:text-white">Phone</label>
-                      <input
-                        type="tel"
-                        name="senderPhone"
-                        id="phone"
-                        className="border-2 rounded-lg p-3 flex border-gray-300"
-                      />
-                    </div>
-                    
-                  </div>
-                  <div className="flex flex-col py-2">
-                    <label htmlFor="message" className="uppercase text-sm py-2 dark:text-white">Your Question</label>
-                    <textarea
-                      name="message"
-                      id="message"
-                      className='border-2 rounded-lg p-3 border-gray-300'
-                      rows={10}
-                      required
-                    />
-                  </div>
-                  <div className=' flex flex-col items-center py-4'>
-                    <div className='flex items-center '>
-                      <span><input type='checkbox' className='w-6 h-6 ' /></span>
-                      <span className='px-4'> I accept the privacy and terms</span>
-                    </div>
-                    <div>
-                      <button type='submit' className='bg-[#18F0F0] dark:bg-slate-100   p-4 mt-4 text-gray-100 font-bold' 
-                        
-                    >Send Question</button>
-                    </div>
-                  </div>
-                </form>
+                <div className="flex flex-col py-2">
+                  <label htmlFor="phone" className="uppercase text-sm py-2 dark:text-white">Phone</label>
+                  <input
+                    type="tel"
+                    name="senderPhone"
+                    id="phone"
+                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                  />
+                </div>
                 
               </div>
-            </div>  
+              <div className="flex flex-col py-2">
+                <label htmlFor="message" className="uppercase text-sm py-2 dark:text-white">Your Question</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  className='border-2 rounded-lg p-3 border-gray-300'
+                  rows={10}
+                  required
+                />
+              </div>
+              <div className=' flex flex-col items-center py-4'>
+                <div className='flex items-center '>
+                  <span><input type='checkbox' className='w-6 h-6 ' /></span>
+                  <span className='px-4'> I accept the privacy and terms</span>
+                </div>
+                <div>
+                  <button type='submit' className='bg-[#18F0F0] dark:bg-slate-100   p-4 mt-4 text-gray-100 font-bold' 
+                    
+                >Send Question</button>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+        </div>  
             
           
         

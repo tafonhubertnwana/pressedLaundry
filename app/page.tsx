@@ -16,6 +16,9 @@ import serviceImg2 from '@/public/assets/Rectangle 41.png'
 import serviceLaundry from '@/public/assets/Rectangle 42.png'
 import Link from 'next/link'
 import Approach from '@/components/approachBtn'
+import QuestionAndAnswer from '@/components/questionAndAnswerBtn'
+import ChooseUs from '@/components/chooseUsBtn'
+import client from '@/public/assets/testimonials-img03.jpg'
 
 export default function Home() {
   return (
@@ -242,7 +245,72 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-              <Approach />
+              {/* <Approach /> */}
+              {/* <QuestionAndAnswer /> */}
+              <ChooseUs />
+            <div>
+              <div className='flex flex-col items-center '>
+                <h5 className=" font-bold py-4  text-[#18F0F0]">[ Our Services ]</h5>
+                <div className='text-center md:w-[50%] py-4'>
+                  <h2>Dry Cleaning & Laundry, Free Delivery</h2>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 p-10">
+                <div className="flex flex-col items-center bg-[#18F0F0]">
+                    <div className='flex items-center space-x-4 pt-3'>
+                      <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
+                        <Image src={client} alt='About-us-img-4' className='object-cover w-full h-full' />
+                      </div>
+                      <div className='flex flex-col'>
+                        <h5 className='text-lg font-semibold'>John Doe</h5>
+                        <span className='text-sm '>Client</span>
+                      </div>
+                    </div>
+
+                  <div className='p-6'>
+                    <span>
+                    The new machines have had very few problems and their services are always done in a timely fashion. Our residents have been thrilled with the PressedPerfect team and we look forward to a long relationship with this first-class organization.
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center bg-slate-100">
+                    <div className='flex items-center space-x-4 pt-3'>
+                      <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
+                        <Image src={client} alt='About-us-img-4' className='object-cover w-full h-full' />
+                      </div>
+                      <div className='flex flex-col'>
+                        <h5 className='text-lg font-semibold'>John Doe</h5>
+                        <span className='text-sm '>Client</span>
+                      </div>
+                    </div>
+
+                  <div className='p-6'>
+                    <span>
+                    Over the last eight years they have proven, on several occasions that they are knowledgeable, prompt, and concerned about my immediate situation. I personally encourage any business associated with their laundry services.
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center bg-slate-100">
+                    <div className='flex items-center space-x-4 pt-3'>
+                      <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
+                        <Image src={client} alt='About-us-img-4' className='object-cover w-full h-full' />
+                      </div>
+                      <div className='flex flex-col'>
+                        <h5 className='text-lg font-semibold'>John Doe</h5>
+                        <span className='text-sm '>Client</span>
+                      </div>
+                    </div>
+
+                  <div className='p-6'>
+                    <span>
+                    Second to none for convenience, quality & turnaround time. Great prices and services. Amazing support team behind the service, if you ever need it. No more having to save up piles of dry cleaning to make it worth taking out.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
           </div>
         </div>
       </div>

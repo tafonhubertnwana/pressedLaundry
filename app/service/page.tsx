@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import banner from '@/public/assets/dst-bg-img.jpg'
-import serviceLaundry from '@/public/assets/laundry.png'
-import service from '@/public/assets/service-img07.png'
-import serviceImg2 from '@/public/assets/service-img08.png'
+import service from '@/public/assets/Rectangle 40.png'
+import serviceImg2 from '@/public/assets/Rectangle 41.png'
+import serviceLaundry from '@/public/assets/Rectangle 42.png'
 import laundry from '@/public/assets/laundry.webp'
 import { GiHanger, GiWashingMachine, GiConverseShoe } from 'react-icons/gi'
 import { PiShirtFoldedFill } from "react-icons/pi";
@@ -39,7 +39,7 @@ const Service = () => {
                 <GiWashingMachine size={40} className='text-white '/>
               </div>
             </div>
-            <div className='pt-8 px-[11%]'>
+            <div className='pt-8 '>
               <h6 className='py-4'>Laundry Services</h6>
               <span>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold and deliver back to you in one neat, easy package.</span>
               <div>
@@ -54,7 +54,7 @@ const Service = () => {
                 < GiHanger size={40} className='text-white '/>
               </div>
             </div>
-            <div className='pt-8 px-[11%]'>
+            <div className='pt-8 '>
               <h6 className='py-4'>Dry cleaning Services</h6>
               <span>UB students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results.</span>
               <div>
@@ -69,7 +69,7 @@ const Service = () => {
                 <TbIroningSteam size={40} className='text-white '/>
               </div>
             </div>
-            <div className='pt-8 px-[11%]'>
+            <div className='pt-8 '>
               <h6 className='py-4'>Steam Iron</h6>
               <span>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</span>
               <div>

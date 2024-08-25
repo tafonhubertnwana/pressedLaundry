@@ -2,6 +2,10 @@ import Image from 'next/image'
 import React from 'react'
 import banner from '@/public/assets/dst-bg-img.jpg'
 import homeImg from '@/public/assets/home_laundry_services.png'
+import hw from '@/public/assets/image 1.png'
+import wash from '@/public/assets/image 3.png'
+import delivery from '@/public/assets/image 2.png'
+import door from '@/public/assets/image 4.png'
 import { GiCheckMark, GiHanger, GiWashingMachine } from 'react-icons/gi';
 import { FaPhoneVolume, FaMoneyBillWave } from 'react-icons/fa';
 import { MdEco } from 'react-icons/md';
@@ -10,6 +14,8 @@ import { TbIroningSteam } from 'react-icons/tb';
 import service from '@/public/assets/Rectangle 40.png'
 import serviceImg2 from '@/public/assets/Rectangle 41.png'
 import serviceLaundry from '@/public/assets/Rectangle 42.png'
+import Link from 'next/link'
+import Approach from '@/components/approachBtn'
 
 export default function Home() {
   return (
@@ -97,55 +103,147 @@ export default function Home() {
             </div> 
           </div>
           <div className="grid grid-cols-3 gap-8 p-10">
-          <div className="flex flex-col items-center">
-            <div className='relative'>
-              <Image src={service} alt='About-us-img-4' />
-            </div>
-            <div className='absolute bottom-[-82%] '>
-              <div className='flex space-x-4 w-96'>
-                <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
-                  <GiWashingMachine size={40} className='text-white '/>
+            <div className="flex flex-col items-center">
+              <div className='relative'>
+                <Image src={service} alt='About-us-img-4' />
+              </div>
+              <div className='absolute bottom-[-82%] '>
+                <div className='flex space-x-4 w-96'>
+                  <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
+                    <GiWashingMachine size={40} className='text-white '/>
+                  </div>
+                  <div className='text-white '>
+                    <h6 className='py-2'>Laundry Services</h6>
+                    <span>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold and deliver back to you in one neat, easy package.</span>  
+                  </div>
                 </div>
-                <div className='text-white '>
-                  <h6 className='py-2'>Laundry Services</h6>
-                  <span>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold and deliver back to you in one neat, easy package.</span>  
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className='relative'>
+                <Image src={serviceImg2} alt='About-us-img-4' />
+              </div>
+              <div className='absolute bottom-[-82%] '>
+                <div className='flex space-x-4 w-96'>
+                  <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
+                    <GiHanger size={40} className='text-white '/>
+                  </div>
+                  <div className='text-white '>
+                    <h6 className='py-2'>Dry Cleaning Services</h6>
+                    <span>UB students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results.</span>  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className='relative'>
+                <Image src={serviceLaundry} alt='About-us-img-4' /> 
+              </div>
+              <div className='absolute bottom-[-82%] '>
+                <div className='flex space-x-4 w-96'>
+                  <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
+                    <TbIroningSteam size={40} className='text-white '/>
+                  </div>
+                  <div className='text-white '>
+                    <h6 className='py-2'>Steam Iron</h6>
+                    <span>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</span>  
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center">
-            <div className='relative'>
-              <Image src={serviceImg2} alt='About-us-img-4' />
+          <div>
+            <div className='flex flex-col items-center '>
+              <h5 className=" font-bold py-4  text-[#18F0F0]">[ Laundry Made Easy ]</h5>
+              <div className='text-center md:w-[50%] py-4'>
+                <h2>How PressedPerfect works</h2>
+              </div>
             </div>
-            <div className='absolute bottom-[-82%] '>
-              <div className='flex space-x-4 w-96'>
-                <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
-                  <GiHanger size={40} className='text-white '/>
+            <div className="grid grid-cols-4 gap-8 content-center  p-8">
+              <div className="flex flex-col items-center">
+                <h4 className='text-[#18F0F0]'>You Order</h4>
+                <div className='relative flex items-center justify-center mb-8'>
+                  <div className='p-6 bg-slate-100 rounded-full my-4 w-48 h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
+                    <Image src={hw} alt='phone' className='object-cover rounded-full' /> 
+                  </div>
+                  <div className='absolute top-[70%] right-[26%] bg-[#18F0F0] rounded-full w-24 h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                    <h3 className=' text-center text-[#000]'>01</h3>
+                  </div>
                 </div>
-                <div className='text-white '>
-                  <h6 className='py-2'>Dry Cleaning Services</h6>
-                  <span>UB students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results.</span>  
+                <p className="text-xl ">Order via website</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <h4 className='text-[#18F0F0]'>You Order</h4>
+                <div className='relative flex items-center justify-center mb-8'>
+                  <div className='p-6 bg-slate-100 rounded-full my-4 w-48 h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
+                    <Image src={delivery} alt='phone' className='object-cover rounded-full' /> 
+                  </div>
+                  <div className='absolute top-[70%] right-[26%] bg-[#18F0F0] rounded-full w-24 h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                    <h2 className=' text-center text-[#000]'>02</h2>
+                  </div>
                 </div>
+                <p className="text-xl ">Collection from your doorstep</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <h4 className='text-[#18F0F0]'>We Collect</h4>
+                <div className='relative flex items-center justify-center mb-8'>
+                  <div className='p-6 bg-slate-100 rounded-full my-4 w-48 h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
+                    <Image src={wash} alt='phone' className='object-cover rounded-full' /> 
+                  </div>
+                  <div className='absolute top-[70%] right-[26%] bg-[#18F0F0] rounded-full w-24 h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                    <h2 className=' text-center text-[#000]'>03</h2>
+                  </div>
+                </div>
+                <p className="text-xl ">Wash, dry & fold your items</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <h4 className='text-[#18F0F0]'>You Order</h4>
+                <div className='relative flex items-center justify-center mb-8'>
+                  <div className='p-6 bg-slate-100 rounded-full my-4 w-48 h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
+                    <Image src={door} alt='phone' className='object-cover rounded-full' /> 
+                  </div>
+                  <div className='absolute top-[70%] right-[26%] bg-[#18F0F0] rounded-full w-24 h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                    <h2 className=' text-center text-[#000]'>04</h2>
+                  </div>
+                </div>
+                <p className="text-xl ">Order will be delivered</p>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center">
-            <div className='relative'>
-              <Image src={serviceLaundry} alt='About-us-img-4' /> 
-            </div>
-            <div className='absolute bottom-[-82%] '>
-              <div className='flex space-x-4 w-96'>
-                <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
-                  <TbIroningSteam size={40} className='text-white '/>
-                </div>
-                <div className='text-white '>
-                  <h6 className='py-2'>Steam Iron</h6>
-                  <span>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</span>  
-                </div>
+          <div>
+            <div className='flex flex-col items-center '>
+              <h5 className=" font-bold py-4  text-[#18F0F0]">[ important Information ]</h5>
+              <div className='text-center md:w-[50%] py-2'>
+                <h2>Trusted Laundry Service</h2>
               </div>
             </div>
+            <div className="grid grid-cols-3 gap-8 p-8">
+              <div className='bg-slate-100 w-full flex justify-center items-center'>
+                <Link href=''>
+                  <button className='p-6 text-black font-bold flex items-center justify-center'>
+                    Our Approach
+                  </button>
+                </Link>
+              </div>
+
+              <div className='bg-slate-100 w-full flex justify-center items-center'>
+                <Link href=''>
+                  <button className='p-6 text-black font-bold flex items-center justify-center'>
+                    Question / Answers
+                  </button>
+                </Link>
+              </div>
+
+              <div className='bg-[#18F0F0] w-full flex justify-center items-center'>
+                <Link href=''>
+                  <button className='p-6 text-white font-bold flex items-center justify-center'>
+                    Why choose Us
+                  </button>
+                </Link>
+              </div>
+            </div>
+              <Approach />
           </div>
-        </div>
         </div>
       </div>
     </>

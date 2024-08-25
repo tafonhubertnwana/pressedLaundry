@@ -6,6 +6,7 @@ import aboutImg2 from '@/public/assets/about-us-img02.jpg'
 import aboutImg4 from '@/public/assets/about_img.jpg'
 import arrowRight from '@/public/assets/arrow-img-right.png'
 import aboutImg3 from '@/public/assets/about-us-img04.jpg'
+import team from '@/public/assets/team-img04.jpg'
 import { GiCheckMark } from "react-icons/gi";
 import { PiLightbulbFilamentBold, PiShirtFoldedFill  } from "react-icons/pi";
 import { GiPriceTag, GiWashingMachine, GiHanger } from "react-icons/gi";
@@ -14,6 +15,7 @@ import { HiClipboardDocumentList } from "react-icons/hi2";
 import { BsPersonHearts } from "react-icons/bs";
 
 import Link from 'next/link'
+// import Carousel from '@/components/aboutCarousel'
 
 
 const About = () => {
@@ -223,33 +225,40 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="carousel carousel-center">
-            <div id="slide1" className="carousel-item relative w-full">
-            <Image src={aboutImg4} alt='About-us-img-4' />
-              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide4" className="btn btn-circle">❮</a>
-                <a href="#slide2" className="btn btn-circle">❯</a>
+          <div>
+            <div className="grid grid-cols-3 gap-8">
+              <div className="flex flex-col items-center">
+                <div className='w-64 h-64 overflow-hidden rounded-full'>
+                <Image src={team} alt='About-us-img-4'  className="object-cover"/>
+                </div>
+                <div className='justify-center pb-10 pt-4'>
+                  <h5 className='justify-center'>John Doe</h5>
+                  <span>
+                      Operational Manager
+                  </span>
+                </div>
               </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-            <Image src={aboutImg4} alt='About-us-img-4' />
-              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide1" className="btn btn-circle">❮</a>
-                <a href="#slide3" className="btn btn-circle">❯</a>
+              <div className="flex flex-col items-center">
+                <div className='w-64 h-64 overflow-hidden rounded-full'>
+                <Image src={team} alt='About-us-img-4' className="object-cover" />
+                </div>
+                <div className='justify-center pb-10 pt-4'>
+                  <h5>John Doe</h5>
+                  <span>
+                      Service Manager
+                  </span>
+                </div>
               </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-            <Image src={aboutImg4} alt='About-us-img-4' />
-              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide2" className="btn btn-circle">❮</a>
-                <a href="#slide4" className="btn btn-circle">❯</a>
-              </div>
-            </div>
-            <div id="slide4" className="carousel-item relative w-full">
-            <Image src={aboutImg4} alt='About-us-img-4' />
-              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide3" className="btn btn-circle">❮</a>
-                <a href="#slide1" className="btn btn-circle">❯</a>
+              <div className="flex flex-col items-center">
+                <div className='rounded-full w-64 h-64  overflow-hidden'>
+                <Image src={team} alt='About-us-img-4' className="object-cover" />
+                </div>
+                <div className='justify-center pb-10 pt-4'>
+                  <h5>John Doe</h5>
+                  <span>
+                      Wash Expert
+                  </span>
+                </div>
               </div>
             </div>
           </div>

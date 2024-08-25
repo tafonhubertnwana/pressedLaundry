@@ -26,28 +26,28 @@ const Contact = () => {
           </div>
           <div className="grid grid-cols-4 gap-8 content-center">
             <div className="flex flex-col items-center">
-              <div className='p-6 bg-[#18F0F0] rounded-full my-4'>
+              <div className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
               < FaMapLocationDot size={40} className='text-white' /> 
               </div>
               <h6>Post Address</h6>
               <p className="text-sm ">Central Market, Buea</p>
             </div>
             <div className="flex flex-col items-center">
-              <div  className='p-6 bg-[#18F0F0] rounded-full my-4'>
+              <div  className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
               < FaPhoneVolume size={40} className='text-white' /> 
               </div>
               <h6>Contact Phone</h6>
               <p className="text-sm ">+ (237) 670-048-674</p>
             </div>
             <div className="flex flex-col items-center">
-              <div  className='p-6 bg-[#18F0F0] rounded-full my-4'>
+              <div  className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
               <IoIosMail size={40} className='text-white' /> 
               </div>
               <h6>E-mail Address</h6>
               <p className="text-sm ">Tafonsoftwarespecialist@gmail</p>
             </div>
             <div className="flex flex-col items-center">
-              <div  className='p-6 bg-[#18F0F0] rounded-full my-4'>
+              <div  className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
               <RiTimerFill size={40} className='text-white' />
               </div>
               <h6>Opening Hours</h6>

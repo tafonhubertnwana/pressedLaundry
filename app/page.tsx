@@ -17,6 +17,7 @@ import serviceLaundry from '@/public/assets/Rectangle 42.png'
 import Link from 'next/link'
 import Approach from '@/components/approachBtn'
 import QuestionAndAnswer from '@/components/questionAndAnswerBtn'
+import PricePackage from '@/components/pricePackage'
 import ChooseUs from '@/components/chooseUsBtn'
 import client from '@/public/assets/testimonials-img03.jpg'
 
@@ -250,9 +251,9 @@ export default function Home() {
               <ChooseUs />
             <div>
               <div className='flex flex-col items-center '>
-                <h5 className=" font-bold py-4  text-[#18F0F0]">[ Our Services ]</h5>
+                <h5 className=" font-bold py-4  text-[#18F0F0]">[ Testimonials ]</h5>
                 <div className='text-center md:w-[50%] py-4'>
-                  <h2>Dry Cleaning & Laundry, Free Delivery</h2>
+                  <h2>Why Our Clients say</h2>
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-6 p-10">
@@ -311,6 +312,7 @@ export default function Home() {
 
 
             </div>
+            <PricePackage />
           </div>
         </div>
       </div>

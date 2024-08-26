@@ -64,7 +64,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className='hidden md:flex'>
-            <Link href=''><button className='p-4 bg-[#18F0F0] text-white font-bold'>Schedule a Pickup</button></Link>
+            <Link href=''><button className='p-4 bg-[#18F0F0] text-white font-bold' >Schedule a Pickup</button></Link>
           </div>
           <div className="md:hidden cursor-pointer" onClick={handleNav}>
               <AiOutlineMenu size={30} />

@@ -11,20 +11,28 @@ const Contact = () => {
     <>
       <div className="w-full">
         <div className='relative'>
-          <Image src={banner} alt='banner' className='lg:w-full'/>
-          <div className='absolute top-[20%] left-[15%]'>
-            <h5 className='text-white py-4'>Home / Contact</h5>
-            <h1 className='text-white'>Contact</h1>
+          <Image 
+            src={banner} 
+            alt='banner' 
+            className='w-full object-cover'
+            layout='responsive' // Ensure the image scales responsively
+            width={1200} // Specify the aspect ratio width
+            height={600} // Specify the aspect ratio height
+          />
+          <div className='absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6'>
+            <h5 className='text-white text-sm md:text-base'>Home / Contact</h5>
+            <h1 className='text-white text-2xl md:text-6xl font-bold'>Contact</h1>
           </div>
         </div>
-        <div className='container m-auto py-4'>
+
+        <div className='container m-auto p-8'>
           <div className='flex flex-col items-center '>
-            <h5 className=" font-bold py-4  text-[#18F0F0]">[ get in Touch with Us ]</h5>
+            <h5 className=" font-bold md:py-4  text-[#18F0F0]">[ get in Touch with Us ]</h5>
             <div className='text-center md:w-[50%] py-4'>
               <h2>Contact Information</h2>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-8 content-center">
+          <div className="grid md:grid-cols-4 gap-8 content-center">
             <div className="flex flex-col items-center">
               <div className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
               < FaMapLocationDot size={40} className='text-white' /> 
@@ -56,8 +64,8 @@ const Contact = () => {
           </div>
         </div>
         {/* form */}
-        <div className="flex flex-col items-center py-6">
-         <div className='text-center md:w-[25%] pt-4'>
+        <div className="flex flex-col items-center pt-6">
+         <div className='text-center w-96 md:w-[30%] pt-4'>
             <h2>Get in Touch. We're Here to Help.</h2>
             <p className='text-lg py-4'>We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.</p>
           </div>

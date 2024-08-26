@@ -15,7 +15,7 @@ const Footer = () => {
       <div className='bg-[#1E1E1E]'>
         <div className='container m-auto py-[3%]'>
           <div>
-            <div className='grid grid-cols-3 gap-8'>
+            <div className='grid md:grid-cols-3 gap-8 p-4'>
               {/* first item */}
               <div>
                 <div className='flex pr-2'>
@@ -66,20 +66,28 @@ const Footer = () => {
           </div>  
         </div>
         <div className='bg-[#D9D9D9]'>
-          <div className="container m-auto">
-            <div className='flex justify-between items-center py-4'>
-              <div>
-                <span className='text-gray-600'>&#169; 2022 <span className='text-[#18F0F0]'>Pressed</span><span className='text-gray-600'>
-                Perfect.</span> All rights reserved.</span>
-              </div>
-              <div className='flex'>
-                <Link href='/'><span className='text-gray-600 px-2'>Privacy Policy</span></Link>
-                <Link href='/'><span className='text-gray-600 px-2'>Terms & Conditions</span></Link>
-              </div>
-            </div>
-          </div>
+  <div className="container mx-auto px-4">
+    <div className='flex flex-col md:flex-row md:justify-between items-center py-4'>
+      {/* <!-- Footer Text --> */}
+      <div className='text-center md:text-left'>
+        <span className='text-gray-600'>&#169; 2022 
+          <span className='text-[#18F0F0]'> Pressed</span>
+          <span className='text-gray-600'> Perfect.</span> All rights reserved.
+        </span>
+      </div>
+      {/* <!-- Links --> */}
+      <div className='flex  gap-2 mt-4 md:mt-0'>
+        <Link href='/'>
+          <span  className='text-gray-600 hover:text-[#18F0F0]'>Terms & Conditions</span >
+        </Link>
+        <Link href='/'>
+          <span className='text-gray-600 hover:text-[#18F0F0]'>Privacy Policy</span >
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
 
-        </div>
       </div>
     </>
   )

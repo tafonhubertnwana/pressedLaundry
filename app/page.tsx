@@ -33,19 +33,25 @@ export default function Home() {
           </div>
         </div>
         <div className="container m-auto">
-          <div className="grid grid-cols-2 gap-0 mb-[5%] mt-8">
+          <div className="grid md:grid-cols-2 gap-0 mb-[5%] mt-8">
             <div className='relative'>
               <div className=''>
-                <Image src={homeImg} alt='home' />
-                <div className='absolute  bg-[#18F0F0] left-[60%] bottom-[20%] rounded-full w-48  h-48 flex items-center justify-center '>
-                  <div className='text-center p-8'>
-                    <h1 className='text-white '>5+</h1>
-                    <h5 className='text-white text-2xl'>Years of Experience</h5>
+                <Image src={homeImg} alt='home' className='w-full'/>
+                <div className=''>
+                  {/* <!-- Floating Circle --> */}
+                  <div className='absolute bg-[#18F0F0] rounded-full w-28 h-28 flex items-center justify-center 
+                    left-[90%] bottom-[10%] transform -translate-x-1/2 translate-y-1/2
+                    md:left-[80%] md:top-[50%] md:w-56 md:h-56'>
+                    <div className='text-center p-4 md:p-6'>
+                      <h1 className='text-white text-2xl md:text-6xl'>5+</h1>
+                      <h5 className='text-white text-sm md:text-2xl'>Years of Experience</h5>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
-            <div className="flex flex-cols m-6 w-[75%] ">
+            <div className="flex flex-cols m-6 md:w-[75%] w-full ">
               <div className="content-center">
                 <h6 className='text-[#18F0F0]'>More than 5 years of  Experience </h6>
                 <h3 className='py-3'>We are Passionate About Laundry</h3>

@@ -6,22 +6,30 @@ const Faq = () => {
   return (
     <div className='w-full '>
       <div className='relative'>
-        <Image src={banner} alt='banner' className='lg:w-full'/>
-        <div className='absolute top-[20%] left-[15%]'>
-          <h5 className='text-white py-4'>Home / FAQ</h5>
-          <h1 className='text-white'>FAQ</h1>
+        <Image 
+          src={banner} 
+          alt='banner' 
+          className='w-full object-cover'
+          layout='responsive' // Ensure the image scales responsively
+          width={1200} // Specify the aspect ratio width
+          height={600} // Specify the aspect ratio height
+        />
+        <div className='absolute top-[0%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6'>
+          <h5 className='text-white text-sm md:text-base'>Home / Faq</h5>
+          <h1 className='text-white text-2xl md:text-6xl font-bold'>FAQ</h1>
         </div>
       </div>
+
       <div className="container m-auto">
-        <div className='flex flex-col items-center '>
-          <h5 className=" font-bold py-4  text-[#18F0F0]">[ Frequently Asked Questions ]</h5>
+        <div className='flex flex-col items-center pt-8 '>
+          <h5 className=" font-bold md:py-4  text-[#18F0F0]">[ Frequently Asked Questions ]</h5>
           <div className='text-center md:w-[50%] py-4'>
             <h2>Reliable Answers to Our Most
             Common Questions</h2>
             <p className='text-lg py-4'>We can save you money on soap, water, heating and electricity. So you can enjoy even more of the things you love. Our prices are simple and affordable.</p>
           </div>
         </div>
-        <div>
+        <div className='sm:p-4'>
           <div  className='font-bold text-xl'>Your First Order!</div>
           <div className='grid md:grid-cols-2 gap-8 mb-[4%]'>
             <div>
@@ -138,8 +146,8 @@ const Faq = () => {
               
           </div>
         </div> 
-        <div className="flex flex-col items-center py-6">
-         <div className='text-center md:w-[50%] py-4'>
+        <div className="flex flex-col items-center pt-10">
+         <div className='text-center md:w-[50%] '>
             <h2>Ask Your Question</h2>
             <p className='text-lg py-4'>We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.</p>
           </div>
@@ -148,44 +156,44 @@ const Faq = () => {
           <div className="p-4">
             <form>
               <div className="flex flex-col py-2">
-                <label htmlFor="name" className="uppercase text-sm py-2 dark:text-white">Your Name</label>
                 <input
                   type="text"
                   name="senderName"
                   id="name"
+                  placeholder='Your Name'
                   className="border-2 rounded-lg p-3 flex border-gray-300"
                   required
                 />
               </div>
               <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col py-2">
-                    <label htmlFor="email" className="uppercase text-sm py-2 dark:text-white">E-mail</label>
                     <input
                       type="email"
                       name="senderEmail"
                       id="email"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
+                      placeholder='E-mail'
                       required
                     />
                   </div>
                 <div className="flex flex-col py-2">
-                  <label htmlFor="phone" className="uppercase text-sm py-2 dark:text-white">Phone</label>
                   <input
                     type="tel"
                     name="senderPhone"
                     id="phone"
                     className="border-2 rounded-lg p-3 flex border-gray-300"
+                    placeholder='Phone'
                   />
                 </div>
                 
               </div>
               <div className="flex flex-col py-2">
-                <label htmlFor="message" className="uppercase text-sm py-2 dark:text-white">Your Question</label>
                 <textarea
                   name="message"
                   id="message"
                   className='border-2 rounded-lg p-3 border-gray-300'
                   rows={10}
+                  placeholder='Your Question'
                   required
                 />
               </div>

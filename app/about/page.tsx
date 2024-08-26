@@ -23,26 +23,48 @@ const About = () => {
     <>
       <div className="w-full">
         <div className='relative'>
-          <Image src={banner} alt='banner' className='lg:w-full'/>
-          <div className='absolute top-[20%] left-[15%]'>
-            <h5 className='text-white py-4'>Home / About Us</h5>
-            <h1 className='text-white'>About Us</h1>
+          <Image 
+            src={banner} 
+            alt='banner' 
+            className='w-full object-cover'
+            layout='responsive' // Ensure the image scales responsively
+            width={1200} // Specify the aspect ratio width
+            height={600} // Specify the aspect ratio height
+          />
+          <div className='absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6'>
+            <h5 className='text-white text-sm md:text-base'>Home / About Us</h5>
+            <h1 className='text-white text-2xl md:text-6xl font-bold'>About Us</h1>
           </div>
         </div>
         <div className="container m-auto">
 
-          <div className="grid grid-cols-2 gap-0">
-            <div className='relative'>
-              <div className='m-8'>
-                <Image src={aboutImg} alt='about' />
-                <div className='absolute bottom-2 left-[-1%]'>
-                  <Image src={aboutImg2} alt='about-basket' width={'340'} height={'400'} />
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className='relative w-full p-4'>
+              <div className='relative'>
+                <Image 
+                  src={aboutImg} 
+                  alt='about' 
+                  layout='responsive' 
+                  width={1200} 
+                  height={800} 
+                  className='object-cover'
+                />
+                <div className='absolute bottom-[-5%] left-[-5%] md:bottom-[-5%] md:left-[-5%]'>
+                  <Image 
+                    src={aboutImg2} 
+                    alt='about-basket' 
+                    width={340} 
+                    height={400} 
+                    className='object-cover'
+                  />
                 </div>
-                <div className='absolute top-[30%] md:left-[40%] lg:left-[75%]'>
-                  <Image src={arrowRight} alt='arrow right'  />
-                </div>
+                {/* Uncomment and adjust for responsive arrow positioning */}
+                {/* <div className='absolute top-1/2 md:top-[30%] lg:top-[25%] left-1/2 md:left-[40%] lg:left-[75%] transform -translate-x-1/2'>
+                  <Image src={arrowRight} alt='arrow right' />
+                </div> */}
               </div>
             </div>
+
             <div className="flex flex-cols m-6 ">
               <div className="content-center">
                 <h6 className='text-[#18F0F0]'>[ More than 5 years of  Experience ]</h6>
@@ -63,7 +85,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-4 p-6">          
+          <div className="grid md:grid-cols-4 gap-4 p-6 content-center">          
             <div className="flex">
               <div className='p-4 rounded-full bg-slate-100 self-start shadow-gray-300 shadow-lg'>
               < PiShirtFoldedFill  size={40} className='text-[#18F0F0] '/>

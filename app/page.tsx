@@ -1,3 +1,5 @@
+
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import banner from '@/public/assets/dst-bg-img.jpg'
@@ -20,8 +22,11 @@ import QuestionAndAnswer from '@/components/questionAndAnswerBtn'
 import PricePackage from '@/components/pricePackage'
 import ChooseUs from '@/components/chooseUsBtn'
 import client from '@/public/assets/testimonials-img03.jpg'
+import { useState } from 'react';
 
 export default function Home() {
+  // State to manage which container is currently open
+  const [activeTab, setActiveTab] = useState('approach');
   return (
     <>
       <div className="w-full">
@@ -112,7 +117,7 @@ export default function Home() {
               </div>
             </div> 
           </div>
-          <div className="grid grid-cols-3 gap-8 p-10">
+          <div className="grid md:grid-cols-3 gap-8 p-10">
             <div className="flex flex-col items-center">
               <div className='relative'>
                 <Image src={service} alt='About-us-img-4' />
@@ -220,7 +225,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div>
+          <div className='pt-10'>
             <div className='flex flex-col items-center '>
               <h5 className=" font-bold py-4  text-[#18F0F0]">[ important Information ]</h5>
               <div className='text-center md:w-[50%] py-2'>
@@ -228,33 +233,40 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-3 gap-8 p-8">
-              <div className='bg-slate-100 w-full flex justify-center items-center'>
-                <Link href=''>
-                  <button className='p-6 text-black font-bold flex items-center justify-center'>
-                    Our Approach
-                  </button>
-                </Link>
+              {/* Approach Tab */}
+              <div className={`bg-slate-100 w-full flex justify-center items-center  ${activeTab === 'approach' ? 'bg-black text-white' : 'bg-slate-100 text-black'}`}>
+                <button
+                  onClick={() => setActiveTab('approach')}
+                  className='p-6 font-bold flex items-center justify-center'
+                >
+                  Our Approach
+                </button>
               </div>
-
-              <div className='bg-slate-100 w-full flex justify-center items-center'>
-                <Link href=''>
-                  <button className='p-6 text-black font-bold flex items-center justify-center'>
-                    Question / Answers
-                  </button>
-                </Link>
+              {/* Question and Answers Tab */}
+              <div className={`bg-slate-100 w-full cursor-pointer  hover:text-[#18F0F0] flex justify-center items-center  ${activeTab === 'qa' ? 'bg-black text-white' : 'bg-slate-100 text-black'}`} onClick={() => setActiveTab('qa')}>  
+                <button
+                  
+                  className='p-6  font-bold flex items-center justify-center '
+                >
+                  Question / Answers
+                </button>
               </div>
-
-              <div className='bg-[#18F0F0] w-full flex justify-center items-center'>
-                <Link href=''>
-                  <button className='p-6 text-white font-bold flex items-center justify-center'>
-                    Why choose Us
-                  </button>
-                </Link>
-              </div>
+              {/* Why Choose Us Tab */}
+              <div className={`bg-slate-100 w-full flex justify-center items-center  ${activeTab === 'choose' ? 'bg-black text-white' : 'bg-slate-100 text-black'}`}>               
+                <button
+                  onClick={() => setActiveTab('choose')}
+                  className='p-6 font-bold flex items-center justify-center'
+                >
+                  Why Choose Us
+                </button>               
+              </div>             
             </div>
-              {/* <Approach /> */}
-              {/* <QuestionAndAnswer /> */}
-              <ChooseUs />
+            <div>
+            {activeTab === 'approach' && <Approach />}
+            {activeTab === 'qa' && <QuestionAndAnswer />}
+            {activeTab === 'choose' && <ChooseUs />}
+            </div>
+              
             <div>
               <div className='flex flex-col items-center '>
                 <h5 className=" font-bold py-4  text-[#18F0F0]">[ Testimonials ]</h5>

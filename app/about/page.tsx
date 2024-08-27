@@ -15,7 +15,8 @@ import { HiClipboardDocumentList } from "react-icons/hi2";
 import { BsPersonHearts } from "react-icons/bs";
 
 import Link from 'next/link'
-// import Carousel from '@/components/aboutCarousel'
+import TeamCarousel from '@/components/aboutCarousel'
+
 
 
 const About = () => {
@@ -67,7 +68,7 @@ const About = () => {
 
             <div className="flex flex-cols m-6 ">
               <div className="content-center">
-                <h6 className='text-[#18F0F0]'>[ More than 5 years of  Experience ]</h6>
+                <h6 className='text-[#18F0F0] className="font-poppins"'>[ More than 5 years of  Experience ]</h6>
                 <h3 className='py-3'>Your Dry Cleaning and Laundry. Done.</h3>
                 <span className='text-lg w-full py-2'>
                 We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about the way you think about laundry!
@@ -124,9 +125,9 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="">
-            <div className="grid grid-cols-2 p-8">
-              <div className='flex bg-slate-100 '>
+          <div className="w-full">
+            <div className="grid md:grid-cols-2  p-8">
+              <div className='flex bg-slate-100 w-full '>
                 <div className="content-center p-[10%]">
                   <h6 className='text-[#18F0F0]'>[ Our Guarantee ]</h6>
                   <h3 className='py-3'>The best Guarantee in the Business</h3>
@@ -150,7 +151,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-6 p-6">
+          <div className="grid md:grid-cols-3 gap-6 p-6">
             <div className="flex space-x-4 p-4">
               <div className='p-4 rounded-full bg-slate-100 self-start shadow-gray-300 shadow-lg'>
               <PiLightbulbFilamentBold size={40} className='text-[#18F0F0] '/>
@@ -221,16 +222,17 @@ const About = () => {
           </div>
         </div>
         <div className="">
-          <div className="grid grid-cols-2 relative py-8">
+          <div className="grid md:grid-cols-2 relative py-8">
             <div className=''>
               <Image src={aboutImg4} alt='About-us-img-4' />
             </div>
-            <div className='flex bg-slate-100 my-[3%] ml-[-15%] mr-[30%] '>
+            <div className='flex bg-slate-100 py-8 md:my-[3%] md:ml-[-15%] md:mr-[30%] '>
               <div className="content-center px-[6%]">
                 <h6 className='text-[#18F0F0]'>[ Our History ]</h6>
                 <h3 className='py-3'>Laundry & Dry Cleaning Foundation</h3>
                 <span className='text-lg w-full py-2 justify-center'>
-                Founded in 2019, we follow a dream and an We aim to serve our customers in a way that far exceeds expectation. Being one of the leading laundry service providers, we know our customers’ mindset. It is not easy to come home from a hectic day at the office and rush to the nearest laundry service with your clothes. So, we have an array of services to make things easy for you. <br/> You need not tolerate late deliveries, low standard of work merged with high prices. Our services cater to all your laundering and ironing, dry cleaning, shoe repairs, upholstery cleaning, etc.</span> 
+                Founded in 2019, we follow a dream and an We aim to serve our customers in a way that far exceeds expectation. Being one of the leading laundry service providers, we know our customers’ mindset. It is not easy to come home from a hectic day at the office and rush to the nearest laundry service with your clothes. So, we have an array of services to make things easy for you.
+                 </span><p className='text-lg w-full py-2 justify-center'> You need not tolerate late deliveries, low standard of work merged with high prices. Our services cater to all your laundering and ironing, dry cleaning, shoe repairs, upholstery cleaning, etc.</p> 
                 
                 
               </div>
@@ -285,6 +287,8 @@ const About = () => {
             </div>
           </div>
         </div>
+        {/* <MyComponent /> */}
+        <TeamCarousel />
 
       </div>
     </>

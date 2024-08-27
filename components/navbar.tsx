@@ -22,15 +22,15 @@ const Navbar = () => {
   return (
     <>
       <div className='w-full'>
-        <div className="hidden md:grid grid-cols-5 gap-8 border-b-2">
-          <div className="md:col-span-2 lg:col-span-4">
+        <div className="hidden md:grid grid-cols-5 gap-0 border-b-2">
+          <div className="md:col-span-3 lg:col-span-4">
             <div className='flex   py-4'>
               <div className='px-4'>Central-Market, Buea</div>
               <div  className='px-4'>Mon-Fri 08:00AM -  05:00PM</div>
               <div  className='px-4'>tafonsoftwarespecialist@gmail.com</div>
             </div>
           </div>
-          <div className="md:col-span-3 lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1">
             <div className='flex justify-between'>
               <div className='flex py-4'><span className=' pr-4 text-[#18F0F0]'><FaPhoneVolume size={20}/></span><span>+(237) 679-048-674</span></div>
               <div>

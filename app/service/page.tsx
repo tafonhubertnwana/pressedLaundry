@@ -30,10 +30,10 @@ const Service = () => {
             <h2>Dry Cleaning & Laundry, Free Delivery</h2>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-8 p-10">
+        <div className="grid md:grid-cols-3 gap-8 p-10">
           <div className="flex flex-col items-center">
             <div className='relative'>
-              <Image src={service} alt='About-us-img-4' />
+              <Image src={service} alt='About-us-img-4' className='w-full'/>
 
               <div className='absolute bottom-[-7%] left-[6%]  p-4 rounded-full bg-[#18F0F0] self-start shadow-gray-300 shadow-lg'>
                 <GiWashingMachine size={40} className='text-white '/>
@@ -80,12 +80,12 @@ const Service = () => {
         </div>
       </div>
         <div className="">
-          <div className="grid grid-cols-2 relative py-8">
+          <div className="grid md:grid-cols-2 relative py-8">
             <div className=''>
               <Image src={laundry} alt='About-us-img-4' />
             </div>
-            <div className='flex bg-slate-100 my-[3%] ml-[-15%] mr-[30%] '>
-              <div className="content-center px-[6%]">
+            <div className='flex bg-slate-100 w-full md:my-[3%] md:ml-[-15%] md:mr-[30%] '>
+              <div className="content-center p-[6%]">
                 <h6 className='text-[#18F0F0]'>[ Our Laundry service for your business]</h6>
                 <h3 className='py-3'>Commercial Laundry Service</h3>
                 <span className='text-lg w-full py-2 justify-center'>
@@ -98,12 +98,12 @@ const Service = () => {
         </div>
         <div className="container m-auto">
         <div className='flex flex-col items-center '>
-            <h5 className=" font-bold py-4  text-[#18F0F0]">[ Why you'll love us ]</h5>
+            <h5 className=" font-bold pt-2  text-[#18F0F0]">[ Why you'll love us ]</h5>
             <div className='text-center md:w-[50%] py-4'>
               <h2>Our Features</h2>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 p-8">
+          <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="flex space-x-4 p-8">
                 <div className='p-4 rounded-full bg-slate-100  self-start shadow-gray-300 shadow-lg'>
                 <MdEco size={40} className='text-[#18F0F0]'/>

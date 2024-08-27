@@ -32,7 +32,7 @@ const Contact = () => {
               <h2>Contact Information</h2>
             </div>
           </div>
-          <div className="grid md:grid-cols-4 gap-8 content-center">
+          <div className="grid md:grid-cols-4  gap-8 content-center">
             <div className="flex flex-col items-center">
               <div className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
               < FaMapLocationDot size={40} className='text-white' /> 

@@ -72,10 +72,10 @@ interface FeatureProps {
 const Feature: React.FC<FeatureProps> = ({ Icon, title, description }) => (
   <div className="flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md">
     <div className="flex  self-start p-4 bg-white rounded-full shadow-lg">
-      <Icon size={40} className="text-[#18F0F0]" />
+      <Icon size={40} className="text-[#18F0F0] " />
     </div>
     <div>
-      <h5 className="text-lg font-semibold py-2">{title}</h5>
+      <h5 className="text-lg font-semibold py-2 group-hover:text-red-500">{title}</h5>
       <p>{description}</p>
     </div>
   </div>

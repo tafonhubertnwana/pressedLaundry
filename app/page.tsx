@@ -23,6 +23,8 @@ import PricePackage from '@/components/pricePackage'
 import ChooseUs from '@/components/chooseUsBtn'
 import client from '@/public/assets/testimonials-img03.jpg'
 import { useState } from 'react';
+import Testimonials from '@/components/testimonials'
+import TestimonialCarousel from '@/components/testimonials'
 
 export default function Home() {
   // State to manage which container is currently open
@@ -60,9 +62,9 @@ export default function Home() {
               <div className="content-center">
                 <h6 className='text-[#18F0F0]'>More than 5 years of  Experience </h6>
                 <h3 className='py-3'>We are Passionate About Laundry</h3>
-                <span className='text-lg w-full py-2'>
+                <p className='w-full py-2'>
                 We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about the way you think about laundry!
-                </span>
+                </p>
                 <div className='flex py-4'>
                   <div className='border-r-2 p-4'>
                     <ul className='py-4'>
@@ -85,35 +87,35 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3  gap-8 p-6">
-            <div className="flex space-x-4 p-8 bg-slate-100 ">
+          <div className="grid grid-cols-3  gap-8 p-6 carousel">
+            <div className=" carousel-item flex space-x-4 p-8 bg-slate-100 ">
               <div className='p-4 rounded-full self-start shadow-gray-300 shadow-lg'>
               <RiTimerFill size={40} className='text-[#18F0F0] '/>
               </div>
               <div>
                 <h5 className='py-2'>Save Time & Money</h5>
-                <span>
-                No more wasted time driving to the laundromats, we pickup and deliver for free!                </span>
+                <p>
+                No more wasted time driving to the laundromats, we pickup and deliver for free!                </p>
               </div>
             </div>
-            <div className="flex space-x-4 p-8 bg-slate-100">
+            <div className=" carousel-item flex space-x-4 p-8 bg-slate-100">
               <div className='p-4 rounded-full   self-start shadow-gray-300 shadow-lg'>
               <FaMoneyBillWave  size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
                 <h5 className='py-2'>Pay Online in Seconds</h5>
-                <span>
-                Manage your Press account and billing online from your smartphone or computer                </span>
+                <p>
+                Manage your Press account and billing online from your smartphone or computer                </p>
               </div>
             </div>
-            <div className="flex space-x-4 p-8 bg-slate-100">
+            <div className=" carousel-item flex space-x-4 p-8 bg-slate-100">
               <div className='p-4 rounded-full bg-slate-100  self-start shadow-gray-300 shadow-lg'>
               <MdEco size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
                 <h5 className='py-2'>Eco-Friendly</h5>
-                <span>
-                We use safe and clean perc-free solvents, so you, and the Earth, can look good.                </span>
+                <p>
+                We use safe and clean perc-free solvents, so you, and the Earth, can look good.                </p>
               </div>
             </div> 
           </div>
@@ -129,7 +131,7 @@ export default function Home() {
                   </div>
                   <div className='text-white '>
                     <h6 className='py-2'>Laundry Services</h6>
-                    <span>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold and deliver back to you in one neat, easy package.</span>  
+                    <p>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold and deliver back to you in one neat, easy package.</p>  
                   </div>
                 </div>
               </div>
@@ -145,7 +147,7 @@ export default function Home() {
                   </div>
                   <div className='text-white '>
                     <h6 className='py-2'>Dry Cleaning Services</h6>
-                    <span>UB students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results.</span>  
+                    <p>UB students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results.</p>  
                   </div>
                 </div>
               </div>
@@ -161,7 +163,7 @@ export default function Home() {
                   </div>
                   <div className='text-white '>
                     <h6 className='py-2'>Steam Iron</h6>
-                    <span>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</span>  
+                    <p>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</p>  
                   </div>
                 </div>
               </div>
@@ -274,7 +276,7 @@ export default function Home() {
                   <h2>Why Our Clients say</h2>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-6 p-10">
+              {/* <div className="grid grid-cols-3 gap-6 p-10">
                 <div className="flex flex-col items-center bg-[#18F0F0]">
                     <div className='flex items-center space-x-4 pt-3'>
                       <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
@@ -282,14 +284,14 @@ export default function Home() {
                       </div>
                       <div className='flex flex-col'>
                         <h5 className='text-lg font-semibold'>John Doe</h5>
-                        <span className='text-sm '>Client</span>
+                        <p className='text-sm '>Client</p>
                       </div>
                     </div>
 
                   <div className='p-6'>
-                    <span>
+                    <p>
                     The new machines have had very few problems and their services are always done in a timely fashion. Our residents have been thrilled with the PressedPerfect team and we look forward to a long relationship with this first-class organization.
-                    </span>
+                    </p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center bg-slate-100">
@@ -299,14 +301,14 @@ export default function Home() {
                       </div>
                       <div className='flex flex-col'>
                         <h5 className='text-lg font-semibold'>John Doe</h5>
-                        <span className='text-sm '>Client</span>
+                        <p className='text-sm '>Client</p>
                       </div>
                     </div>
 
                   <div className='p-6'>
-                    <span>
+                    <p>
                     Over the last eight years they have proven, on several occasions that they are knowledgeable, prompt, and concerned about my immediate situation. I personally encourage any business associated with their laundry services.
-                    </span>
+                    </p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center bg-slate-100">
@@ -316,17 +318,18 @@ export default function Home() {
                       </div>
                       <div className='flex flex-col'>
                         <h5 className='text-lg font-semibold'>John Doe</h5>
-                        <span className='text-sm '>Client</span>
+                        <p className='text-sm '>Client</p>
                       </div>
                     </div>
 
                   <div className='p-6'>
-                    <span>
+                    <p>
                     Second to none for convenience, quality & turnaround time. Great prices and services. Amazing support team behind the service, if you ever need it. No more having to save up piles of dry cleaning to make it worth taking out.
-                    </span>
+                    </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
+               <TestimonialCarousel /> 
 
 
             </div>

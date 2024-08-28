@@ -15,7 +15,7 @@ import { HiClipboardDocumentList } from "react-icons/hi2";
 import { BsPersonHearts } from "react-icons/bs";
 
 import Link from 'next/link'
-import TeamCarousel from '@/components/aboutCarousel'
+// import TeamCarousel from '@/components/aboutCarousel'
 
 
 
@@ -287,8 +287,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* <MyComponent /> */}
-        <TeamCarousel />
+       
+        {/* <TeamCarousel /> */}
 
       </div>
     </>

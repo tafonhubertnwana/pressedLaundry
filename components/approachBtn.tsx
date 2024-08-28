@@ -1,71 +1,85 @@
-import Link from 'next/link'
-import React from 'react'
-import aboutImg3 from '@/public/assets/about-us-img04.jpg'
-import Image from 'next/image'
-import { FaHandHoldingHeart } from "react-icons/fa6";
+// components/Approach.tsx
+
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import aboutImg3 from '@/public/assets/about-us-img04.jpg';
+import { FaHandHoldingHeart } from 'react-icons/fa';
 import { PiLightbulbFilamentBold, PiShirtFoldedFill } from 'react-icons/pi';
 
+// Define types for props if needed (currently not needed for this component)
+interface ApproachProps {}
 
-const Approach = () => {
+const Approach: React.FC<ApproachProps> = () => {
   return (
-    <>
-      <div className="w-full">
-        <div className="container m-auto">
-        <div className="">
-            <div className="grid grid-cols-2 p-8">
-              <div className='flex bg-slate-100 '>
-                <div className="content-start p-[10%]">
-                  
-                  <h3 className='py-3'>Our Approach</h3>
-                  <span className='text-lg w-full py-2 justify-center'>
-                  We approach workforce accommodations with a property development mindset. Our “Develop. Own. Operate.” business model produces integrated solutions that enable clients to focus on their core business. </span>
-                  <span>Clients benefit from consistent service delivery with greater cost and quality control as well as more efficient use of their operational and financial resources.</span>
-                  <div>
-                  <Link href=''><button className='font-bold bg-[#18F0F0] p-4 text-white mt-4'>Get Service Now</button></Link>
-                  </div>
-                </div>
-              </div>
-              <div className=''>
-                <Image src={aboutImg3} alt='About-us-img-2' />
-              </div>
-            </div>
-            <div className="grid grid-cols-3  gap-8 p-6">
-            <div className="flex space-x-4 p-8 bg-slate-100 ">
-              <div className='p-4 rounded-full self-start shadow-gray-300 shadow-lg'>
-              <PiLightbulbFilamentBold size={40} className='text-[#18F0F0] '/>
-              </div>
+    <section className="w-full py-8">
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 p-8">
+          {/* Text Content */}
+          <div className="flex flex-col justify-center p-6 bg-slate-100 rounded-lg shadow-md">
+            <h3 className="text-2xl font-bold py-3">Our Approach</h3>
+            <p className="text-lg py-2">
+              We approach workforce accommodations with a property development mindset. Our “Develop. Own. Operate.” business model produces integrated solutions that enable clients to focus on their core business.
+            </p>
+            <p>
+              Clients benefit from consistent service delivery with greater cost and quality control, as well as more efficient use of their operational and financial resources.
+            </p>
+            <Link href="/service">
               <div>
-                <h5 className='py-2'>High Quality</h5>
-                <span>
-                We work hard to make sure that the clothes you get back are spotless and ready for action.                </span>
+                <button className="font-bold bg-[#18F0F0] p-4 text-white rounded-lg mt-4">
+                  Get Service Now
+                </button>
               </div>
-            </div>
-            <div className="flex space-x-4 p-8 bg-slate-100">
-              <div className='p-4 rounded-full   self-start shadow-gray-300 shadow-lg'>
-              <PiShirtFoldedFill size={40} className='text-[#18F0F0]'/>
-              </div>
-              <div>
-                <h5 className='py-2'>Cleaner & Greener</h5>
-                <span>
-                We work with the environment in mind. No harsh chemicals        </span>
-              </div>
-            </div>
-            <div className="flex space-x-4 p-8 bg-slate-100">
-              <div className='p-4 rounded-full bg-slate-100  self-start shadow-gray-300 shadow-lg'>
-              <FaHandHoldingHeart  size={40} className='text-[#18F0F0]'/>
-              </div>
-              <div>
-                <h5 className='py-2'>Happiness Guarantee</h5>
-                <span>
-                if you're not completely satisfied with the wash or dry cleaning, we will re-process tour clothes for free! </span>
-              </div>
-            </div> 
+            </Link>
           </div>
+          
+          {/* Image */}
+          <div className="w-full">
+            <Image src={aboutImg3} alt="About us image" layout="responsive" />
           </div>
         </div>
+
+        {/* Features */}
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8 p-6">
+          <Feature
+            Icon={PiLightbulbFilamentBold}
+            title="High Quality"
+            description="We work hard to make sure that the clothes you get back are spotless and ready for action."
+          />
+          <Feature
+            Icon={PiShirtFoldedFill}
+            title="Cleaner & Greener"
+            description="We work with the environment in mind. No harsh chemicals."
+          />
+          <Feature
+            Icon={FaHandHoldingHeart}
+            title="Happiness Guarantee"
+            description="If you're not completely satisfied with the wash or dry cleaning, we will re-process your clothes for free!"
+          />
+        </div>
       </div>
-    </>
-  )
+    </section>
+  );
+};
+
+// Reusable Feature Component
+interface FeatureProps {
+  Icon: React.ComponentType<{ size: number; className?: string }>;
+  title: string;
+  description: string;
 }
 
-export default Approach
+const Feature: React.FC<FeatureProps> = ({ Icon, title, description }) => (
+  <div className="flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md">
+    <div className="flex  self-start p-4 bg-white rounded-full shadow-lg">
+      <Icon size={40} className="text-[#18F0F0]" />
+    </div>
+    <div>
+      <h5 className="text-lg font-semibold py-2">{title}</h5>
+      <p>{description}</p>
+    </div>
+  </div>
+
+);
+
+export default Approach;

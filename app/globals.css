@@ -63,8 +63,10 @@ body{
   }
 
   p {
-    @apply text-lg sm:text-xl md:text-2xl
+    @apply  text-[#7b7b7b]
   } 
+
+ 
 
   li{
     @apply cursor-pointer

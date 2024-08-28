@@ -232,7 +232,7 @@ export default function Home() {
                 <h2>Trusted Laundry Service</h2>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-8 p-8">
+            <div className="grid md:grid-cols-3 md:gap-8 gap-4 p-8">
               {/* Approach Tab */}
               <div className={`bg-slate-100 w-full flex justify-center items-center  ${activeTab === 'approach' ? 'bg-black text-white' : 'bg-slate-100 text-black'}`}>
                 <button

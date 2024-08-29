@@ -7,34 +7,28 @@ import { TbIroningSteam, TbWashTemperature6 } from "react-icons/tb";
 // Reusable Package Component
 const PackageCard = ({ Icon, title, description, price, features }) => {
   return (
-    <div className='relative flex flex-col items-center justify-center min-h-screen'>
-      {/* Icon Container */}
-      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-        <div className='p-4 bg-[#18F0F0] rounded-full'>
-          <Icon size={80} className='text-white' />
+    <div className='relative bg-slate-100 py-8 px-4 shadow-lg rounded-lg'>
+      <div className='flex flex-col items-center'>
+        <div className='absolute top-[-10%] left-1/2 transform -translate-x-1/2'>
+          <div className='p-4 bg-[#18F0F0] rounded-full'>
+            <Icon size={80} className='text-white' />
+          </div>
         </div>
-      </div>
-
-      {/* Content */}
-      <div className='relative pt-16 text-center bg-white p-8 rounded-lg shadow-md hover:bg-[#f0f0f0]'>
-        <h4 className='text-xl font-semibold'>{title}</h4>
-        <h6 className='text-[#18F0F0] py-2 text-lg'>{description}</h6>
-        <div className='border-b-2 border-gray-300'>
-          <ul className='py-4 space-y-2'>
-            {features.map((feature, index) => (
-              <li key={index} className='flex items-center'>
-                <GiCheckMark size={20} className='text-[#18F0F0]' />
-                <span className='pl-2'>{feature}</span>
-              </li>
-            ))}
-          </ul>
+        <div className='pt-16 text-center'>
+          <h4 className='text-xl font-semibold'>{title}</h4>
+          <h6 className='text-[#18F0F0] py-2 text-lg'>{description}</h6>
+          <div className='border-b-2 border-gray-300'>
+            <ul className='py-4 space-y-2'>
+              {features.map((feature, index) => (
+                <li key={index} className='flex items-center'>
+                  <GiCheckMark size={20} className='text-[#18F0F0]' />
+                  <span className='pl-2'>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <h3 className='text-[#18F0F0] text-xl font-bold'>{price}</h3>
         </div>
-        <h3 className='text-[#18F0F0] text-xl font-bold'>{price}</h3>
-
-        {/* Order Now Button */}
-        <button className='absolute bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-[#18F0F0] text-white rounded-lg font-semibold transition-transform transform scale-0 group-hover:scale-100 group-hover:shadow-lg'>
-          Order Now
-        </button>
       </div>
     </div>
   );

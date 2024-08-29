@@ -89,7 +89,7 @@ const carouselItems = [
 const TestimonialCarousel = () => {
   return (
     <div className="container m-auto">
-      <div className='my-10'>
+      <div className='mb-10'>
         <Slider {...sliderSettings}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className=" group hover:bg-[#18F0F0] transition-colors duration-300 h-[320px] items-center p-6 bg-slate-100">

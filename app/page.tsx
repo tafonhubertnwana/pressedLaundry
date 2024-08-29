@@ -214,7 +214,7 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-3 md:gap-8 gap-4 p-8">
               {/* Approach Tab */}
-              <div className={`bg-slate-100 w-full flex justify-center items-center  ${activeTab === 'approach' ? 'bg-[#18F0F0] text-white' : 'bg-slate-100 text-black'}`}>
+              <div className={`bg-slate-100 w-full flex justify-center items-center  ${activeTab === 'approach' ? '[#18F0F0] text-white' : 'bg-slate-100 text-black'}`}>
                 <button
                   onClick={() => setActiveTab('approach')}
                   className='p-6 font-bold flex items-center justify-center'

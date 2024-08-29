@@ -23,8 +23,7 @@ import PricePackage from '@/components/pricePackage'
 import ChooseUs from '@/components/chooseUsBtn'
 import client from '@/public/assets/testimonials-img03.jpg'
 import { useState } from 'react';
-import Testimonials from '@/components/testimonials'
-import TestimonialCarousel from '@/components/testimonials'
+import {TestimonialCarousel, Carousel }from '@/components/testimonials'
 
 export default function Home() {
   // State to manage which container is currently open
@@ -87,9 +86,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3  gap-8 p-6 carousel">
-            <div className=" carousel-item flex space-x-4 p-8 bg-slate-100 ">
-              <div className='p-4 rounded-full self-start shadow-gray-300 shadow-lg'>
+          <div className="grid md:grid-cols-3  gap-8 p-6 ">
+            <div className=" flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md">
+              <div className='p-4  bg-white  rounded-full  self-start shadow-gray-300 shadow-lg'>
               <RiTimerFill size={40} className='text-[#18F0F0] '/>
               </div>
               <div>
@@ -98,8 +97,8 @@ export default function Home() {
                 No more wasted time driving to the laundromats, we pickup and deliver for free!                </p>
               </div>
             </div>
-            <div className=" carousel-item flex space-x-4 p-8 bg-slate-100">
-              <div className='p-4 rounded-full   self-start shadow-gray-300 shadow-lg'>
+            <div className=" flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md">
+              <div className='p-4 rounded-full  bg-white  self-start shadow-gray-300 shadow-lg'>
               <FaMoneyBillWave  size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
@@ -108,8 +107,8 @@ export default function Home() {
                 Manage your Press account and billing online from your smartphone or computer                </p>
               </div>
             </div>
-            <div className=" carousel-item flex space-x-4 p-8 bg-slate-100">
-              <div className='p-4 rounded-full bg-slate-100  self-start shadow-gray-300 shadow-lg'>
+            <div className="  flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md">
+              <div className='p-4 rounded-full bg-white   self-start shadow-gray-300 shadow-lg'>
               <MdEco size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
@@ -119,56 +118,57 @@ export default function Home() {
               </div>
             </div> 
           </div>
-          <div className="grid md:grid-cols-3 gap-8 p-10">
-            <div className="flex flex-col items-center">
-              <div className='relative'>
-                <Image src={service} alt='About-us-img-4' />
-              </div>
-              <div className='absolute bottom-[-82%] '>
-                <div className='flex space-x-4 w-96'>
-                  <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
-                    <GiWashingMachine size={40} className='text-white '/>
+          {/* <Carousel /> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
+            {/* Laundry Services */}
+            <div className="relative flex flex-col items-center">
+              <Image src={service} alt='About-us-img-4' className='w-full h-auto' />
+              <div className='absolute bottom-0 w-full'>
+                <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-50 bg-black p-4 rounded-lg'>
+                  <div className='p-4 rounded-full bg-[#18F0F0]'>
+                    <GiWashingMachine size={40} className='text-white' />
                   </div>
-                  <div className='text-white '>
-                    <h6 className='py-2'>Laundry Services</h6>
-                    <p>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold and deliver back to you in one neat, easy package.</p>  
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className='relative'>
-                <Image src={serviceImg2} alt='About-us-img-4' />
-              </div>
-              <div className='absolute bottom-[-82%] '>
-                <div className='flex space-x-4 w-96'>
-                  <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
-                    <GiHanger size={40} className='text-white '/>
-                  </div>
-                  <div className='text-white '>
-                    <h6 className='py-2'>Dry Cleaning Services</h6>
-                    <p>UB students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results.</p>  
+                  <div className='text-white'>
+                    <h6 className='py-2 text-lg font-semibold'>Laundry Services</h6>
+                    <p className='text-white'>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold, and deliver it back to you in one neat, easy package.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center">
-              <div className='relative'>
-                <Image src={serviceLaundry} alt='About-us-img-4' /> 
-              </div>
-              <div className='absolute bottom-[-82%] '>
-                <div className='flex space-x-4 w-96'>
-                  <div className='  p-4 rounded-full bg-[#18F0F0] self-center '>
-                    <TbIroningSteam size={40} className='text-white '/>
+
+            {/* Dry Cleaning Services */}
+            <div className="relative flex flex-col items-center">
+              <Image src={serviceImg2} alt='About-us-img-4' className='w-full h-auto' />
+              <div className='absolute bottom-0 w-full'>
+                <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-50 bg-black p-4 rounded-lg'>
+                  <div className='p-4 rounded-full bg-[#18F0F0]'>
+                    <GiHanger size={40} className='text-white' />
                   </div>
-                  <div className='text-white '>
-                    <h6 className='py-2'>Steam Iron</h6>
-                    <p>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</p>  
+                  <div className='text-white'>
+                    <h6 className='py-2 text-lg font-semibold'>Dry Cleaning Services</h6>
+                    <p className='text-white'>UB students and local residents love our reliable dry cleaning services for fast, accurate, top-quality results.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Steam Iron */}
+            <div className="relative flex flex-col items-center">
+              <Image src={serviceLaundry} alt='About-us-img-4' className='w-full h-auto' />
+              <div className='absolute bottom-0 w-full'>
+                <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-50 bg-black p-4 rounded-lg'>
+                  <div className='p-4 rounded-full bg-[#18F0F0]'>
+                    <TbIroningSteam size={40} className='text-white' />
+                  </div>
+                  <div className='text-white'>
+                    <h6 className='py-2 text-lg font-semibold'>Steam Iron</h6>
+                    <p className='text-white'>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div>
             <div className='flex flex-col items-center '>
               <h5 className=" font-bold py-4  text-[#18F0F0]">[ Laundry Made Easy ]</h5>
@@ -176,56 +176,64 @@ export default function Home() {
                 <h2>How PressedPerfect works</h2>
               </div>
             </div>
-            <div className="grid grid-cols-4 gap-8 content-center  p-8">
-              <div className="flex flex-col items-center">
-                <h4 className='text-[#18F0F0]'>You Order</h4>
-                <div className='relative flex items-center justify-center mb-8'>
-                  <div className='p-6 bg-slate-100 rounded-full my-4 w-48 h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
-                    <Image src={hw} alt='phone' className='object-cover rounded-full' /> 
-                  </div>
-                  <div className='absolute top-[70%] right-[26%] bg-[#18F0F0] rounded-full w-24 h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
-                    <h3 className=' text-center text-[#000]'>01</h3>
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center">
+              <h4 className='text-[#18F0F0] mb-4'>You Order</h4>
+              <div className='relative flex items-center justify-center mb-8'>
+                <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
+                  <Image src={hw} alt='phone' className='object-cover ' />
                 </div>
-                <p className="text-xl ">Order via website</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <h4 className='text-[#18F0F0]'>You Order</h4>
-                <div className='relative flex items-center justify-center mb-8'>
-                  <div className='p-6 bg-slate-100 rounded-full my-4 w-48 h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
-                    <Image src={delivery} alt='phone' className='object-cover rounded-full' /> 
-                  </div>
-                  <div className='absolute top-[70%] right-[26%] bg-[#18F0F0] rounded-full w-24 h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
-                    <h2 className=' text-center text-[#000]'>02</h2>
-                  </div>
+                <div className='absolute top-[-10%] right-[-10%] md:top-[75%] md:right-[26%] bg-[#18F0F0] rounded-full w-16 h-16 md:w-24 md:h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                  <h3 className='text-center text-[#000] text-xs md:text-lg'>01</h3>
                 </div>
-                <p className="text-xl ">Collection from your doorstep</p>
               </div>
-              <div className="flex flex-col items-center">
-                <h4 className='text-[#18F0F0]'>We Collect</h4>
-                <div className='relative flex items-center justify-center mb-8'>
-                  <div className='p-6 bg-slate-100 rounded-full my-4 w-48 h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
-                    <Image src={wash} alt='phone' className='object-cover rounded-full' /> 
-                  </div>
-                  <div className='absolute top-[70%] right-[26%] bg-[#18F0F0] rounded-full w-24 h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
-                    <h2 className=' text-center text-[#000]'>03</h2>
-                  </div>
-                </div>
-                <p className="text-xl ">Wash, dry & fold your items</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <h4 className='text-[#18F0F0]'>You Order</h4>
-                <div className='relative flex items-center justify-center mb-8'>
-                  <div className='p-6 bg-slate-100 rounded-full my-4 w-48 h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
-                    <Image src={door} alt='phone' className='object-cover rounded-full' /> 
-                  </div>
-                  <div className='absolute top-[70%] right-[26%] bg-[#18F0F0] rounded-full w-24 h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
-                    <h2 className=' text-center text-[#000]'>04</h2>
-                  </div>
-                </div>
-                <p className="text-xl ">Order will be delivered</p>
-              </div>
+              <p className=" md:mt-6">Order via website</p>
             </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center">
+              <h4 className='text-[#18F0F0] mb-4'>You Order</h4>
+              <div className='relative flex items-center justify-center mb-8'>
+                <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
+                  <Image src={delivery} alt='delivery' className='object-cover ' />
+                </div>
+                <div className='absolute top-[-10%] right-[-10%] md:top-[75%] md:right-[26%] bg-[#18F0F0] rounded-full w-16 h-16 md:w-24 md:h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                  <h2 className='text-center text-[#000] text-xs md:text-lg'>02</h2>
+                </div>
+              </div>
+              <p className="md:mt-6">Collection from your doorstep</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center">
+              <h4 className='text-[#18F0F0] mb-4'>We Collect</h4>
+              <div className='relative flex items-center justify-center mb-8'>
+                <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
+                  <Image src={wash} alt='wash' className='object-cover ' />
+                </div>
+                <div className='absolute top-[-10%] right-[-10%] md:top-[75%] md:right-[26%] bg-[#18F0F0] rounded-full w-16 h-16 md:w-24 md:h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                  <h2 className='text-center text-[#000] text-xs md:text-lg'>03</h2>
+                </div>
+              </div>
+              <p className="md:mt-6">Wash, dry & fold your items</p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="flex flex-col items-center text-center">
+              <h4 className='text-[#18F0F0]  mb-4'>You Order</h4>
+              <div className='relative flex items-center justify-center mb-8'>
+                <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
+                  <Image src={door} alt='door' className='object-cover ' />
+                </div>
+                <div className='absolute top-[-10%] right-[-10%] md:top-[75%] md:right-[26%] bg-[#18F0F0] rounded-full w-16 h-16 md:w-24 md:h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                  <h2 className='text-center text-[#000] text-xs md:text-lg'>04</h2>
+                </div>
+              </div>
+              <p className=" md:mt-6">Order will be delivered</p>
+            </div>
+          </div>
+
           </div>
           <div className='pt-10'>
             <div className='flex flex-col items-center '>
@@ -276,7 +284,7 @@ export default function Home() {
                   <h2>Why Our Clients say</h2>
                 </div>
               </div>
-              {/* <div className="grid grid-cols-3 gap-6 p-10">
+              <div className="grid grid-cols-3 gap-6 p-10">
                 <div className="flex flex-col items-center bg-[#18F0F0]">
                     <div className='flex items-center space-x-4 pt-3'>
                       <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
@@ -328,7 +336,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-              </div> */}
+              </div>
                <TestimonialCarousel /> 
 
 

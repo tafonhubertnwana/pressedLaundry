@@ -1,7 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
-import client from '@/public/assets/testimonials-img03.jpg'; // Adjust the path according to your project structure
+import client from '@/public/assets/testimonials-img03.jpg'; 
+import { MdEco } from 'react-icons/md';
+import { RiTimerFill } from 'react-icons/ri';
+import { FaMoneyBillWave } from 'react-icons/fa';
 
 // Slick slider settings
 const sliderSettings = {
@@ -65,6 +68,24 @@ const testimonials = [
   },
 ];
 
+const carouselItems = [
+  {
+    icon: <RiTimerFill size={40} className='text-[#18F0F0]' />,
+    title: 'Save Time & Money',
+    description: 'No more wasted time driving to the laundromats, we pickup and deliver for free!',
+  },
+  {
+    icon: <FaMoneyBillWave size={40} className='text-[#18F0F0]' />,
+    title: 'Pay Online in Seconds',
+    description: 'Manage your Press account and billing online from your smartphone or computer',
+  },
+  {
+    icon: <MdEco size={40} className='text-[#18F0F0]' />,
+    title: 'Eco-Friendly',
+    description: 'We use safe and clean perc-free solvents, so you, and the Earth, can look good.',
+  },
+];
+
 const TestimonialCarousel = () => {
   return (
     <div className="p-10">
@@ -90,4 +111,30 @@ const TestimonialCarousel = () => {
   );
 };
 
-export default TestimonialCarousel;
+
+
+const Carousel = () => {
+  return (
+    <div className="p-6">
+      <Slider {...sliderSettings}>
+        {carouselItems.map((item, index) => (
+          <div
+            key={index}
+            className="carousel-item flex space-x-4 p-8 bg-slate-100 mx-2 rounded-lg shadow-lg"
+          >
+            <div className='p-4 rounded-full bg-slate-100 shadow-gray-300 shadow-lg'>
+              {item.icon}
+            </div>
+            <div>
+              <h5 className='py-2 text-lg font-semibold'>{item.title}</h5>
+              <p>{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+
+
+export {TestimonialCarousel, Carousel}

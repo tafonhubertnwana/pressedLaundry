@@ -41,7 +41,7 @@ const Service = () => {
             </div>
             <div className='pt-8 '>
               <h6 className='py-4'>Laundry Services</h6>
-              <span>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold and deliver back to you in one neat, easy package.</span>
+              <p>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold and deliver back to you in one neat, easy package.</p>
               <div>
                 <Link href=''><button className='font-bold bg-[#18F0F0] p-4 text-white mt-4'>More Info</button></Link>
               </div>
@@ -56,7 +56,7 @@ const Service = () => {
             </div>
             <div className='pt-8 '>
               <h6 className='py-4'>Dry cleaning Services</h6>
-              <span>UB students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results.</span>
+              <p>UB students and local residents love on our reliable dry cleaning services for the fast, accurate, top quality results.</p>
               <div>
                 <Link href=''><button className='font-bold bg-[#18F0F0] p-4 text-white mt-4'>More Info</button></Link>
               </div>
@@ -71,7 +71,7 @@ const Service = () => {
             </div>
             <div className='pt-8 '>
               <h6 className='py-4'>Steam Iron</h6>
-              <span>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</span>
+              <p>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</p>
               <div>
                 <Link href=''><button className='font-bold bg-[#18F0F0] p-4 text-white mt-4'>More Info</button></Link>
               </div>
@@ -88,8 +88,8 @@ const Service = () => {
               <div className="content-center p-[6%]">
                 <h6 className='text-[#18F0F0]'>[ Our Laundry service for your business]</h6>
                 <h3 className='py-3'>Commercial Laundry Service</h3>
-                <span className='text-lg w-full py-2 justify-center'>
-                Large corporations have determined that there is a financial benefit to outsourcing back office work because it saves money. Allowing us to do your laundry is cost effective and will allow you and your employees to focus on your core business. We offer smart solutions to meet your commercial laundry needs. </span> 
+                <p className='text-lg w-full py-2 justify-center'>
+                Large corporations have determined that there is a financial benefit to outsourcing back office work because it saves money. Allowing us to do your laundry is cost effective and will allow you and your employees to focus on your core business. We offer smart solutions to meet your commercial laundry needs. </p> 
                 
                 
               </div>
@@ -110,8 +110,8 @@ const Service = () => {
                 </div>
                 <div>
                   <h5 className='py-2'>Eco-Friendly Dry Cleaning</h5>
-                  <span>
-                  Our commitment to eco-friendly practices extends beyond our use of 100% toxin-free cleaning techniques. Our company is also incredibly proud to be a carbon-neutral business.                  </span>
+                  <p>
+                  Our commitment to eco-friendly practices extends beyond our use of 100% toxin-free cleaning techniques. Our company is also incredibly proud to be a carbon-neutral business.                  </p>
                 </div>
               </div>
               <div className="flex space-x-4 p-8">
@@ -120,8 +120,8 @@ const Service = () => {
                 </div>
                 <div>
                   <h5 className='py-2'>Wash & Fold</h5>
-                  <span>
-                  We are excited to offer quality shoe repair & bag services alongside our second to none dry cleaning and wash & fold service. Our staff use the highest quality products.                  </span>
+                  <p>
+                  We are excited to offer quality shoe repair & bag services alongside our second to none dry cleaning and wash & fold service. Our staff use the highest quality products.                  </p>
                 </div>
               </div>
               <div className="flex space-x-4 p-4">
@@ -130,8 +130,8 @@ const Service = () => {
                 </div>
                 <div>
                   <h5 className='py-2'>Bag & Shoe Shines</h5>
-                  <span>
-                  Laundry services are considerably the most convenient services that people look for. Laundry is one of the most difficult chores that we have to deal with on a regular basis.                  </span>
+                  <p>
+                  Laundry services are considerably the most convenient services that people look for. Laundry is one of the most difficult chores that we have to deal with on a regular basis.                  </p>
                 </div>
               </div>
               <div className="flex space-x-4 p-4">
@@ -140,8 +140,8 @@ const Service = () => {
                 </div>
                 <div>
                   <h5 className='py-2'>Package Delivery</h5>
-                  <span>
-                  We offer one-day day laundry service to customers in our service areas, combining the excellence of dry cleaning with the ultimate convenience in laundry service and laundry delivery.                  </span>
+                  <p>
+                  We offer one-day day laundry service to customers in our service areas, combining the excellence of dry cleaning with the ultimate convenience in laundry service and laundry delivery.                  </p>
                 </div>
               </div>
           </div>

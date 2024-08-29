@@ -34,7 +34,7 @@ const QuestionAndAnswer: React.FC<QuestionAndAnswerProps> = ({ faqs }) => {
         <div className="grid md:grid-cols-3 gap-4 p-8">
           {/* Image Section */}
           <div className="w-full">
-            <div className="relative sm:w-full sm:h-full">
+            <div className="relative w-full h-full">
               <Image src={img3} alt="FAQ Image" layout="responsive"  />
             </div>
           </div>

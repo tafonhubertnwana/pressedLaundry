@@ -16,12 +16,12 @@ interface FeatureProps {
 
 // Reusable Feature Component
 const Feature: React.FC<FeatureProps> = ({ Icon, title, description }) => (
-  <div className="flex space-x-4 p-4 md:p-4">
+  <div className=" group  transition-colors duration-300 flex space-x-4 p-4 md:p-4">
     <div className='p-4 rounded-full bg-slate-100 self-start shadow-gray-300 shadow-lg'>
       <Icon size={40} className='text-[#18F0F0]' />
     </div>
     <div>
-      <h5 className=''>{title}</h5>
+      <h5 className='group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{title}</h5>
       <p>{description}</p>
     </div>
   </div>

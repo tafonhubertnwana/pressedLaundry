@@ -86,39 +86,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid md:grid-cols-3  gap-8 p-6 ">
-            <div className=" flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md">
-              <div className='p-4  bg-white  rounded-full  self-start shadow-gray-300 shadow-lg'>
-              <RiTimerFill size={40} className='text-[#18F0F0] '/>
-              </div>
-              <div>
-                <h5 className='py-2'>Save Time & Money</h5>
-                <p>
-                No more wasted time driving to the laundromats, we pickup and deliver for free!                </p>
-              </div>
-            </div>
-            <div className=" flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md">
-              <div className='p-4 rounded-full  bg-white  self-start shadow-gray-300 shadow-lg'>
-              <FaMoneyBillWave  size={40} className='text-[#18F0F0]'/>
-              </div>
-              <div>
-                <h5 className='py-2'>Pay Online in Seconds</h5>
-                <p>
-                Manage your Press account and billing online from your smartphone or computer                </p>
-              </div>
-            </div>
-            <div className="  flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md">
-              <div className='p-4 rounded-full bg-white   self-start shadow-gray-300 shadow-lg'>
-              <MdEco size={40} className='text-[#18F0F0]'/>
-              </div>
-              <div>
-                <h5 className='py-2'>Eco-Friendly</h5>
-                <p>
-                We use safe and clean perc-free solvents, so you, and the Earth, can look good.                </p>
-              </div>
-            </div> 
+          <div>
+            <Carousel /> 
           </div>
-          {/* <Carousel /> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
             {/* Laundry Services */}
             <div className="relative flex flex-col items-center">
@@ -244,7 +214,7 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-3 md:gap-8 gap-4 p-8">
               {/* Approach Tab */}
-              <div className={`bg-slate-100 w-full flex justify-center items-center  ${activeTab === 'approach' ? 'bg-black text-white' : 'bg-slate-100 text-black'}`}>
+              <div className={`bg-slate-100 w-full flex justify-center items-center  ${activeTab === 'approach' ? 'bg-[#18F0F0] text-white' : 'bg-slate-100 text-black'}`}>
                 <button
                   onClick={() => setActiveTab('approach')}
                   className='p-6 font-bold flex items-center justify-center'
@@ -253,7 +223,7 @@ export default function Home() {
                 </button>
               </div>
               {/* Question and Answers Tab */}
-              <div className={`bg-slate-100 w-full cursor-pointer  hover:text-[#18F0F0] flex justify-center items-center  ${activeTab === 'qa' ? 'bg-black text-white' : 'bg-slate-100 text-black'}`} onClick={() => setActiveTab('qa')}>  
+              <div className={` group bg-slate-100 w-full cursor-pointer  group-hover:text-[#18F0F0] flex justify-center items-center  ${activeTab === 'qa' ? 'bg-black text-white' : 'bg-slate-100 text-black'}`} onClick={() => setActiveTab('qa')}>  
                 <button
                   
                   className='p-6  font-bold flex items-center justify-center '
@@ -284,59 +254,7 @@ export default function Home() {
                   <h2>Why Our Clients say</h2>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-6 p-10">
-                <div className="flex flex-col items-center bg-[#18F0F0]">
-                    <div className='flex items-center space-x-4 pt-3'>
-                      <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
-                        <Image src={client} alt='About-us-img-4' className='object-cover w-full h-full' />
-                      </div>
-                      <div className='flex flex-col'>
-                        <h5 className='text-lg font-semibold'>John Doe</h5>
-                        <p className='text-sm '>Client</p>
-                      </div>
-                    </div>
-
-                  <div className='p-6'>
-                    <p>
-                    The new machines have had very few problems and their services are always done in a timely fashion. Our residents have been thrilled with the PressedPerfect team and we look forward to a long relationship with this first-class organization.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col items-center bg-slate-100">
-                    <div className='flex items-center space-x-4 pt-3'>
-                      <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
-                        <Image src={client} alt='About-us-img-4' className='object-cover w-full h-full' />
-                      </div>
-                      <div className='flex flex-col'>
-                        <h5 className='text-lg font-semibold'>John Doe</h5>
-                        <p className='text-sm '>Client</p>
-                      </div>
-                    </div>
-
-                  <div className='p-6'>
-                    <p>
-                    Over the last eight years they have proven, on several occasions that they are knowledgeable, prompt, and concerned about my immediate situation. I personally encourage any business associated with their laundry services.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col items-center bg-slate-100">
-                    <div className='flex items-center space-x-4 pt-3'>
-                      <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
-                        <Image src={client} alt='About-us-img-4' className='object-cover w-full h-full' />
-                      </div>
-                      <div className='flex flex-col'>
-                        <h5 className='text-lg font-semibold'>John Doe</h5>
-                        <p className='text-sm '>Client</p>
-                      </div>
-                    </div>
-
-                  <div className='p-6'>
-                    <p>
-                    Second to none for convenience, quality & turnaround time. Great prices and services. Amazing support team behind the service, if you ever need it. No more having to save up piles of dry cleaning to make it worth taking out.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              
                <TestimonialCarousel /> 
 
 

@@ -88,25 +88,28 @@ const carouselItems = [
 
 const TestimonialCarousel = () => {
   return (
-    <div className="p-10">
-      <Slider {...sliderSettings}>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="flex flex-col items-center p-6 bg-slate-100">
-            <div className='flex items-center space-x-4 pt-3'>
-              <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
-                <Image src={testimonial.image} alt={`Testimonial image ${index}`} className='object-cover w-full h-full' />
+    <div className="container m-auto">
+      <div className='my-10'>
+        <Slider {...sliderSettings}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className=" group hover:bg-[#18F0F0] transition-colors duration-300 h-[320px] items-center p-6 bg-slate-100">
+              <div className='flex items-center space-x-4 pt-3'>
+                <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
+                  <Image src={testimonial.image} alt={`Testimonial image ${index}`} className='object-cover w-full h-full' />
+                </div>
+                <div className='flex flex-col'>
+                  <h5 className='text-lg font-semibold group-hover:text-white'>{testimonial.name}</h5>
+                  <p className='text-sm group-hover:text-white'>{testimonial.role}</p>
+                </div>
               </div>
-              <div className='flex flex-col'>
-                <h5 className='text-lg font-semibold'>{testimonial.name}</h5>
-                <p className='text-sm'>{testimonial.role}</p>
+              <div className='p-6 '>
+                <p className='group-hover:text-white'>{testimonial.testimonial}</p>
               </div>
             </div>
-            <div className='p-6'>
-              <p>{testimonial.testimonial}</p>
-            </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
+     
     </div>
   );
 };
@@ -115,23 +118,27 @@ const TestimonialCarousel = () => {
 
 const Carousel = () => {
   return (
-    <div className="p-6">
-      <Slider {...sliderSettings}>
-        {carouselItems.map((item, index) => (
-          <div
-            key={index}
-            className="carousel-item flex space-x-4 p-8 bg-slate-100 mx-2 rounded-lg shadow-lg"
-          >
-            <div className='p-4 rounded-full bg-slate-100 shadow-gray-300 shadow-lg'>
-              {item.icon}
+    <div className="container m-auto">
+      <div className='my-10 '>
+        <Slider {...sliderSettings}>
+          {carouselItems.map((item, index) => (
+            <div key={index} className='h-[200px]'>             
+              <div
+                
+                className="  group flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md hover:bg-slate-200 transition-colors duration-300"
+              >
+                <div className='p-4 rounded-full bg-white self-start shadow-gray-300 shadow-lg'>
+                  {item.icon}
+                </div>
+                <div>
+                  <h5 className='py-2 text-lg font-semibold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{item.title}</h5>
+                  <p>{item.description}</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h5 className='py-2 text-lg font-semibold'>{item.title}</h5>
-              <p>{item.description}</p>
-            </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };

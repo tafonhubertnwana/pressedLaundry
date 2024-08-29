@@ -78,24 +78,26 @@ body{
 }
 
 /* global.css */
-.underline-animate {
-  position: relative;
+.slick-slide > div {
+  margin: 0 10px
 }
 
-.underline-animate::after {
+/* styles/globals.css */
+.group-hover\:underline::before {
   content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  display: block;
   height: 2px;
-  background-color: #18F0F0;
+  background-color: green;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
   transform: scaleX(0);
   transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease;
 }
 
-.underline-animate:hover::after {
+.group-hover:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }

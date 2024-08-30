@@ -18,9 +18,9 @@ interface QuestionAndAnswerProps {
 
 // Reusable FAQ Item Component
 const FAQItem: React.FC<FAQItem> = ({ question, answer, defaultChecked = false }) => (
-  <div className="collapse collapse-plus rounded-none bg-base-200 my-4">
+  <div className="collapse border-2 group  transition-colors duration-300 bg-white collapse-plus rounded-none  my-4">
     <input type="radio" name="my-accordion-3" defaultChecked={defaultChecked} />
-    <div className="collapse-title text-xl font-bold">{question}</div>
+    <div className="collapse-title text-xl font-bold group-hover:text-[#18F0F0]">{question}</div>
     <div className="collapse-content">
       <p className="text-xl">{answer}</p>
     </div>

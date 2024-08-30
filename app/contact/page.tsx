@@ -8,69 +8,60 @@ import { RiTimerFill } from 'react-icons/ri'
 
 const Contact = () => {
   return (
-    <>
-      <div className="w-full">
-        <div className='relative'>
-          <Image 
-            src={banner} 
-            alt='banner' 
-            className='w-full object-cover'
-            layout='responsive' // Ensure the image scales responsively
-            width={1200} // Specify the aspect ratio width
-            height={600} // Specify the aspect ratio height
-          />
-          <div className='absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6'>
-            <h5 className='text-white text-sm md:text-base'>Home / Contact</h5>
-            <h1 className='text-white text-2xl md:text-6xl font-bold'>Contact</h1>
+    <div className="w-full">
+      {/* Banner Section */}
+      <div className='relative'>
+        <Image 
+          src={banner} 
+          alt='Contact banner' 
+          className='w-full object-cover'
+          layout='responsive'
+          width={1200}
+          height={600}
+        />
+        <div className='absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6'>
+          <h5 className='text-white text-sm md:text-base'>Home / Contact</h5>
+          <h1 className='text-white text-2xl md:text-6xl font-bold'>Contact</h1>
+        </div>
+      </div>
+
+      {/* Contact Information Section */}
+      <div className='container mx-auto p-8'>
+        <div className='flex flex-col items-center'>
+          <h5 className="font-bold text-[#18F0F0] text-sm md:text-base">[ Get in Touch with Us ]</h5>
+          <div className='text-center md:w-[50%] py-4'>
+            <h2>Contact Information</h2>
           </div>
         </div>
 
-        <div className='container m-auto p-8'>
-          <div className='flex flex-col items-center '>
-            <h5 className=" font-bold md:py-4  text-[#18F0F0]">[ get in Touch with Us ]</h5>
-            <div className='text-center md:w-[50%] py-4'>
-              <h2>Contact Information</h2>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-4  gap-8 content-center">
-            <div className="flex flex-col items-center">
-              <div className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
-              < FaMapLocationDot size={40} className='text-white' /> 
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { icon: <FaMapLocationDot size={40} className='text-white' />, title: 'Post Address', content: 'Central Market, Buea' },
+            { icon: <FaPhoneVolume size={40} className='text-white' />, title: 'Contact Phone', content: '+ (237) 670-048-674' },
+            { icon: <IoIosMail size={40} className='text-white' />, title: 'E-mail Address', content: 'Tafonsoftwarespecialist@gmail.com' },
+            { icon: <RiTimerFill size={40} className='text-white' />, title: 'Opening Hours', content: 'Mon-Fri 08:00am - 05:00pm\nSat-Sun 10:00am - 05:00pm' },
+          ].map(({ icon, title, content }, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <div className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-lg'>
+                {icon}
               </div>
-              <h6>Post Address</h6>
-              <p className="text-sm ">Central Market, Buea</p>
+              <h6 className='font-semibold'>{title}</h6>
+              <p className="text-sm text-center">{content}</p>
             </div>
-            <div className="flex flex-col items-center">
-              <div  className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
-              < FaPhoneVolume size={40} className='text-white' /> 
-              </div>
-              <h6>Contact Phone</h6>
-              <p className="text-sm ">+ (237) 670-048-674</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div  className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
-              <IoIosMail size={40} className='text-white' /> 
-              </div>
-              <h6>E-mail Address</h6>
-              <p className="text-sm ">Tafonsoftwarespecialist@gmail</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div  className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-gray-300 shadow-lg'>
-              <RiTimerFill size={40} className='text-white' />
-              </div>
-              <h6>Opening Hours</h6>
-              <span className="text-sm ">Mon-Fri 08:00am - 05:00pm<br/>Sat-Sun 10:00am - 05:00pm</span>
-            </div>
-          </div>
+          ))}
         </div>
-        {/* form */}
-        <div className="flex flex-col items-center pt-6">
-         <div className='text-center w-96 md:w-[30%] pt-4'>
-            <h2>Get in Touch. We're Here to Help.</h2>
-            <p className='text-lg py-4'>We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.</p>
-          </div>
-        </div> 
-        <div className="md:w-[50%] m-auto">
+      </div>
+
+      {/* Contact Form Section */}
+      <div className="flex flex-col items-center pt-6">
+        <div className='text-center w-full md:w-[50%]'>
+          <h2>Get in Touch. We're Here to Help.</h2>
+          <p className='text-lg py-4'>
+            We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.
+          </p>
+        </div>
+
+        <div className="w-full md:w-[50%] mx-auto">
           <div className="p-4">
             <form>
               <div className="flex flex-col py-2">
@@ -78,32 +69,31 @@ const Contact = () => {
                   type="text"
                   name="senderName"
                   id="name"
-                  className="border-2 rounded-lg p-3 flex border-gray-300"
+                  className="border-2 rounded-lg p-3 border-gray-300"
                   placeholder='Your Name'
                   required
                 />
               </div>
-              <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                  <div className="flex flex-col py-2">
-                    <input
-                      type="email"
-                      name="senderEmail"
-                      id="email"
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
-                      placeholder='E-mail'
-                      required
-                    />
-                  </div>
+              <div className="grid md:grid-cols-2 gap-4 py-2">
+                <div className="flex flex-col py-2">
+                  <input
+                    type="email"
+                    name="senderEmail"
+                    id="email"
+                    className="border-2 rounded-lg p-3 border-gray-300"
+                    placeholder='E-mail'
+                    required
+                  />
+                </div>
                 <div className="flex flex-col py-2">
                   <input
                     type="tel"
                     name="senderPhone"
                     id="phone"
+                    className="border-2 rounded-lg p-3 border-gray-300"
                     placeholder='Phone'
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
                   />
                 </div>
-                
               </div>
               <div className="flex flex-col py-2">
                 <textarea
@@ -115,23 +105,28 @@ const Contact = () => {
                   required
                 />
               </div>
-              <div className=' flex flex-col items-center py-4'>
-                <div className='flex items-center '>
-                  <span><input type='checkbox' className='w-6 h-6 ' /></span>
-                  <span className='px-4'> I accept the privacy and terms</span>
+              <div className='flex flex-col items-center py-4'>
+                <div className='flex items-center mb-4'>
+                  <input
+                    type='checkbox'
+                    id='privacy'
+                    className='w-6 h-6 mr-2'
+                    required
+                  />
+                  <label htmlFor='privacy' className='text-sm'>I accept the privacy and terms</label>
                 </div>
-                <div>
-                  <button type='submit' className='bg-[#18F0F0] dark:bg-slate-100   p-4 mt-4 text-gray-100 font-bold' 
-                    
-                >Send Message</button>
-                </div>
+                <button
+                  type='submit'
+                  className='bg-[#18F0F0] text-gray-100 p-4 mt-4 rounded-lg font-bold'
+                >
+                  Send Message
+                </button>
               </div>
             </form>
-            
           </div>
-        </div>        
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 

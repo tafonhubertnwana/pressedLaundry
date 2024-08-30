@@ -48,12 +48,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, icon: Icon, title, des
 
 // FeatureCard Component
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description }) => (
-  <div className="flex space-x-4 p-8">
-    <div className='p-4 rounded-full bg-slate-100 shadow-gray-300 shadow-lg'>
+  <div className=" group  transition-colors duration-300 flex space-x-4 p-8">
+    <div className='p-4 self-start rounded-full bg-slate-100 shadow-gray-300 shadow-lg'>
       <Icon size={40} className='text-[#18F0F0]' />
     </div>
     <div>
-      <h5 className='py-2'>{title}</h5>
+      <h5 className='py-2 group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{title}</h5>
       <p>{description}</p>
     </div>
   </div>

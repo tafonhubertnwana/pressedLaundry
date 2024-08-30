@@ -8,10 +8,16 @@ import { IoLogoWhatsapp } from 'react-icons/io';
 import logo from '@/public/assets/logo.png'
 import { AiOutlineMenu } from 'react-icons/ai';
 import { LiaTimesSolid } from 'react-icons/lia';
+import Modal from '@/components/modal'
 
 
 
 const Navbar = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const [nav, setNav] = useState(false)
 
@@ -64,7 +70,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div className='hidden md:flex'>
-            <Link href=''><button className='p-4 bg-[#18F0F0] text-white font-bold' >Schedule a Pickup</button></Link>
+            <button onClick={openModal} className='p-4 bg-[#18F0F0] text-white font-bold' >Schedule a Pickup</button>
+            <Modal isOpen={isModalOpen} onClose={closeModal} />
           </div>
           <div className="md:hidden cursor-pointer" onClick={handleNav}>
               <AiOutlineMenu size={30} />
@@ -72,19 +79,19 @@ const Navbar = () => {
         </div>
         <div
           className={`${
-            nav ? 'fixed left-0 top-0 h-screen w-full bg-black/30 md:hidden dark:bg-slate-800' : ''
+            nav ? 'fixed left-0 top-0 h-screen w-full bg-black/30 md:hidden dark:bg-slate-800 z-100' : ''
           }`}
         >
           <div
             className={`${
               nav
                 ? 'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white px-8 py-1 ease-in duration-500 dark:bg-slate-800 z-100'
-                : 'md:hidden fixed left-[-100%] top-0 py-5 ease-in duration-500 dark:bg-slate-800'
+                : 'md:hidden fixed left-[-100%] top-0 py-5 ease-in duration-500 dark:bg-slate-800 z-100'
             }`}
           >
             <div className="flex w-full justify-between border-b">
               <div className='py-6'>
-                <Link href=''><button className='p-4 bg-[#18F0F0] text-white font-bold'>Schedule a Pickup</button></Link>
+                <Link href=''><button  className='p-4 bg-[#18F0F0] text-white font-bold'>Schedule a Pickup</button></Link>
               </div>
               <div
                 onClick={handleNav}

@@ -5,6 +5,8 @@ import client from '@/public/assets/testimonials-img03.jpg';
 import { MdEco } from 'react-icons/md';
 import { RiTimerFill } from 'react-icons/ri';
 import { FaMoneyBillWave } from 'react-icons/fa';
+import team from '@/public/assets/team-img04.jpg'; // Replace with your image path
+
 
 // Slick slider settings
 const sliderSettings = {
@@ -86,6 +88,24 @@ const carouselItems = [
   },
 ];
 
+const teamMembers = [
+  {
+    name: 'John Doe',
+    role: 'Operational Manager',
+    imgSrc: team, // Ensure image path is correct and always available
+  },
+  {
+    name: 'Jane Smith',
+    role: 'Service Manager',
+    imgSrc: team,
+  },
+  {
+    name: 'Alice Johnson',
+    role: 'Wash Expert',
+    imgSrc: team,
+  },
+];
+
 const TestimonialCarousel = () => {
   return (
     <div className="container m-auto">
@@ -142,6 +162,8 @@ const Carousel = () => {
     </div>
   );
 };
+
+
 
 
 export {TestimonialCarousel, Carousel}

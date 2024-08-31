@@ -15,6 +15,7 @@ import { HiClipboardDocumentList } from "react-icons/hi2";
 import { BsPersonHearts } from "react-icons/bs";
 
 import Link from 'next/link'
+// import { TeamCarousel } from '@/components/testimonials'
 // import TeamCarousel from '@/components/aboutCarousel'
 
 
@@ -86,7 +87,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-4 p-6 content-center">          
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 content-center">          
             <div className="flex">
               <div className='p-4 rounded-full bg-slate-100 self-start shadow-gray-300 shadow-lg'>
               < PiShirtFoldedFill  size={40} className='text-[#18F0F0] '/>
@@ -288,7 +289,7 @@ const About = () => {
           </div>
         </div>
        
-        {/* <TeamCarousel /> */}
+        {/* <TeamCarousel />  */}
 
       </div>
     </>

@@ -50,7 +50,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-[700px] max-w-lg h-[700px] relative">
+      <div className="bg-white p-6 shadow-lg w-[700px] max-w-lg h-[700px] relative">
         <button
           onClick={onClose}
           className="absolute text-4xl top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -62,13 +62,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col py-2">
-            <input
+          <input
               id="name"
-              name="Your Name*"
+              name="name"
               type="text"
+              placeholder='name'
               value={formData.name}
               onChange={handleChange}
-              className="border-2 rounded-lg p-3 border-gray-300"
+              className="border-2 p-3 border-gray-300"
               required
             />
           </div>
@@ -76,11 +77,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <div className="flex flex-col py-2">
               <input
                 type="email"
-                name="senderEmail"
+                name="email"
                 value={formData.email}
                 onChange={handleChange}
                 id="email"
-                className="border-2 rounded-lg p-3 border-gray-300"
+                className="border-2 p-3 border-gray-300"
                 placeholder='Your e-mail address*'
                 required
               />
@@ -92,7 +93,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 value={formData.phone}
                 onChange={handleChange}
                 id="phone"
-                className="border-2 rounded-lg p-3 border-gray-300"
+                className="border-2 p-3 border-gray-300"
                 placeholder='Your phone number'
               />
             </div>
@@ -105,7 +106,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               placeholder='address'
               value={formData.address}
               onChange={handleChange}
-              className="border-2 rounded-lg p-3 border-gray-300"
+              className="border-2 p-3 border-gray-300"
               required
             />
           </div>
@@ -116,7 +117,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               name="selectedItem"
               value={formData.selectedItem}
               onChange={handleChange}
-              className="border-2 rounded-lg p-3 border-gray-300"
+              className="border-2 p-3 border-gray-300"
               required
             >
               <option value="" disabled>Service</option>
@@ -133,7 +134,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               type="date"
               value={formData.dateOfPickup}
               onChange={handleChange}
-              className="border-2 rounded-lg p-3 border-gray-300"
+              className="border-2 p-3 border-gray-300"
               placeholder='Pick-Up Date'
               required
             />
@@ -146,7 +147,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               value={formData.comment}
               onChange={handleChange}
               placeholder='Your comment'
-              className="border-2 rounded-lg p-3 border-gray-300"
+              className="border-2 p-3 border-gray-300"
             />
           </div>
           <button

@@ -16,7 +16,7 @@ const Price = () => {
         </div>
       <PricePackage />
       <div className='container m-auto'>
-        <div className='flex flex-col items-center '>
+        <div className='flex flex-col mt-8 items-center '>
           <h5 className=" font-bold py-2  text-[#18F0F0]">[ Our Service Prices ]</h5>
           <div className='text-center md:w-[50%] py-4'>
             <h2>Full Price Table</h2>

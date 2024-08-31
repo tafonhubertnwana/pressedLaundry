@@ -59,7 +59,7 @@ body{
     @apply text-lg sm:text-xl md:text-2xl
   }
   h6{
-    @apply text-base sm:text-lg md:text-xl
+    @apply tracking-wide text-base sm:text-lg md:text-xl
   }
 
   p {

@@ -15,6 +15,7 @@ import { HiClipboardDocumentList } from "react-icons/hi2";
 import { BsPersonHearts } from "react-icons/bs";
 
 import Link from 'next/link'
+import TeamCarousel from '@/components/aboutCarousel'
 // import { TeamCarousel } from '@/components/testimonials'
 // import TeamCarousel from '@/components/aboutCarousel'
 
@@ -250,7 +251,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className="grid grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
                 <div className='w-64 h-64 overflow-hidden rounded-full'>
@@ -268,7 +269,7 @@ const About = () => {
                 <Image src={team} alt='About-us-img-4' className="object-cover" />
                 </div>
                 <div className='justify-center pb-10 pt-4'>
-                  <h5>John Doe</h5>
+                  <h5>Rozi</h5>
                   <span>
                       Service Manager
                   </span>
@@ -279,14 +280,15 @@ const About = () => {
                 <Image src={team} alt='About-us-img-4' className="object-cover" />
                 </div>
                 <div className='justify-center pb-10 pt-4'>
-                  <h5>John Doe</h5>
+                  <h5>Levi</h5>
                   <span>
                       Wash Expert
                   </span>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <TeamCarousel />
         </div>
        
         {/* <TeamCarousel />  */}

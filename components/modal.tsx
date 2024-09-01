@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 interface ModalProps {
   isOpen: boolean;
@@ -26,23 +27,32 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('/api/send-email', {
+      try{
+      const response = await fetch('/api/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      alert('Form submitted successfully');
-      onClose();
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Failed to submit form');
+     if(response.ok) {
+      toast.success(`Hey ${formData.name} your schedule was sent successfully`);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        selectedItem: '',
+        dateOfPickup: '',
+        comment: '',
+      });
+      onClose(); // Close the modal after successful submission
+     } else {
+      const errorText = await response.text();
+      toast.error(`Failed to send schedule : ${errorText}`);
+     }
+    } catch(error){
+      console.error('Error during submission:', error);
+      toast.error('An error occurred while sending your schedule.')
     }
   };
 
@@ -111,7 +121,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             />
           </div>
           <div className="flex flex-col py-2">
-            
             <select
               id="selectedItem"
               name="selectedItem"
@@ -120,7 +129,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               className="border-2 p-3 border-gray-300"
               required
             >
-              <option value="" disabled>Service</option>
+              <option value="" disabled>Select Service</option>
               <option value="Item 1">Laundry Service</option>
               <option value="Item 2">Dry Cleaning</option>
               <option value="Item 3">Steam Ironing</option>

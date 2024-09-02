@@ -3,6 +3,7 @@ import PricePackage from '@/components/pricePackage'
 import Image from 'next/image'
 import banner from '@/public/assets/dst-bg-img.jpg'
 import Link from 'next/link'
+import Tops from '@/components/tops'
 
 const Price = () => {
   return (
@@ -23,11 +24,11 @@ const Price = () => {
             <span>Laundry service pricing is volume based. Dry cleaning is priced by item type. Give us a call to review pricing and services today!</span>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-8 p-8">
+        <div className="grid grid-cols-4 gap-8 p-8">
               <div className='bg-slate-100 w-full flex justify-center items-center'>
                 <Link href=''>
                   <button className='p-6 text-black font-bold flex items-center justify-center'>
-                    Most Popular Items
+                    Tops
                   </button>
                 </Link>
               </div>
@@ -35,7 +36,7 @@ const Price = () => {
               <div className='bg-slate-100 w-full flex justify-center items-center'>
                 <Link href=''>
                   <button className='p-6 text-black font-bold flex items-center justify-center'>
-                    Full Apparel List
+                    Bottoms
                   </button>
                 </Link>
               </div>
@@ -43,11 +44,19 @@ const Price = () => {
               <div className='bg-[#18F0F0] w-full flex justify-center items-center'>
                 <Link href=''>
                   <button className='p-6 text-white font-bold flex items-center justify-center'>
-                    Full Apparel List
+                    Bedsheets
+                  </button>
+                </Link>
+              </div>
+              <div className='bg-[#18F0F0] w-full flex justify-center items-center'>
+                <Link href=''>
+                  <button className='p-6 text-white font-bold flex items-center justify-center'>
+                    Underwears
                   </button>
                 </Link>
               </div>
             </div>
+            <Tops />
       </div>
       
     </>

@@ -67,11 +67,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         >
           &times;
         </button>
-        <div className='py-8 mt-6'>
+        <div className='py-8 mt-4'>
           <h3>Schedule for PickUp</h3>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex flex-col py-2">
+          <div className="flex flex-col ">
           <input
               id="name"
               name="name"
@@ -83,8 +83,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               required
             />
           </div>
-          <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-            <div className="flex flex-col py-2">
+          <div className="grid md:grid-cols-2 gap-4 w-full ">
+            <div className="flex flex-col ">
               <input
                 type="email"
                 name="email"
@@ -96,7 +96,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 required
               />
             </div>
-            <div className="flex flex-col py-2">
+            <div className="flex flex-col ">
               <input
                 type="tel"
                 name="phone"
@@ -108,7 +108,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               />
             </div>
           </div>
-          <div className="flex flex-col py-2"> 
+          <div className="flex flex-col "> 
             <input
               id="address"
               name="address"
@@ -120,7 +120,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               required
             />
           </div>
-          <div className="flex flex-col py-2">
+          <div className="flex flex-col ">
             <select
               id="selectedItem"
               name="selectedItem"
@@ -136,7 +136,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <option value="Item 4">Shoe Washing</option>
             </select>
           </div>
-          <div className="flex flex-col py-2">  
+          <div className="flex flex-col ">  
             <input
               id="dateOfPickup"
               name="dateOfPickup"
@@ -148,7 +148,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               required
             />
           </div>
-          <div className="flex flex-col py-2" >
+          <div className="flex flex-col " >
             
             <textarea
               id="comment"
@@ -161,7 +161,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <button
             type="submit"
-            className="inline-flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="inline-flex justify-center  p-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
            Order Now
           </button>

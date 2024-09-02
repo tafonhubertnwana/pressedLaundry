@@ -251,7 +251,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          {/* <div>
+          <div>
             <div className="grid grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
                 <div className='w-64 h-64 overflow-hidden rounded-full'>
@@ -287,8 +287,8 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div> */}
-          <TeamCarousel />
+          </div>
+          // {/* <TeamCarousel /> */}
         </div>
        
         {/* <TeamCarousel />  */}

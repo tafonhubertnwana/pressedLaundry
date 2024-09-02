@@ -288,7 +288,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          // {/* <TeamCarousel /> */}
+        {/* <TeamCarousel /> */}
         </div>
        
         {/* <TeamCarousel />  */}

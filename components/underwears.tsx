@@ -1,47 +1,39 @@
-import React from 'react'
+import React from 'react';
 
 const Underwears = () => {
-  return (
-    <>
-    <div className="">
-      <div className="w-[50%] m-auto">
-      <div className="flex justify-between">
-        <div>INNERWEARS</div>
-        <div>300</div>
-      </div>
-      <div className="flex justify-between">
-        <div>CHELEPS</div>
-        <div>300</div>
-      </div>
-      <div className="flex justify-between">
-        <div>PANTIES</div>
-        <div>300</div>
-      </div>
-      <div className="flex justify-between">
-        <div>BLOUSES</div>
-        <div>400</div>
-      </div>
-      <div className="flex justify-between">
-        <div>JERSEY TOPS</div>
-        <div>300</div>
-      </div>
-      <div className="flex justify-between">
-        <div>JACKETS</div>
-        <div>700</div>
-      </div>
-      <div className="flex justify-between">
-        <div>PULLOVERS</div>
-        <div>700</div>
-      </div>
-     
-      </div>
-      
+  const items = [
+    { category: "INNERWEARS", count: 300 },
+    { category: "CHELEPS", count: 300 },
+    { category: "PANTIES", count: 300 },
+    { category: "BLOUSES", count: 400 },
+    { category: "JERSEY TOPS", count: 300 },
+    { category: "JACKETS", count: 700 },
+    { category: "PULLOVERS", count: 700 }
+  ];
 
-      
-      
+  return (
+    <div className="w-[50%] m-auto">
+      <table className="w-full border-separate border-spacing-2">
+        <thead>
+          <tr>
+            <th className="bg-slate-600 text-white p-2 rounded-full">Items</th>
+            <th className="bg-slate-600 text-white p-2 rounded-full">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item, index) => (
+            <tr
+              key={index}
+              className={index % 2 === 0 ? "bg-slate-600 text-white" : "bg-slate-200"}
+            >
+              <td className="p-2">{item.category}</td>
+              <td className="p-2">{item.count}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
-    </>
-  )
+  );
 }
 
-export default Underwears
+export default Underwears;

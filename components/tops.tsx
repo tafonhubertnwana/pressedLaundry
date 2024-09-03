@@ -12,7 +12,7 @@ const Tops = () => {
   ];
 
   return (
-    <div className="w-[50%] m-auto">
+    <div className="w-full md:w-[75%] m-auto">
       <table className="w-full border-separate border-spacing-2">
         <thead>
           <tr>

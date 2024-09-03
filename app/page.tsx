@@ -25,6 +25,26 @@ import client from '@/public/assets/testimonials-img03.jpg'
 import { useState } from 'react';
 import {TestimonialCarousel, Carousel }from '@/components/testimonials'
 
+const faqs = [
+  {
+    question: "What if my clothes are heavily stained?",
+    answer: "If your clothes are heavily stained, please inform us at the time of pickup. We will assess the stains and use specialized treatments to address them. Note that while we strive to remove all stains, some may be difficult to fully eliminate depending on the fabric and nature of the stain.",
+    defaultChecked: true
+  },
+  {
+    question: "How long do you take to return the garments?",
+    answer: "The typical turnaround time for returning garments is 1 to 3 business days. For special or bulk orders, or if additional treatment is required, it may take slightly longer. We will provide an estimated return time at the time of pickup and keep you updated on the status of your order."
+  },
+  {
+    question: "How can I pay for the services?",
+    answer: "You can pay for our services through various methods, including cash, credit/debit cards, and mobile payment apps. For convenience, you can also set up automatic billing if you have a recurring service. Please check with our customer service team for specific payment options available in your area."
+  },
+  {
+    question: "Does Dry cleaning process remove all the stains?",
+    answer: "Dry cleaning is effective at removing many stains, but it may not remove all types. The success of stain removal depends on the type of stain, the fabric, and how long the stain has been set. Our team will use specialized treatments to address stains as effectively as possible, but some stains may be challenging to completely remove."
+  }
+]
+
 export default function Home() {
   // State to manage which container is currently open
   const [activeTab, setActiveTab] = useState('approach');
@@ -243,7 +263,7 @@ export default function Home() {
             </div>
             <div>
             {activeTab === 'approach' && <Approach />}
-            {activeTab === 'qa' && <QuestionAndAnswer />}
+            {activeTab === 'qa' && <QuestionAndAnswer faqs={faqs} />}
             {activeTab === 'choose' && <ChooseUs />}
             </div>
               

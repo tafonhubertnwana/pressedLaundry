@@ -17,42 +17,54 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     comment: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  // Updated handleChange function
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type, selectedOptions } = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+
+    // Handle select element
+    if (type === 'select-one') {
+      const selectedValue = (selectedOptions as HTMLOptionsCollection)[0].value;
+      setFormData({
+        ...formData,
+        [name]: selectedValue,
+      });
+    } else {
+      // Handle input and textarea elements
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-      try{
-      const response = await fetch('/api/send', {
+    try {
+      const response = await fetch('/api/send/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
-     if(response.ok) {
-      toast.success(`Hey ${formData.name} your schedule was sent successfully`);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        selectedItem: '',
-        dateOfPickup: '',
-        comment: '',
-      });
-      onClose(); // Close the modal after successful submission
-     } else {
-      const errorText = await response.text();
-      toast.error(`Failed to send schedule : ${errorText}`);
-     }
-    } catch(error){
+      if (response.ok) {
+        toast.success(`Hey ${formData.name}, your schedule was sent successfully`);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          address: '',
+          selectedItem: '',
+          dateOfPickup: '',
+          comment: '',
+        });
+        onClose(); // Close the modal after successful submission
+      } else {
+        const errorText = await response.text();
+        toast.error(`Failed to send schedule: ${errorText}`);
+      }
+    } catch (error) {
       console.error('Error during submission:', error);
-      toast.error('An error occurred while sending your schedule.')
+      toast.error('An error occurred while sending your schedule.');
     }
   };
 
@@ -68,15 +80,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           &times;
         </button>
         <div className='py-8 mt-4'>
-          <h3>Schedule for PickUp</h3>
+          <h3>Schedule for Pick-Up</h3>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col ">
-          <input
+            <input
               id="name"
               name="name"
               type="text"
-              placeholder='name'
+              placeholder='Name'
               value={formData.name}
               onChange={handleChange}
               className="border-2 p-3 border-gray-300"
@@ -113,7 +125,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               id="address"
               name="address"
               type="text"
-              placeholder='address'
+              placeholder='Address'
               value={formData.address}
               onChange={handleChange}
               className="border-2 p-3 border-gray-300"
@@ -130,10 +142,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               required
             >
               <option value="" disabled>Select Service</option>
-              <option value="Item 1">Laundry Service</option>
-              <option value="Item 2">Dry Cleaning</option>
-              <option value="Item 3">Steam Ironing</option>
-              <option value="Item 4">Shoe Washing</option>
+              <option value="Laundry Service">Laundry Service</option>
+              <option value="Dry Cleaning">Dry Cleaning</option>
+              <option value="Steam Ironing">Steam Ironing</option>
+              <option value="Shoe Washing">Shoe Washing</option>
             </select>
           </div>
           <div className="flex flex-col ">  
@@ -149,7 +161,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             />
           </div>
           <div className="flex flex-col " >
-            
             <textarea
               id="comment"
               name="comment"
@@ -161,9 +172,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           </div>
           <button
             type="submit"
-            className="inline-flex justify-center  p-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="inline-flex justify-center p-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-           Order Now
+            Order Now
           </button>
         </form>
       </div>

@@ -14,7 +14,7 @@ const Approach: React.FC<ApproachProps> = () => {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 p-8">
+        <div className="grid md:grid-cols-2 gap-8 pb-8 pt-4 px-8">
           {/* Text Content */}
           <div className="flex flex-col justify-center p-6 bg-slate-100 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold py-3">Our Approach</h3>

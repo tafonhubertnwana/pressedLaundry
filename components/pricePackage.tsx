@@ -16,7 +16,7 @@ interface PackageCardProps {
 const PackageCard: React.FC<PackageCardProps> = ({ Icon, title, description, price, features }) => (
   <div className='relative bg-slate-100 py-8 px-6 shadow-lg rounded-lg'>
     <div className='flex flex-col items-center'>
-      <div className='absolute top-[-20px] left-1/2 transform -translate-x-1/2'>
+      <div className='absolute top-[-50px] left-1/2 transform -translate-x-1/2'>
         <div className='p-4 bg-[#18F0F0] rounded-full'>
           <Icon size={80} className='text-white' />
         </div>
@@ -94,11 +94,11 @@ const PricePackage: React.FC = () => {
 
   return (
     <div className='w-full'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center pb-12'>
-          <h5 className='font-bold text-[#18F0F0] text-xl md:text-2xl'>
+      <div className='container mx-auto px-4 mt-8'>
+        <div className='text-center pb-10'>
+          <h6 className=' text-[#18F0F0] '>
             [ What we offer ]
-          </h5>
+          </h6>
           <div className='text-center md:w-1/2 mx-auto py-4'>
             <h2 className='text-3xl md:text-4xl'>Price Packages</h2>
             <p className='mt-2'>

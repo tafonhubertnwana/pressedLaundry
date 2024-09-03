@@ -52,7 +52,7 @@ export default function Home() {
     <>
       <div className="w-full">
         <div className='relative'>
-          <Image src={banner} alt='banner' className='lg:w-full'/>
+          <Image src={banner} alt='banner' className='lg:w-full '/>
           <div className='absolute top-[20%] left-[15%]'>
             <h1 className='text-white py-4'>Laundry Service</h1>
             <h5 className='text-white'>We care for the clothes you wear</h5>
@@ -67,7 +67,7 @@ export default function Home() {
                   {/* <!-- Floating Circle --> */}
                   <div className='absolute bg-[#18F0F0] rounded-full w-28 h-28 flex items-center justify-center 
                     left-[90%] bottom-[10%] transform -translate-x-1/2 translate-y-1/2
-                    md:left-[80%] md:top-[50%] md:w-56 md:h-56'>
+                    md:left-[80%] md:top-[20%] lg:left-[80%] lg:top-[50%] md:w-56 md:h-56'>
                     <div className='text-center p-4 md:p-6'>
                       <h1 className='text-white text-2xl md:text-6xl'>5+</h1>
                       <h5 className='text-white text-sm md:text-2xl'>Years of Experience</h5>
@@ -87,10 +87,10 @@ export default function Home() {
                 <div className='flex py-4'>
                   <div className='border-r-2 p-4'>
                     <ul className='py-4'>
-                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]' /></span> <span className='pl-2'>100% Customer Satisfaction</span></li>
-                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <span className='pl-2'>Free Collection & Delivery</span></li>
-                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <span className='pl-2'>Affordable Prices</span></li>
-                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <span className='pl-2'>Best Quality</span></li> 
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]' /></span> <p className='pl-2'>100% Customer Satisfaction</p></li>
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Free Collection & Delivery</p></li>
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Affordable Prices</p></li>
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Best Quality</p></li> 
                     </ul>
                   </div>
                   <div className='p-4'>
@@ -98,7 +98,7 @@ export default function Home() {
                       <div  className='p-6 bg-slate-100  rounded-full my-4 shadow-gray-300 shadow-lg'>
                       < FaPhoneVolume size={30} className='text-[#18F0F0]' /> 
                       </div>
-                      <h6>Call for Quality Services</h6>
+                      <span className='text-sm lg:text-xl font-bold'>Call for Quality Services</span>
                       <p className="text-sm ">+ (237) 670-048-674</p>
                     </div>
                   </div>
@@ -111,15 +111,15 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
             {/* Laundry Services */}
-            <div className="relative flex flex-col items-center">
+            <div className=" group transition-colors duration-300 relative flex flex-col items-center">
               <Image src={service} alt='About-us-img-4' className='w-full h-auto' />
               <div className='absolute bottom-0 w-full'>
-                <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-50 bg-black p-4 rounded-lg'>
+                <div className='group flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-50 bg-black p-4 rounded-lg'>
                   <div className='p-4 rounded-full bg-[#18F0F0]'>
                     <GiWashingMachine size={40} className='text-white' />
                   </div>
                   <div className='text-white'>
-                    <h6 className='py-2 text-lg font-semibold'>Laundry Services</h6>
+                    <span className='py-2 text-lg font-bold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>Laundry Services</span>
                     <p className='text-white'>Let us pick up your dirty laundry, sort it, pre-treat stains, wash, dry, fold, and deliver it back to you in one neat, easy package.</p>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function Home() {
             </div>
 
             {/* Dry Cleaning Services */}
-            <div className="relative flex flex-col items-center">
+            <div className=" group transition-colors duration-300 relative flex flex-col items-center">
               <Image src={serviceImg2} alt='About-us-img-4' className='w-full h-auto' />
               <div className='absolute bottom-0 w-full'>
                 <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-50 bg-black p-4 rounded-lg'>
@@ -135,7 +135,7 @@ export default function Home() {
                     <GiHanger size={40} className='text-white' />
                   </div>
                   <div className='text-white'>
-                    <h6 className='py-2 text-lg font-semibold'>Dry Cleaning Services</h6>
+                    <span className='py-2 text-lg font-bold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>Dry Cleaning Services</span>
                     <p className='text-white'>UB students and local residents love our reliable dry cleaning services for fast, accurate, top-quality results.</p>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ export default function Home() {
             </div>
 
             {/* Steam Iron */}
-            <div className="relative flex flex-col items-center">
+            <div className=" group transition-colors duration-300 relative flex flex-col items-center">
               <Image src={serviceLaundry} alt='About-us-img-4' className='w-full h-auto' />
               <div className='absolute bottom-0 w-full'>
                 <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-50 bg-black p-4 rounded-lg'>
@@ -151,7 +151,7 @@ export default function Home() {
                     <TbIroningSteam size={40} className='text-white' />
                   </div>
                   <div className='text-white'>
-                    <h6 className='py-2 text-lg font-semibold'>Steam Iron</h6>
+                    <span className='py-2 text-lg font-bold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>Steam Iron</span>
                     <p className='text-white'>These services are accomplished under the guidance of adroit personnel who have affluent industry proficiency.</p>
                   </div>
                 </div>
@@ -161,9 +161,9 @@ export default function Home() {
 
           <div>
             <div className='flex flex-col items-center '>
-              <h5 className=" font-bold py-4  text-[#18F0F0]">[ Laundry Made Easy ]</h5>
-              <div className='text-center md:w-[50%] py-4'>
-                <h2>How PressedPerfect works</h2>
+              <h6 className=" font-bold pt-4   text-[#18F0F0]">[ Laundry Made Easy ]</h6>
+              <div className='text-center md:w-[50%] pb-4 pt-2'>
+                <h2 className=''>How PressedPerfect works</h2>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
@@ -183,7 +183,7 @@ export default function Home() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <h4 className='text-[#18F0F0] mb-4'>You Order</h4>
+              <h4 className='text-[#18F0F0] mb-4'>We collect</h4>
               <div className='relative flex items-center justify-center mb-8'>
                 <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
                   <Image src={delivery} alt='delivery' className='object-cover ' />
@@ -197,7 +197,7 @@ export default function Home() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <h4 className='text-[#18F0F0] mb-4'>We Collect</h4>
+              <h4 className='text-[#18F0F0] mb-4'>We Clean</h4>
               <div className='relative flex items-center justify-center mb-8'>
                 <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
                   <Image src={wash} alt='wash' className='object-cover ' />
@@ -211,7 +211,7 @@ export default function Home() {
 
             {/* Step 4 */}
             <div className="flex flex-col items-center text-center">
-              <h4 className='text-[#18F0F0]  mb-4'>You Order</h4>
+              <h4 className='text-[#18F0F0]  mb-4'>We Return</h4>
               <div className='relative flex items-center justify-center mb-8'>
                 <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
                   <Image src={door} alt='door' className='object-cover ' />
@@ -227,7 +227,7 @@ export default function Home() {
           </div>
           <div className='pt-10'>
             <div className='flex flex-col items-center '>
-              <h5 className=" font-bold py-4  text-[#18F0F0]">[ important Information ]</h5>
+              <h6 className=" font-bold pt-4  text-[#18F0F0]">[ important Information ]</h6>
               <div className='text-center md:w-[50%] py-2'>
                 <h2>Trusted Laundry Service</h2>
               </div>
@@ -269,8 +269,8 @@ export default function Home() {
               
             <div>
               <div className='flex flex-col items-center '>
-                <h5 className=" font-bold py-4  text-[#18F0F0]">[ Testimonials ]</h5>
-                <div className='text-center md:w-[50%] py-4'>
+                <h6 className=" font-bold pt-4  text-[#18F0F0]">[ Testimonials ]</h6>
+                <div className='text-center md:w-[50%] py-2'>
                   <h2>Why Our Clients say</h2>
                 </div>
               </div>

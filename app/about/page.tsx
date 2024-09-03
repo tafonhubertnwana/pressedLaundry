@@ -16,8 +16,7 @@ import { BsPersonHearts } from "react-icons/bs";
 
 import Link from 'next/link'
 import TeamCarousel from '@/components/aboutCarousel'
-// import { TeamCarousel } from '@/components/testimonials'
-// import TeamCarousel from '@/components/aboutCarousel'
+
 
 
 
@@ -147,8 +146,8 @@ const About = () => {
           </div>
           <div>
             <div className='flex flex-col items-center '>
-              <h5 className=" font-bold py-4  text-[#18F0F0]">[ Our Advantages ]</h5>
-              <div className='text-center md:w-[50%] py-4'>
+              <h6 className=" font-bold pt-4  text-[#18F0F0]">[ Our Advantages ]</h6>
+              <div className='text-center md:w-[50%] py-2'>
                 <h2>Why Choose Us</h2>
               </div>
             </div>
@@ -244,14 +243,14 @@ const About = () => {
         <div className="container m-auto">
           <div>
             <div className='flex flex-col items-center '>
-              <h5 className=" font-bold py-4  text-[#18F0F0]">[ Our Teams ]</h5>
-              <div className='text-center md:w-[50%] py-4'>
+              <h6 className="  pt-4  text-[#18F0F0]">[ Our Teams ]</h6>
+              <div className='text-center md:w-[50%] py-2'>
                 <h2>Laundry Specialist</h2>
-                <p>Our team’s goal each day is to earn your business with each visit and to make your experience with us the absolute best.</p>
+                <p className='py-2'>Our team’s goal each day is to earn your business with each visit and to make your experience with us the absolute best.</p>
               </div>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className="grid grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
                 <div className='w-64 h-64 overflow-hidden rounded-full'>
@@ -287,8 +286,11 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
-        {/* <TeamCarousel /> */}
+          </div> */}
+          {/* <div>
+
+            <TeamCarousel /> 
+          </div> */}
         </div>
        
         {/* <TeamCarousel />  */}

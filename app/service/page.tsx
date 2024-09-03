@@ -29,7 +29,7 @@ interface FeatureCardProps {
 
 // ServiceCard Component
 const ServiceCard: React.FC<ServiceCardProps> = ({ image, icon: Icon, title, description }) => (
-  <div className="flex flex-col items-center">
+  <div className=" group transition-colors duration-300 flex flex-col items-center">
     <div className='relative'>
       <Image src={image} alt={title} className='w-full'/>
       <div className='absolute bottom-[-7%] left-[6%] p-4 rounded-full bg-[#18F0F0] shadow-gray-300 shadow-lg'>
@@ -37,7 +37,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, icon: Icon, title, des
       </div>
     </div>
     <div className='pt-8'>
-      <h6 className='py-4'>{title}</h6>
+      <span className='py-2 text-lg font-bold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{title}</span>
       <p>{description}</p>
       <Link href=''>
         <button className='font-bold bg-[#18F0F0] p-4 text-white mt-4'>More Info</button>
@@ -48,7 +48,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, icon: Icon, title, des
 
 // FeatureCard Component
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description }) => (
-  <div className=" group  transition-colors duration-300 flex space-x-4 p-8">
+  <div className=" group  transition-colors duration-300 flex space-x-4 p-6">
     <div className='p-4 self-start rounded-full bg-slate-100 shadow-gray-300 shadow-lg'>
       <Icon size={40} className='text-[#18F0F0]' />
     </div>
@@ -73,7 +73,7 @@ const Service: React.FC = () => {
         </div>
         <div className="container m-auto">
           <div className='flex flex-col items-center'>
-            <h5 className="font-bold py-4 text-[#18F0F0]">[ Our Services ]</h5>
+            <h6 className="font-bold pt-8 text-[#18F0F0]">[ Our Services ]</h6>
             <div className='text-center md:w-[50%] py-4'>
               <h2>Dry Cleaning & Laundry, Free Delivery</h2>
             </div>
@@ -117,12 +117,12 @@ const Service: React.FC = () => {
         </div>
         <div className="container m-auto">
           <div className='flex flex-col items-center'>
-            <h5 className="font-bold pt-2 text-[#18F0F0]">[ Why you'll love us ]</h5>
+            <h6 className="font-bold pt-2 text-[#18F0F0]">[ Why you'll love us ]</h6>
             <div className='text-center md:w-[50%] py-4'>
               <h2>Our Features</h2>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 p-8">
+          <div className="grid md:grid-cols-2 gap-8 pb-8 pt-4">
             <FeatureCard 
               icon={MdEco} 
               title="Eco-Friendly Dry Cleaning" 

@@ -91,7 +91,8 @@ const Navbar = () => {
           >
             <div className="flex w-full justify-between border-b">
               <div className='py-6'>
-                <Link href=''><button  className='p-4 bg-[#18F0F0] text-white font-bold'>Schedule a Pickup</button></Link>
+                <button onClick={openModal} className='p-4 bg-[#18F0F0] text-white font-bold'>Schedule a Pickup</button>
+                <Modal isOpen={isModalOpen} onClose={closeModal} />
               </div>
               <div
                 onClick={handleNav}

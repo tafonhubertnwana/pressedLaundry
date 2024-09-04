@@ -32,7 +32,7 @@ const Faq = () => {
 
       <div className="container mx-auto">
         <div className='flex flex-col items-center pt-8'>
-          <h5 className="font-bold md:py-4 text-[#18F0F0]">[ Frequently Asked Questions ]</h5>
+          <h6 className="font-bold md:py-4 text-[#18F0F0]">[ Frequently Asked Questions ]</h6>
           <div className='text-center md:w-[50%] py-4'>
             <h2>Reliable Answers to Our Most Common Questions</h2>
             <p className='text-lg py-4'>We can save you money on soap, water, heating, and electricity. Enjoy even more of the things you love with our simple and affordable prices.</p>

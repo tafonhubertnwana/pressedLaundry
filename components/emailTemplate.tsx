@@ -22,6 +22,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   return (
     <div>
       <h1>Pick-Up details from {name}!</h1>
+      <p>Email: {email}</p>
       <p>tel: {phone}</p>
       <p>Address: {address}</p>
       <p>Service: {selectedItem}</p>

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { StaticImageData } from "next/image"
 import Link from 'next/link';
-import { GiHanger, GiWashingMachine, GiConverseShoe } from 'react-icons/gi';
+import { GiHanger, GiWashingMachine, GiConverseShoe, GiCheckMark } from 'react-icons/gi';
 import { PiShirtFoldedFill } from 'react-icons/pi';
 import { TbIroningSteam, TbTruckDelivery } from 'react-icons/tb';
 import { MdEco } from 'react-icons/md';
@@ -36,7 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, icon: Icon, title, des
         <Icon size={40} className='text-white' />
       </div>
     </div>
-    <div className='pt-8'>
+    <div className=' px-14  pt-10 md:px-1 md:pt-8 '>
       <span className='py-2 text-lg font-bold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{title}</span>
       <p>{description}</p>
       <Link href=''>
@@ -52,7 +52,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, descriptio
     <div className='p-4 self-start rounded-full bg-slate-100 shadow-gray-300 shadow-lg'>
       <Icon size={40} className='text-[#18F0F0]' />
     </div>
-    <div>
+    <div className=''>
       <h5 className='py-2 group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{title}</h5>
       <p>{description}</p>
     </div>
@@ -64,13 +64,22 @@ const Service: React.FC = () => {
   return (
     <>
       <div className="w-full">
-        <div className='relative'>
-          <Image src={banner} alt='banner' className='lg:w-full'/>
-          <div className='absolute top-[20%] left-[15%]'>
-            <h5 className='text-white py-4'>Home / Services</h5>
-            <h1 className='text-white'>Services</h1>
-          </div>
+      
+      {/* Banner Section */}
+      <div className='relative'>
+        <Image 
+          src={banner} 
+          alt='Contact banner' 
+          className='w-full object-cover'
+          layout='responsive'
+          width={1200}
+          height={600}
+        />
+        <div className='absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6'>
+          <h5 className='text-white text-sm md:text-base'>Home / Service</h5>
+          <h1 className='text-white text-2xl md:text-6xl font-bold'>Service</h1>
         </div>
+      </div>
         <div className="container m-auto">
           <div className='flex flex-col items-center'>
             <h6 className="font-bold pt-8 text-[#18F0F0]">[ Our Services ]</h6>
@@ -104,14 +113,26 @@ const Service: React.FC = () => {
             <div>
               <Image src={laundry} alt='Commercial Laundry Service' />
             </div>
-            <div className='flex bg-slate-100 w-full md:my-[3%] md:ml-[-15%] md:mr-[30%]'>
+            <div className='flex bg-slate-100 w-full md:my-[0%] md:ml-[-15%] md:mr-[30%]'>
               <div className="content-center p-[6%]">
                 <h6 className='text-[#18F0F0]'>[ Our Laundry service for your business]</h6>
                 <h3 className='py-3'>Commercial Laundry Service</h3>
                 <p className='text-lg w-full py-2'>
-                  Large corporations have determined that there is a financial benefit to outsourcing back office work because it saves money. Allowing us to do your laundry is cost effective and will allow you and your employees to focus on your core business. We offer smart solutions to meet your commercial laundry needs.
+                  Large corporations have determined that there is a financial benefit to outsourcing back office work because it saves money. Allowing us to do your laundry is cost effective and will allow you and your employees to focus on your core business. We offer smart solutions to meet your commercial laundry needs. Our Commercial Laundry Clients include:
                 </p>
+                <div className='border-r-2'>
+                    <ul className='py-4'>
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]' /></span> <p className='pl-2'>Salons & Spas</p></li>
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Assisted Living / Nursing Homes</p></li>
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Restaurants and Caterers</p></li>
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Hotels & Motels</p></li> 
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Religious Organizations</p></li> 
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Daycare centers</p></li> 
+                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Athletic Facilities / Gyms</p></li> 
+                    </ul>
+                  </div>
               </div>
+              
             </div>
           </div>
         </div>

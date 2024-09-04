@@ -93,13 +93,13 @@ export default function Home() {
                       <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Best Quality</p></li> 
                     </ul>
                   </div>
-                  <div className='p-4'>
+                  <div className=' group p-4'>
                     <div className="flex flex-col items-center">
                       <div  className='p-6 bg-slate-100  rounded-full my-4 shadow-gray-300 shadow-lg'>
                       < FaPhoneVolume size={30} className='text-[#18F0F0]' /> 
                       </div>
                       <span className='text-sm lg:text-xl font-bold'>Call for Quality Services</span>
-                      <p className="text-sm ">+ (237) 670-048-674</p>
+                      <p className="text-sm group-hover:text-[#18F0F0]">+ (237) 670-048-674</p>
                     </div>
                   </div>
                 </div>

@@ -27,8 +27,8 @@ const Contact = () => {
 
       {/* Contact Information Section */}
       <div className='container mx-auto p-8'>
-        <div className='flex flex-col items-center'>
-          <h5 className="font-bold text-[#18F0F0] text-sm md:text-base">[ Get in Touch with Us ]</h5>
+        <div className='flex flex-col items-center pt-8'>
+          <h6 className="font-bold text-[#18F0F0] ">[ Get in Touch with Us ]</h6>
           <div className='text-center md:w-[50%] py-4'>
             <h2>Contact Information</h2>
           </div>

@@ -15,7 +15,7 @@ const Footer = () => {
       <div className='bg-[#1E1E1E]'>
         <div className='container m-auto py-[3%]'>
           <div>
-            <div className='grid md:grid-cols-3 gap-8 p-4'>
+            <div className='grid lg:grid-cols-3 gap-8 p-4'>
               {/* first item */}
               <div>
                 <div className='flex pr-2'>

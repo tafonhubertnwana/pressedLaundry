@@ -33,13 +33,13 @@ const Price = () => {
       </div>
       <div className='container m-auto my-8'>
         <div className='flex flex-col mt-8 items-center'>
-          <h5 className='font-bold py-2 text-[#18F0F0]'>[ Our Service Prices ]</h5>
+          <p className=' py-2 text-[#18F0F0] lg:text-lg font-bold'>[ Our Service Prices ]</p>
           <div className='text-center md:w-[50%] py-4'>
-            <h2>Full Price Table</h2>
-            <span>Laundry service pricing is volume-based. Dry cleaning is priced by item type. Give us a call to review pricing and services today!</span>
+            <h5>Full Price Table</h5>
+            <p>Laundry service pricing is volume-based. Dry cleaning is priced by item type. Give us a call to review pricing and services today!</p>
           </div>
         </div>
-        <div className='grid md:grid-cols-4 gap-8 p-8'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 p-8'>
           {Object.entries(tabOptions).map(([key, label]) => (
             <div
               key={key}

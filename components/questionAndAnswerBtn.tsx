@@ -20,9 +20,9 @@ interface QuestionAndAnswerProps {
 const FAQItem: React.FC<FAQItem> = ({ question, answer, defaultChecked = false }) => (
   <div className="collapse border-2 group  transition-colors duration-300 bg-white collapse-plus rounded-none  my-4">
     <input type="radio" name="my-accordion-3" defaultChecked={defaultChecked} />
-    <div className="collapse-title text-xl font-bold group-hover:text-[#18F0F0]">{question}</div>
+    <div className="collapse-title  font-bold group-hover:text-[#18F0F0]">{question}</div>
     <div className="collapse-content">
-      <p className="text-xl">{answer}</p>
+      <p className="">{answer}</p>
     </div>
   </div>
 );
@@ -31,11 +31,11 @@ const QuestionAndAnswer: React.FC<QuestionAndAnswerProps> = ({ faqs }) => {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-3 gap-4 p-8">
+        <div className="grid lg:grid-cols-3 gap-4 p-8">
           {/* Image Section */}
-          <div className="w-full">
+          <div className="hidden lg:flex w-full">
             <div className="relative w-full h-full">
-              <Image src={img3} alt="FAQ Image" layout="responsive"  />
+              <Image src={img3} alt="FAQ Image w-full" layout="responsive"  />
             </div>
           </div>
 

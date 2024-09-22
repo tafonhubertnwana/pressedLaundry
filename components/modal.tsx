@@ -19,11 +19,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   // Updated handleChange function
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type, selectedOptions } = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
-
-    // Handle select element
+    const { name, value, type } = e.target;
+  
     if (type === 'select-one') {
-      const selectedValue = (selectedOptions as HTMLOptionsCollection)[0].value;
+      const selectedValue = (e.target as HTMLSelectElement).value;
       setFormData({
         ...formData,
         [name]: selectedValue,
@@ -80,7 +79,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           &times;
         </button>
         <div className='py-8 mt-4'>
-          <h3>Schedule for Pick-Up</h3>
+          <h6>Schedule for Pick-Up</h6>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col ">

@@ -21,7 +21,7 @@ const Feature: React.FC<FeatureProps> = ({ Icon, title, description }) => (
       <Icon size={40} className='text-[#18F0F0]' />
     </div>
     <div>
-      <h5 className='group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{title}</h5>
+      <div className='group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4 lg:text-xl font-bold'>{title}</div>
       <p>{description}</p>
     </div>
   </div>
@@ -31,17 +31,17 @@ const ChooseUs: React.FC = () => {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {/* Introduction */}
           <div className="flex flex-col items-start p-6">
             <div className='pb-6'>
-              <h2 className='text-2xl font-bold py-2'>Why Choose Us</h2>
+              <h5 className='  py-2'>Why Choose Us</h5>
               <p>
                 We know that a strong, client-focused business is a smart business. We have a 20,000-square-foot, state-of-the-art workshop where all cleaning, specialized spot removal, pressing, inspection, and packaging of your items take place.
               </p>
             </div>
             <div className='mb-6'>
-              <h4 className='text-xl font-semibold'>Values & Experience</h4>
+              <h6 className=''>Values & Experience</h6>
               <p>
                 We know that a strong, client-focused business is a smart business. We have a 20,000-square-foot, state-of-the-art workshop where all cleaning, specialized spot removal, pressing, inspection, and packaging of your items take place.
               </p>

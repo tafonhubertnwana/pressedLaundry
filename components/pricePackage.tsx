@@ -22,8 +22,8 @@ const PackageCard: React.FC<PackageCardProps> = ({ Icon, title, description, pri
         </div>
       </div>
       <div className='pt-16 text-center'>
-        <h4 className='text-xl font-semibold'>{title}</h4>
-        <h6 className='text-[#18F0F0] py-2 text-lg'>{description}</h6>
+        <p className='text-xl font-semibold'>{title}</p>
+        <h6 className='text-[#18F0F0] py-2 text-lg lg:text-lg font-bold'>{description}</h6>
         <div className='border-b-2 border-gray-300'>
           <ul className='py-4 space-y-2'>
             {features.map((feature, index) => (
@@ -96,11 +96,11 @@ const PricePackage: React.FC = () => {
     <div className='w-full'>
       <div className='container mx-auto px-4 mt-8'>
         <div className='text-center pb-10'>
-          <h6 className=' text-[#18F0F0] '>
+          <p className=' text-[#18F0F0] lg:text-lg font-bold '>
             [ What we offer ]
-          </h6>
-          <div className='text-center md:w-1/2 mx-auto py-4'>
-            <h2 className='text-3xl md:text-4xl'>Price Packages</h2>
+          </p>
+          <div className='text-center lg:w-1/2 mx-auto py-4'>
+            <h5 className=''>Price Packages</h5>
             <p className='mt-2'>
               Our prices are simple and affordable, making them easy on the pocket
               compared to high street prices.
@@ -108,7 +108,7 @@ const PricePackage: React.FC = () => {
           </div>
         </div>
 
-        <div className='grid gap-8 md:grid-cols-3 p-8'>
+        <div className='grid gap-8 lg:grid-cols-3 p-8'>
           {packages.map((pkg, index) => (
             <PackageCard
               key={index}

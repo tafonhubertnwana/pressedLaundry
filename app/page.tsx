@@ -59,15 +59,15 @@ export default function Home() {
           </div>
         </div>
         <div className="container m-auto">
-          <div className="grid md:grid-cols-2 gap-0 mb-[5%] mt-8">
+          <div className="grid lg:grid-cols-2 gap-0 mb-[5%] mt-8">
             <div className='relative'>
               <div className=''>
                 <Image src={homeImg} alt='home' className='w-full'/>
                 <div className=''>
                   {/* <!-- Floating Circle --> */}
                   <div className='absolute bg-[#18F0F0] rounded-full w-28 h-28 flex items-center justify-center 
-                    left-[90%] bottom-[10%] transform -translate-x-1/2 translate-y-1/2
-                    md:left-[80%] md:top-[20%] lg:left-[80%] lg:top-[50%] md:w-56 md:h-56'>
+                    left-[70%] bottom-[10%] transform -translate-x-1/2 translate-y-1/2
+                    md:left-[80%] md:top-[60%] lg:left-[80%] lg:top-[50%] md:w-56 md:h-56'>
                     <div className='text-center p-4 md:p-6'>
                       <h1 className='text-white text-2xl md:text-6xl'>5+</h1>
                       <h5 className='text-white text-sm md:text-2xl'>Years of Experience</h5>
@@ -77,11 +77,11 @@ export default function Home() {
 
               </div>
             </div>
-            <div className="flex flex-cols m-6 md:w-[75%] w-full ">
+            <div className="flex flex-cols m-6 lg:w-[75%] w-full ">
               <div className="content-center">
-                <h6 className='text-[#18F0F0]'>More than 5 years of  Experience </h6>
-                <h3 className='py-3'>We are Passionate About Laundry</h3>
-                <p className='w-full py-2'>
+                <p className='text-[#18F0F0] lg:text-lg font-bold'>More than 5 years of  Experience </p>
+                <h5 className='py-3'>We are Passionate About Laundry</h5>
+                <p className=' w-full p-2'>
                 We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about the way you think about laundry!
                 </p>
                 <div className='md:flex py-4'>
@@ -109,7 +109,7 @@ export default function Home() {
           <div>
             <Carousel /> 
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
+          <div className="grid lg:grid-cols-3 gap-8 p-10">
             {/* Laundry Services */}
             <div className=" group transition-colors duration-300 relative flex flex-col items-center">
               <Image src={service} alt='About-us-img-4' className='w-full h-auto' />
@@ -161,15 +161,15 @@ export default function Home() {
 
           <div>
             <div className='flex flex-col items-center '>
-              <h6 className=" font-bold pt-4   text-[#18F0F0]">[ Laundry Made Easy ]</h6>
+              <p className="  pt-4   text-[#18F0F0] lg:text-lg font-bold">[ Laundry Made Easy ]</p>
               <div className='text-center md:w-[50%] pb-4 pt-2'>
-                <h2 className=''>How PressedPerfect works</h2>
+                <h5 className=''>How PressedPerfect works</h5>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center">
-              <h4 className='text-[#18F0F0] mb-4'>You Order</h4>
+              <h6 className='text-[#18F0F0] mb-4'>You Order</h6>
               <div className='relative flex items-center justify-center mb-8'>
                 <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
                   <Image src={hw} alt='phone' className='object-cover ' />
@@ -183,7 +183,7 @@ export default function Home() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center">
-              <h4 className='text-[#18F0F0] mb-4'>We collect</h4>
+              <h6 className='text-[#18F0F0] mb-4'>We collect</h6>
               <div className='relative flex items-center justify-center mb-8'>
                 <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
                   <Image src={delivery} alt='delivery' className='object-cover ' />
@@ -197,7 +197,7 @@ export default function Home() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center">
-              <h4 className='text-[#18F0F0] mb-4'>We Clean</h4>
+              <h6 className='text-[#18F0F0] mb-4'>We Clean</h6>
               <div className='relative flex items-center justify-center mb-8'>
                 <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
                   <Image src={wash} alt='wash' className='object-cover ' />
@@ -211,7 +211,7 @@ export default function Home() {
 
             {/* Step 4 */}
             <div className="flex flex-col items-center text-center">
-              <h4 className='text-[#18F0F0]  mb-4'>We Return</h4>
+              <h6 className='text-[#18F0F0]  mb-4'>We Return</h6>
               <div className='relative flex items-center justify-center mb-8'>
                 <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
                   <Image src={door} alt='door' className='object-cover ' />
@@ -227,21 +227,21 @@ export default function Home() {
           </div>
           <div className='pt-10'>
             <div className='flex flex-col items-center '>
-              <h6 className=" font-bold pt-4  text-[#18F0F0]">[ important Information ]</h6>
+              <p className=" pt-4  text-[#18F0F0] lg:text-lg font-bold">[ important Information ]</p>
               <div className='text-center md:w-[50%] py-2'>
-                <h2>Trusted Laundry Service</h2>
+                <h5>Trusted Laundry Service</h5>
               </div>
             </div>
             <div className="grid md:grid-cols-3 md:gap-8 gap-4 p-8">
               {/* Approach Tab */}
-              <div className={`bg-slate-100 w-full flex justify-center items-center  ${activeTab === 'approach' ? '[#18F0F0] text-white' : 'bg-slate-100 text-black'}`}>
-                <button
-                  onClick={() => setActiveTab('approach')}
-                  className='p-6 font-bold flex items-center justify-center'
-                >
-                  Our Approach
-                </button>
-              </div>
+              <div className={`w-full flex justify-center items-center p-6 ${activeTab === 'approach' ? 'bg-[#18F0F0] text-white' : 'bg-slate-100 text-black'}`}>
+              <button
+                onClick={() => setActiveTab('approach')}
+                className="font-bold flex items-center justify-center"
+              >
+                Our Approach
+              </button>
+            </div>
               {/* Question and Answers Tab */}
               <div className={` group bg-slate-100 w-full cursor-pointer  group-hover:text-[#18F0F0] flex justify-center items-center  ${activeTab === 'qa' ? 'bg-black text-white' : 'bg-slate-100 text-black'}`} onClick={() => setActiveTab('qa')}>  
                 <button
@@ -269,9 +269,9 @@ export default function Home() {
               
             <div>
               <div className='flex flex-col items-center '>
-                <h6 className=" font-bold pt-4  text-[#18F0F0]">[ Testimonials ]</h6>
+                <p className="  pt-4  text-[#18F0F0] lg:text-lg font-bold">[ Testimonials ]</p>
                 <div className='text-center md:w-[50%] py-2'>
-                  <h2>Why Our Clients say</h2>
+                  <h5>Why Our Clients say</h5>
                 </div>
               </div>
               

@@ -21,7 +21,7 @@ const sliderSettings = {
     {
       breakpoint: 1024, // Tablet
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
       },

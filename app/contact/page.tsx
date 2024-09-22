@@ -27,14 +27,14 @@ const Contact = () => {
 
       {/* Contact Information Section */}
       <div className='container mx-auto p-8'>
-        <div className='flex flex-col items-center pt-8'>
-          <h6 className="font-bold text-[#18F0F0] ">[ Get in Touch with Us ]</h6>
-          <div className='text-center md:w-[50%] py-4'>
-            <h2>Contact Information</h2>
+        <div className='flex flex-col items-center pt-6'>
+          <p className="font-bold text-[#18F0F0] lg:text-lg  ">[ Get in Touch with Us ]</p>
+          <div className='text-center lg:w-[50%] py-2'>
+            <h5>Contact Information</h5>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { icon: <FaMapLocationDot size={40} className='text-white' />, title: 'Post Address', content: 'Central Market, Buea' },
             { icon: <FaPhoneVolume size={40} className='text-white' />, title: 'Contact Phone', content: '+ (237) 670-048-674' },
@@ -45,7 +45,7 @@ const Contact = () => {
               <div className='p-6 bg-[#18F0F0] rounded-full my-4 shadow-lg'>
                 {icon}
               </div>
-              <h6 className='font-semibold'>{title}</h6>
+              <div className='font-semibold text-lg'>{title}</div>
               <p className="text-sm text-center">{content}</p>
             </div>
           ))}
@@ -53,15 +53,15 @@ const Contact = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="flex flex-col items-center pt-6">
-        <div className='text-center w-full md:w-[50%]'>
-          <h2>Get in Touch. We're Here to Help.</h2>
-          <p className='text-lg py-4'>
+      <div className="flex flex-col items-center pt-6  ">
+        <div className='text-center w-full lg:w-[50%] '>
+          <h5>Get in Touch. We're Here to Help.</h5>
+          <p className=' py-4 mx-8'>
             We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.
           </p>
         </div>
 
-        <div className="w-full md:w-[50%] mx-auto">
+        <div className="w-full lg:w-[50%] mx-auto">
           <div className="p-4">
             <form>
               <div className="flex flex-col py-2">

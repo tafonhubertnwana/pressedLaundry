@@ -25,9 +25,9 @@ const Footer = () => {
                       Perfect</span>
                   </div>
                 </div>
-                <div className='text-white py-4'>
+                <p className='text-white py-4'>
                 We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies and cleaning methods.
-                </div>
+                </p>
                 <div>
                   <ul className='flex py-4'>
                     <Link href='/'><li className='px-2'><IoLogoWhatsapp size={25} className='text-white '/></li></Link>
@@ -39,9 +39,9 @@ const Footer = () => {
               </div>
               {/* second item */}
               <div>
-                <h4 className='text-white'>Contacts</h4>
+                <div className='text-white'>Contacts</div>
                 <div>
-                <ul className='py-4'>
+                <ul className='py-2 md:py-4'>
                     <Link href='/'><li className=' flex py-2'>< FaMapLocationDot size={20} className='text-[#18F0F0]' /> <span className='text-white px-4'>Central-Market, Buea</span></li></Link>
                     <Link href='/'><li  className=' flex  py-2'><RiTimerFill size={20} className='text-[#18F0F0]' /><span className='text-white px-4'>Mon-Fri:8am - 5pm <br/> Sat-Sun:10am - 5pm</span></li></Link>
                     <Link href='/'><li  className=' flex  py-2'><IoIosMail size={20} className='text-[#18F0F0]' /><span className='text-white px-4'>tafonsoftwarespecialist@gmail.com</span></li></Link>
@@ -51,9 +51,9 @@ const Footer = () => {
               </div>
               {/* third item */}
               <div>
-                <h4 className='text-white'>Newsletter Subscribe</h4>
-                <div>
-                  <div className='text-gray-400 py-4'>sign up and receive our special offers</div>
+                <div className='text-white'>Newsletter Subscribe</div>
+                <div className='py-2 md:py-4'>
+                  <span className='text-gray-400 py-4'>sign up and receive our special offers</span>
                 <input type="email" placeholder='Your e-mail address'  className='p-4 w-full'/>
                 <div>
 

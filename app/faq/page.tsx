@@ -5,7 +5,7 @@ import banner from '@/public/assets/dst-bg-img.jpg'
 const FAQItem = ({ title, content }: { title: string, content: string }) => (
   <div className="group  transition-colors duration-300 collapse border-2 bg-white collapse-plus rounded-none  my-4">
     <input type="radio" name="faq" />
-    <div className=" group-hover:text-[#18F0F0] collapse-title text-xl font-bold">{title}</div>
+    <span className=" group-hover:text-[#18F0F0] collapse-title font-bold">{title}</span>
     <div className="collapse-content">
       <p className=''>{content}</p>
     </div>
@@ -31,17 +31,17 @@ const Faq = () => {
       </div>
 
       <div className="container mx-auto">
-        <div className='flex flex-col items-center pt-8'>
-          <h6 className="font-bold md:py-4 text-[#18F0F0]">[ Frequently Asked Questions ]</h6>
-          <div className='text-center md:w-[50%] py-4'>
-            <h2>Reliable Answers to Our Most Common Questions</h2>
-            <p className='text-lg py-4'>We can save you money on soap, water, heating, and electricity. Enjoy even more of the things you love with our simple and affordable prices.</p>
+        <div className=' mx-4 flex flex-col items-center pt-8'>
+          <p className=" md:py-4 text-[#18F0F0] lg:text-lg font-bold">[ Frequently Asked Questions ]</p>
+          <div className='text-center lg:w-[50%] py-4'>
+            <h5>Reliable Answers to Our Most Common Questions</h5>
+            <p className=' py-4'>We can save you money on soap, water, heating, and electricity. Enjoy even more of the things you love with our simple and affordable prices.</p>
           </div>
         </div>
         
-        <div className='sm:p-4'>
-          <div className='font-bold text-xl'>Your First Order!</div>
-          <div className='grid md:grid-cols-2 gap-8 mb-4'>
+        <div className='p-4'>
+          <div className='font-bold md:text-xl'>Your First Order!</div>
+          <div className='grid lg:grid-cols-2 gap-8 mb-4'>
             <div>
               <FAQItem 
                 title="What should I prepare for the first laundry pickup?" 
@@ -80,9 +80,9 @@ const Faq = () => {
             </div>
           </div>
           
-          <div className='grid md:grid-cols-2 gap-8'>
+          <div className='grid lg:grid-cols-2 gap-8'>
             <div>
-              <div className='font-bold text-xl'>Dry Cleaning</div>
+              <div className='font-bold md:text-xl'>Dry Cleaning</div>
               <FAQItem 
                 title="What if my clothes are damaged?" 
                 content="If your clothes are damaged, please notify us immediately. We take great care in handling items, but if damage occurs, we will investigate and work with you to resolve the issue. Compensation or remediation options will be provided based on our policy and the extent of the damage." 
@@ -97,7 +97,7 @@ const Faq = () => {
               />
             </div>
             <div>
-              <div className='font-bold text-xl'>Wash, Tumble Dry & Fold</div>
+              <div className='font-bold md:text-xl'>Wash, Tumble Dry & Fold</div>
               <FAQItem 
                 title="Do I need to weigh my Wash, Tumble Dry & Fold bag?" 
                 content="It depends on your situation. If you're using a laundry service that charges by weight, weighing your bag can help you estimate the cost and avoid surprises. If you’re simply organizing your laundry and not concerned about costs, weighing the bag is usually unnecessary." 
@@ -115,13 +115,13 @@ const Faq = () => {
         </div>
         
         <div className="flex flex-col items-center pt-10">
-          <div className='text-center md:w-[50%]'>
-            <h2>Ask Your Question</h2>
-            <p className='text-lg py-4'>We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.</p>
+          <div className='text-center mx-4 lg:w-[50%]'>
+            <h5>Ask Your Question</h5>
+            <p className='py-4'>We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.</p>
           </div>
         </div>
         
-        <div className="md:w-[50%] mx-auto">
+        <div className="lg:w-[50%] mx-auto">
           <div className="p-4">
             <form>
               <div className="flex flex-col py-2">

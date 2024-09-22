@@ -36,7 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, icon: Icon, title, des
         <Icon size={40} className='text-white' />
       </div>
     </div>
-    <div className=' px-14  pt-10 md:px-1 md:pt-8 '>
+    <div className=' px-2  pt-8 md:px-1 md:pt-8 '>
       <span className='py-2 text-lg font-bold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{title}</span>
       <p>{description}</p>
       <Link href=''>
@@ -53,7 +53,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, descriptio
       <Icon size={40} className='text-[#18F0F0]' />
     </div>
     <div className=''>
-      <h5 className='py-2 group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{title}</h5>
+      <div className='py-2 group-hover:text-[#18F0F0] lg:text-lg font-bold group-hover:underline group-hover:underline-offset-4'>{title}</div>
       <p>{description}</p>
     </div>
   </div>
@@ -82,12 +82,12 @@ const Service: React.FC = () => {
       </div>
         <div className="container m-auto">
           <div className='flex flex-col items-center'>
-            <h6 className="font-bold pt-8 text-[#18F0F0]">[ Our Services ]</h6>
-            <div className='text-center md:w-[50%] py-4'>
-              <h2>Dry Cleaning & Laundry, Free Delivery</h2>
+            <p className="font-bold pt-8 text-[#18F0F0] lg:text-lg ">[ Our Services ]</p>
+            <div className='text-center lg:w-[50%] p-4'>
+              <h5>Dry Cleaning & Laundry, Free Delivery</h5>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 p-10">
+          <div className="grid lg:grid-cols-3 gap-8 p-5">
             <ServiceCard 
               image={service} 
               icon={GiWashingMachine} 
@@ -109,15 +109,15 @@ const Service: React.FC = () => {
           </div>
         </div>
         <div className="">
-          <div className="grid md:grid-cols-2 relative py-8">
+          <div className="grid lg:grid-cols-2 relative py-8">
             <div>
               <Image src={laundry} alt='Commercial Laundry Service' />
             </div>
-            <div className='flex bg-slate-100 w-full md:my-[0%] md:ml-[-15%] md:mr-[30%]'>
+            <div className='flex bg-slate-100 w-full lg:my-[0%] lg:ml-[-15%] lg:mr-[30%]'>
               <div className="content-center p-[6%]">
-                <h6 className='text-[#18F0F0]'>[ Our Laundry service for your business]</h6>
-                <h3 className='py-3'>Commercial Laundry Service</h3>
-                <p className='text-lg w-full py-2'>
+                <p className='text-[#18F0F0] lg:text-lg font-bold'>[ Our Laundry service for your business]</p>
+                <h5 className='py-3'>Commercial Laundry Service</h5>
+                <p className=' w-full py-2'>
                   Large corporations have determined that there is a financial benefit to outsourcing back office work because it saves money. Allowing us to do your laundry is cost effective and will allow you and your employees to focus on your core business. We offer smart solutions to meet your commercial laundry needs. Our Commercial Laundry Clients include:
                 </p>
                 <div className='border-r-2'>
@@ -138,12 +138,12 @@ const Service: React.FC = () => {
         </div>
         <div className="container m-auto">
           <div className='flex flex-col items-center'>
-            <h6 className="font-bold pt-2 text-[#18F0F0]">[ Why you'll love us ]</h6>
-            <div className='text-center md:w-[50%] py-4'>
-              <h2>Our Features</h2>
+            <p className="font-bold pt-2 text-[#18F0F0] lg:text-lg ">[ Why you'll love us ]</p>
+            <div className='text-center md:w-[50%] pt-4'>
+              <h5>Our Features</h5>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 pb-8 pt-4">
+          <div className="grid lg:grid-cols-2 gap-8 pb-8 pt-4">
             <FeatureCard 
               icon={MdEco} 
               title="Eco-Friendly Dry Cleaning" 

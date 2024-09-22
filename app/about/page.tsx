@@ -40,7 +40,7 @@ const About = () => {
         </div>
         <div className="container m-auto">
 
-          <div className="grid md:grid-cols-2 gap-0">
+          <div className="grid lg:grid-cols-2 gap-0">
             <div className='relative w-full p-4'>
               <div className='relative'>
                 <Image 
@@ -57,7 +57,7 @@ const About = () => {
                     alt='about-basket' 
                     width={340} 
                     height={400} 
-                    className='object-cover'
+                    className='object-cover w-[200px] md:w-[450px]'
                   />
                 </div>
                 {/* Uncomment and adjust for responsive arrow positioning */}
@@ -67,19 +67,19 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex flex-cols m-6 ">
+            <div className="flex flex-cols m-4 md:pt-8 lg:pt-2">
               <div className="content-center">
-                <h6 className='text-[#18F0F0] className="font-poppins"'>[ More than 5 years of  Experience ]</h6>
-                <h3 className='py-3'>Your Dry Cleaning and Laundry. Done.</h3>
-                <p className='text-lg w-full py-2'>
+                <p className='text-[#18F0F0] font-poppins lg:text-lg font-bold'>[ More than 5 years of  Experience ]</p>
+                <h5 className='py-3'>Your Dry Cleaning and Laundry. Done.</h5>
+                <p className=' w-full py-2'>
                 We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about the way you think about laundry!
                 </p>
                 <div>
                   <ul className='py-4'>
-                    <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]' /></span> <span className='pl-2'>100% Customer Satisfaction</span></li>
-                    <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <span className='pl-2'>Free Collection & Delivery</span></li>
-                    <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <span className='pl-2'>Affordable Prices</span></li>
-                    <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <span className='pl-2'>Best Quality</span></li>
+                    <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]' /></span> <p className='pl-2'>100% Customer Satisfaction</p></li>
+                    <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Free Collection & Delivery</p></li>
+                    <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Affordable Prices</p></li>
+                    <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Best Quality</p></li>
                     
                   </ul>
                 </div>
@@ -87,14 +87,14 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 content-center">          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-6 content-center">          
             <div className="flex">
               <div className='p-4 rounded-full bg-slate-100 self-start shadow-gray-300 shadow-lg'>
               < PiShirtFoldedFill  size={40} className='text-[#18F0F0] '/>
               </div>
               
               <div className='pl-2'>
-                <h2>5000+</h2>
+                <h4>5000+</h4>
                 <p>Shirts Washed</p> 
               </div>
             </div>
@@ -103,7 +103,7 @@ const About = () => {
               <GiWashingMachine size={40} className='text-[#18F0F0] '/>
               </div>
               <div className='pl-2'>
-                <h2>25</h2>
+                <h4>25</h4>
                 <p>Shirts Machines</p> 
               </div>
             </div>
@@ -112,7 +112,7 @@ const About = () => {
               <GiHanger  size={40} className='text-[#18F0F0] '/>
               </div>
               <div className='pl-2'>
-                <h2>9000+</h2>
+                <h4>9000+</h4>
                 <p>Dry Cleaned Items</p> 
               </div>
             </div>
@@ -121,18 +121,18 @@ const About = () => {
               <BsPersonHearts  size={40} className='text-[#18F0F0] '/>
               </div>
               <div className='pl-2'>
-                <h2>100%</h2>
+                <h4>100%</h4>
                 <p>Happy Customer</p> 
               </div>
             </div>
           </div>
           <div className="w-full">
-            <div className="grid md:grid-cols-2  p-8">
+            <div className="grid lg:grid-cols-2  p-8">
               <div className='flex bg-slate-100 w-full '>
                 <div className="content-center p-[10%]">
-                  <h6 className='text-[#18F0F0]'>[ Our Guarantee ]</h6>
-                  <h3 className='py-3'>The best Guarantee in the Business</h3>
-                  <p className='text-lg w-full py-2 justify-center'>
+                  <p className='text-[#18F0F0] lg:text-lg font-bold'>[ Our Guarantee ]</p>
+                  <h5 className='py-3'>The best Guarantee in the Business</h5>
+                  <p className=' w-full py-2 justify-center'>
                   The most trusted brand in clothing care since 2019. We will do everything we can to return your clothes to you in great shape. In the rare instance that an item goes missing or is damaged during the cleaning process, we’ll reimburse you up to the full value of the item with a $1,000 maximum per order. </p>
                   <div>
                   <Link href=''><button className='font-bold bg-[#18F0F0] p-4 text-white mt-4'>Get Service Now</button></Link>
@@ -146,19 +146,19 @@ const About = () => {
           </div>
           <div>
             <div className='flex flex-col items-center '>
-              <h6 className=" font-bold pt-4  text-[#18F0F0]">[ Our Advantages ]</h6>
-              <div className='text-center md:w-[50%] py-2'>
-                <h2>Why Choose Us</h2>
+              <p className="  pt-4  text-[#18F0F0] lg:text-lg font-bold">[ Our Advantages ]</p>
+              <div className='text-center lg:w-[50%] py-2'>
+                <h5>Why Choose Us</h5>
               </div>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 p-6">
+          <div className="grid lg:grid-cols-3 gap-6 p-6">
             <div className="flex space-x-4 p-4">
               <div className='p-4 rounded-full bg-slate-100 self-start shadow-gray-300 shadow-lg'>
               <PiLightbulbFilamentBold size={40} className='text-[#18F0F0] '/>
               </div>
               <div>
-                <h5>Persionalized Experience</h5>
+                <div className='font-bold md:text-xl'>Persionalized Experience</div>
                 <p>
                 We take utmost care of your clothes, segregating based on the cloth type and giving you instant clothes to make a statement.
                 </p>
@@ -169,7 +169,7 @@ const About = () => {
               <GiPriceTag  size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
-                <h5>affordable Pricing</h5>
+                <div className='font-bold md:text-xl'>affordable Pricing</div>
                 <p>
                 Prices that suits your pocket is one of our USP. An option of choosing between 2 types of pricing is available.
                 </p>
@@ -180,7 +180,7 @@ const About = () => {
               <PiLightbulbFilamentBold size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
-                <h5>Convenience</h5>
+                <div className='font-bold md:text-xl'>Convenience</div>
                 <p>
                 With just a tap of a button, your laundry gets done, giving your leisure time to spend with family and friends.
                 </p>
@@ -191,7 +191,7 @@ const About = () => {
               <PiLightbulbFilamentBold size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
-                <h5>Quality</h5>
+                <div className='font-bold md:text-xl'>Quality</div>
                 <p>
                 We use the best in class products, to assure that your favorite clothes are always there for you to wear.
                 </p>
@@ -202,7 +202,7 @@ const About = () => {
               <TbTruckDelivery size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
-                <h5>Express Delivery</h5>
+                <div className='font-bold md:text-xl'>Express Delivery</div>
                 <p>
                 With our super express delivery, we would get your laundry done in less than 8 hours
                 </p>
@@ -213,7 +213,7 @@ const About = () => {
               <HiClipboardDocumentList size={40} className='text-[#18F0F0]'/>
               </div>
               <div>
-                <h5>Instant Order Update</h5>
+                <div className='font-bold md:text-xl'>Instant Order Update</div>
                 <p>
                 Regular updates of your order. to help you keep a track of your laundry and plan accordingly.
                 </p>
@@ -223,17 +223,17 @@ const About = () => {
           </div>
         </div>
         <div className="">
-          <div className="grid md:grid-cols-2 relative py-8">
+          <div className="grid lg:grid-cols-2 relative py-8">
             <div className=''>
               <Image src={aboutImg4} alt='About-us-img-4' />
             </div>
-            <div className='flex bg-slate-100 py-8 md:my-[3%] md:ml-[-15%] md:mr-[30%] '>
+            <div className='flex bg-slate-100 py-8 w-full lg:my-[3%] lg:ml-[-15%] lg:mr-[30%] '>
               <div className="content-center px-[6%]">
-                <h6 className='text-[#18F0F0]'>[ Our History ]</h6>
-                <h3 className='py-3'>Laundry & Dry Cleaning Foundation</h3>
-                <p className='text-lg w-full py-2 justify-center'>
+                <p className='text-[#18F0F0] lg:text-lg font-bold'>[ Our History ]</p>
+                <h5 className='py-3'>Laundry & Dry Cleaning Foundation</h5>
+                <p className=' w-full py-2 justify-center'>
                 Founded in 2019, we follow a dream and an We aim to serve our customers in a way that far exceeds expectation. Being one of the leading laundry service providers, we know our customers’ mindset. It is not easy to come home from a hectic day at the office and rush to the nearest laundry service with your clothes. So, we have an array of services to make things easy for you.
-                 </p><p className='text-lg w-full py-2 justify-center'> You need not tolerate late deliveries, low standard of work merged with high prices. Our services cater to all your laundering and ironing, dry cleaning, shoe repairs, upholstery cleaning, etc.</p> 
+                 </p><p className=' w-full py-2 justify-center'> You need not tolerate late deliveries, low standard of work merged with high prices. Our services cater to all your laundering and ironing, dry cleaning, shoe repairs, upholstery cleaning, etc.</p> 
                 
                 
               </div>
@@ -243,9 +243,9 @@ const About = () => {
         <div className="container m-auto">
           <div>
             <div className='flex flex-col items-center '>
-              <h6 className="  pt-4  text-[#18F0F0]">[ Our Teams ]</h6>
-              <div className='text-center md:w-[50%] py-2'>
-                <h2>Laundry Specialist</h2>
+              <p className="  pt-4  text-[#18F0F0] lg:text-lg font-bold">[ Our Teams ]</p>
+              <div className='text-center lg:w-[50%] py-2'>
+                <h5>Laundry Specialist</h5>
                 <p className='py-2'>Our team’s goal each day is to earn your business with each visit and to make your experience with us the absolute best.</p>
               </div>
             </div>

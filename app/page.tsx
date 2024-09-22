@@ -84,7 +84,7 @@ export default function Home() {
                 <p className='w-full py-2'>
                 We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about the way you think about laundry!
                 </p>
-                <div className='flex py-4'>
+                <div className='md:flex py-4'>
                   <div className='border-r-2 p-4'>
                     <ul className='py-4'>
                       <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]' /></span> <p className='pl-2'>100% Customer Satisfaction</p></li>

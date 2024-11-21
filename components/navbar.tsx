@@ -26,8 +26,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='w-full relative'>
-        <div className="hidden lg:grid grid-cols-5 gap-0 border-b-2">
+      <div className='w-full overflow-hidden fixed top-0 z-50 '>
+        <div className="hidden bg-white lg:flex justify-between border-b-2">
           <div className=" lg:col-span-4 ">
             <div className='flex py-4'>
               <div className='px-4'>Central-Market, Buea</div>
@@ -35,11 +35,11 @@ const Navbar = () => {
               <div className='px-4'>tafonsoftwarespecialist@gmail.com</div>
             </div>
           </div>
-          <div className="lg:col-span-1">
+          <div className="">
             <div className='flex justify-between'>
               <div className='flex py-4'>
                 <span className='pr-4 text-[#18F0F0]'><FaPhoneVolume size={20}/></span>
-                <span>+(237) 679-048-674</span>
+                <span>+(237)679048674</span>
               </div>
               <div>
                 <ul className='flex py-4'>
@@ -53,7 +53,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* navbar */}
-        <div className="sticky top-0 z-50 bg-white shadow-md">
+        <div className=" bg-white shadow-md">
           <div className="flex justify-between p-4">
             <div className='flex pr-2'>
               <Image src={logo} alt='logo' />
@@ -139,7 +139,7 @@ const Navbar = () => {
                     <Link href='/'><li  className=' flex  py-2'><FaPhoneVolume  size={20} className='text-[#18F0F0]'/><span className='text-black px-4'>+(237) 679-048-674</span></li></Link>
                   </ul>
                 </div>
-              <div className="pt-10">
+              {/* <div className="pt-10">
                 <ul className="flex justify-between items-center py-4">
                   <Link href="/" target="_blank">
                     <li className="hover:scale-110 ease-in duration-300 rounded-full cursor-pointer dark:bg-slate-400 shadow-gray-300 p-6 shadow-lg">
@@ -162,7 +162,7 @@ const Navbar = () => {
                     </li>
                   </Link>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

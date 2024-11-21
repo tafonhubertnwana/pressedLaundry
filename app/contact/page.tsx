@@ -24,6 +24,13 @@ const Contact = () => {
           <h1 className='text-white text-2xl md:text-6xl font-bold'>Contact</h1>
         </div>
       </div>
+      <div className="w-full ">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1989.6231152755204!2d9.278558608653139!3d4.17193407025065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106131f8905d3471%3A0x672a961c0448f3e8!2sBuea%20Central%20Market!5e0!3m2!1sen!2scm!4v1732229468908!5m2!1sen!2scm"
+          width="100%" height="450" loading="lazy" 
+          
+        />
+      </div>
 
       {/* Contact Information Section */}
       <div className='container mx-auto p-8'>

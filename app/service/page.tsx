@@ -66,7 +66,7 @@ const Service: React.FC = () => {
       <div className="w-full">
       
       {/* Banner Section */}
-      <div className='relative'>
+      <div className='relative mt-36'>
         <Image 
           src={banner} 
           alt='Contact banner' 
@@ -80,7 +80,7 @@ const Service: React.FC = () => {
           <h1 className='text-white text-2xl md:text-6xl font-bold'>Service</h1>
         </div>
       </div>
-        <div className="container m-auto">
+        <div className="md:container lx:w-2/3 m-auto">
           <div className='flex flex-col items-center'>
             <p className="font-bold pt-8 text-[#18F0F0] lg:text-lg ">[ Our Services ]</p>
             <div className='text-center lg:w-[50%] p-4'>

@@ -1,66 +1,101 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import PricePackage from '@/components/pricePackage';
-import Tops from '@/components/tops';
-import Bottoms from '@/components/bottoms';
-import Bedsheets from '@/components/bedsheets';
-import Underwears from '@/components/underwears';
 import banner from '@/public/assets/dst-bg-img.jpg';
+import prices from '@/data/prices.json'; // Import JSON file directly
 
-const tabOptions = {
-  top: 'Tops',
-  bottom: 'Bottoms',
-  bedsheet: 'Bedsheets',
-  underwear: 'Underwear'
+interface PriceItem {
+  category: string;
+  count: number;
+}
+
+interface Prices {
+  tops: PriceItem[];
+  bottoms: PriceItem[];
+  bedsheets: PriceItem[];
+  underwears: PriceItem[];
+}
+
+const tabOptions: Record<keyof Prices, string> = {
+  tops: 'Tops',
+  bottoms: 'Bottoms',
+  bedsheets: 'Bedsheets',
+  underwears: 'Underwears',
 };
 
-const Price = () => {
-  const [activeTab, setActiveTab] = useState('top');
+const Price: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<keyof Prices>('tops');
 
   return (
-    <>
-      <div className='relative'>
-        <Image src={banner} alt='banner' className='lg:w-full' />
-        <div className='absolute top-[20%] left-[15%]'>
-          <h5 className='text-white py-4'>Home / Price</h5>
-          <h1 className='text-white'>Price</h1>
+    <div>
+      {/* Banner Section */}
+      <div className="relative">
+        <Image src={banner} alt="banner" className="lg:w-full" />
+        <div className="absolute top-[20%] left-[15%]">
+          <h5 className="text-white py-4">Home / Price</h5>
+          <h1 className="text-white">Price</h1>
         </div>
       </div>
-      <div className="mt-10">
 
-        <PricePackage />
+      {/* Price Package Placeholder */}
+      <div className="mt-10">
+        <div className="text-center">
+          <h2>Price Package Component Placeholder</h2>
+        </div>
       </div>
-      <div className='container m-auto my-8'>
-        <div className='flex flex-col mt-8 items-center'>
-          <p className=' py-2 text-[#18F0F0] lg:text-lg font-bold'>[ Our Service Prices ]</p>
-          <div className='text-center md:w-[50%] py-4'>
+
+      {/* Tabs Section */}
+      <div className="container m-auto my-8">
+        <div className="flex flex-col mt-8 items-center">
+          <p className="py-2 text-[#18F0F0] lg:text-lg font-bold">[ Our Service Prices ]</p>
+          <div className="text-center md:w-[50%] py-4">
             <h5>Full Price Table</h5>
-            <p>Laundry service pricing is volume-based. Dry cleaning is priced by item type. Give us a call to review pricing and services today!</p>
+            <p>
+              Laundry service pricing is volume-based. Dry cleaning is priced by item type. Give us a call to
+              review pricing and services today!
+            </p>
           </div>
         </div>
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 p-8'>
+
+        {/* Tab Buttons */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
           {Object.entries(tabOptions).map(([key, label]) => (
             <div
               key={key}
-              onClick={() => setActiveTab(key)}
-              className={`group bg-slate-100 w-full flex justify-center items-center ${activeTab === key ? 'bg-black text-white' : 'text-black'}`}
+              onClick={() => setActiveTab(key as keyof Prices)}
+              className={`group bg-slate-100 w-full flex justify-center items-center ${
+                activeTab === key ? 'bg-black text-white' : 'text-black'
+              }`}
             >
-              <button
-                
-                className='p-6 font-bold flex items-center justify-center'
-              >
-                {label}
-              </button>
+              <button className="p-6 font-bold flex items-center justify-center">{label}</button>
             </div>
           ))}
         </div>
-        {activeTab === 'top' && <Tops />}
-        {activeTab === 'bottom' && <Bottoms />}
-        {activeTab === 'bedsheet' && <Bedsheets />}
-        {activeTab === 'underwear' && <Underwears />}
+
+        {/* Dynamic Content Rendering */}
+        <div className="w-full md:w-[75%] m-auto">
+          <table className="w-full border-separate border-spacing-2">
+            <thead>
+              <tr>
+                <th className="bg-slate-400 text-white p-2">Items</th>
+                <th className="bg-slate-400 text-white p-2">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              {prices[activeTab]?.map((item, index) => (
+                <tr
+                  key={index}
+                  className={index % 2 === 0 ? 'bg-slate-400 text-white' : 'bg-slate-100'}
+                >
+                  <td className="p-2">{item.category}</td>
+                  <td className="p-2">{item.count}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

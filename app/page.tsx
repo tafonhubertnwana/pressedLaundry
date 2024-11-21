@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       <div className="w-full">
-        <div className='relative'>
+        <div className='relative mt-[200px]'>
           <Image src={banner} alt='banner' className='lg:w-full '/>
           <div className='absolute top-[20%] left-[15%]'>
             <h1 className='text-white py-4'>Laundry Service</h1>

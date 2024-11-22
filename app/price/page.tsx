@@ -29,7 +29,7 @@ const Price: React.FC = () => {
   return (
     <div>
       {/* Banner Section */}
-      <div className="relative">
+      <div className="relative mt-36">
         <Image src={banner} alt="banner" className="lg:w-full" />
         <div className="absolute top-[20%] left-[15%]">
           <h5 className="text-white py-4">Home / Price</h5>

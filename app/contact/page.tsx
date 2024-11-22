@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div className="w-full">
       {/* Banner Section */}
-      <div className='relative'>
+      <div className='relative mt-36'>
         <Image 
           src={banner} 
           alt='Contact banner' 

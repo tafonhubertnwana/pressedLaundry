@@ -1,0 +1,20 @@
+[
+  {
+    "name": "John Doe",
+    "role": "Client",
+    "image": "/assets/testimonials-img03.jpg",
+    "testimonial": "The new machines have had very few problems and their services are always done in a timely fashion. Our residents have been thrilled with the PressedPerfect team and we look forward to a long relationship with this first-class organization."
+  },
+  {
+    "name": "John Doe",
+    "role": "Client",
+    "image": "/assets/testimonials-img03.jpg",
+    "testimonial": "Over the last eight years they have proven, on several occasions that they are knowledgeable, prompt, and concerned about my immediate situation. I personally encourage any business associated with their laundry services."
+  },
+  {
+    "name": "John Doe",
+    "role": "Client",
+    "image": "/assets/testimonials-img03.jpg",
+    "testimonial": "Second to none for convenience, quality & turnaround time. Great prices and services. Amazing support team behind the service, if you ever need it. No more having to save up piles of dry cleaning to make it worth taking out."
+  }
+]

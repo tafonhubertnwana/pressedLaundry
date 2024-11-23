@@ -172,7 +172,7 @@ const Service: React.FC = () => {
 
         <div className="container m-auto">
           <div className='flex flex-col items-center'>
-            <p className="font-bold pt-2 text-[#18F0F0] lg:text-lg ">[ Why you'll love us ]</p>
+            <p className="font-bold pt-2 text-[#18F0F0] lg:text-lg ">[ Why you&apos;ll love us ]</p>
             <div className='text-center md:w-[50%] pt-4'>
               <h5>Our Features</h5>
             </div>

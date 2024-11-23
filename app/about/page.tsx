@@ -175,7 +175,7 @@ const About = () => {
           Founded in 2019, we follow a dream to serve our customers in a way that far exceeds expectations. As one of the leading laundry service providers, we understand our customers’ needs. It can be challenging to come home from a hectic day at the office and rush to the nearest laundry service.
         </p>
         <p className="py-2">
-          You shouldn't have to tolerate late deliveries or low standards of work at high prices. Our comprehensive services include laundering, ironing, dry cleaning, shoe repairs, upholstery cleaning, and more, all designed to make your life easier.
+          You shouldn&apos;t have to tolerate late deliveries or low standards of work at high prices. Our comprehensive services include laundering, ironing, dry cleaning, shoe repairs, upholstery cleaning, and more, all designed to make your life easier.
         </p>
       </div>
     </div>

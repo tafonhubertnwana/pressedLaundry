@@ -62,7 +62,7 @@ const Contact = () => {
       {/* Contact Form Section */}
       <div className="flex flex-col items-center pt-6  ">
         <div className='text-center w-full lg:w-[50%] '>
-          <h5>Get in Touch. We&apos;re Here to Help.</h5>
+          <h5>Get in Touch. We&rsquo;re Here to Help.</h5>
           <p className=' py-4 mx-8'>
             We look forward to helping you create and maintain a clean, healthy environment that’s as enjoyable as it is functional.
           </p>

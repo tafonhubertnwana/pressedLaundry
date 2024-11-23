@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import banner from '@/public/assets/dst-bg-img.jpg';
 import prices from '@/data/prices.json'; // Import JSON file directly
+import PricePackage from '@/components/pricePackage'
 
 interface PriceItem {
   category: string;
@@ -29,7 +30,7 @@ const Price: React.FC = () => {
   return (
     <div>
       {/* Banner Section */}
-      <div className="relative mt-36">
+      <div className="relative mt-20 lg:mt-36">
         <Image src={banner} alt="banner" className="lg:w-full" />
         <div className="absolute top-[20%] left-[15%]">
           <h5 className="text-white py-4">Home / Price</h5>
@@ -39,9 +40,7 @@ const Price: React.FC = () => {
 
       {/* Price Package Placeholder */}
       <div className="mt-10">
-        <div className="text-center">
-          <h2>Price Package Component Placeholder</h2>
-        </div>
+        <PricePackage />
       </div>
 
       {/* Tabs Section */}
@@ -59,18 +58,18 @@ const Price: React.FC = () => {
 
         {/* Tab Buttons */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
-          {Object.entries(tabOptions).map(([key, label]) => (
-            <div
-              key={key}
-              onClick={() => setActiveTab(key as keyof Prices)}
-              className={`group bg-slate-100 w-full flex justify-center items-center ${
-                activeTab === key ? 'bg-black text-white' : 'text-black'
-              }`}
-            >
-              <button className="p-6 font-bold flex items-center justify-center">{label}</button>
-            </div>
-          ))}
-        </div>
+  {Object.entries(tabOptions).map(([key, label]) => (
+    <div
+      key={key}
+      onClick={() => setActiveTab(key as keyof Prices)}
+      className={`group w-full flex justify-center items-center ${
+        activeTab === key ? 'bg-[#18F0F0] text-white' : 'bg-slate-100 text-black'
+      }`}
+    >
+      <button className="p-6 font-bold flex items-center justify-center">{label}</button>
+    </div>
+  ))}
+</div>
 
         {/* Dynamic Content Rendering */}
         <div className="w-full md:w-[75%] m-auto">

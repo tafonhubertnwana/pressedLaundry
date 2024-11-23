@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       <div className="w-full">
-        <div className='relative mt-[200px]'>
+        <div className='relative mt-20 lg:mt-36'>
           <Image src={banner} alt='banner' className='lg:w-full '/>
           <div className='absolute top-[20%] left-[15%]'>
             <h1 className='text-white py-4'>Laundry Service</h1>
@@ -115,7 +115,7 @@ export default function Home() {
     <Image src={service} alt='About-us-img-4' className='w-full h-auto group-hover:opacity-80 transition-opacity duration-300' />
     <div className='absolute bottom-0 w-full'>
       <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-60 bg-black p-4 rounded-lg'>
-        <div className='p-4 rounded-full bg-[#18F0F0]'>
+        <div className='p-4 rounded-full bg-[#18F0F0] transform transition-transform duration-500 group-hover:rotate-12'>
           <GiWashingMachine size={40} className='text-white' />
         </div>
         <div className='text-white'>
@@ -131,7 +131,7 @@ export default function Home() {
     <Image src={serviceImg2} alt='About-us-img-4' className='w-full h-auto group-hover:opacity-80 transition-opacity duration-300' />
     <div className='absolute bottom-0 w-full'>
       <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-60 bg-black p-4 rounded-lg'>
-        <div className='p-4 rounded-full bg-[#18F0F0]'>
+        <div className='p-4 rounded-full bg-[#18F0F0] transform transition-transform duration-500 group-hover:rotate-12'>
           <GiHanger size={40} className='text-white' />
         </div>
         <div className='text-white'>
@@ -147,7 +147,7 @@ export default function Home() {
     <Image src={serviceLaundry} alt='About-us-img-4' className='w-full h-auto group-hover:opacity-80 transition-opacity duration-300' />
     <div className='absolute bottom-0 w-full'>
       <div className='flex flex-row items-center space-y-4 md:space-y-0 space-x-4 bg-opacity-60 bg-black p-4 rounded-lg'>
-        <div className='p-4 rounded-full bg-[#18F0F0]'>
+        <div className='p-4 rounded-full bg-[#18F0F0] transform transition-transform duration-500 group-hover:rotate-12'>
           <TbIroningSteam size={40} className='text-white' />
         </div>
         <div className='text-white'>
@@ -175,8 +175,8 @@ export default function Home() {
                   <div className='p-6 bg-slate-100 rounded-full w-32 h-32 md:w-48 md:h-48 shadow-gray-300 shadow-lg flex items-center justify-center'>
                     <Image src={hw} alt='phone' className='object-cover' />
                   </div>
-                  <div className='absolute top-[-10%] right-[-10%] md:top-[75%] md:right-[26%] bg-[#18F0F0] rounded-full w-16 h-16 md:w-24 md:h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
-                    <h3 className='text-center text-[#000] text-xs md:text-lg'>01</h3>
+                  <div className='absolute top-[-10%] right-[-10%] md:top-[75%] transform transition-transform duration-500 group-hover:rotate-12 md:right-[26%] bg-[#18F0F0] rounded-full w-16 h-16 md:w-24 md:h-24 flex items-center justify-center shadow-gray-300 shadow-lg'>
+                    <h3 className='text-center text-[#000] text-xs md:text-lg '>01</h3>
                   </div>
                 </div>
                 <p className="md:mt-6">Order via website</p>

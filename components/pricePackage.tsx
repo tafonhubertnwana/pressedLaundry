@@ -3,55 +3,41 @@ import { GiCheckMark } from 'react-icons/gi';
 import { MdLocalLaundryService } from 'react-icons/md';
 import { TbIroningSteam, TbWashTemperature6 } from 'react-icons/tb';
 
-// Define type for PackageCard props
 interface PackageCardProps {
-  Icon: React.ComponentType<{ size: number, className?: string }>;
+  Icon: React.ComponentType<{ size: number; className?: string }>;
   title: string;
   description: string;
   price: string;
   features: string[];
 }
 
-// Reusable PackageCard Component
 const PackageCard: React.FC<PackageCardProps> = ({ Icon, title, description, price, features }) => (
-  <div className='relative bg-slate-100 py-8 px-6 shadow-lg rounded-lg'>
+  <div className='relative bg-white py-8 px-6  h-54 shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300'>
     <div className='flex flex-col items-center'>
-      <div className='absolute top-[-50px] left-1/2 transform -translate-x-1/2'>
-        <div className='p-4 bg-[#18F0F0] rounded-full'>
-          <Icon size={80} className='text-white' />
+      <div className='absolute top-[-40px] left-1/2 transform -translate-x-1/2'>
+        <div className='p-4 bg-[#18F0F0] rounded-full shadow-lg transition-transform duration-300 hover:rotate-12'>
+          <Icon size={70} className='text-white' />
         </div>
       </div>
       <div className='pt-16 text-center'>
-        <p className='text-xl font-semibold'>{title}</p>
-        <h6 className='text-[#18F0F0] py-2 text-lg lg:text-lg font-bold'>{description}</h6>
-        <div className='border-b-2 border-gray-300'>
-          <ul className='py-4 space-y-2'>
-            {features.map((feature, index) => (
-              <li key={index} className='flex items-center'>
-                <GiCheckMark size={20} className='text-[#18F0F0]' />
-                <span className='pl-2'>{feature}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <h2 className='text-xl font-semibold'>{title}</h2>
+        <p className='text-gray-500 py-2 text-lg'>{description}</p>
+        <ul className='py-4 space-y-2'>
+          {features.map((feature, index) => (
+            <li key={index} className='flex items-center'>
+              <GiCheckMark size={20} className='text-[#18F0F0]' />
+              <span className='pl-2 text-gray-700'>{feature}</span>
+            </li>
+          ))}
+        </ul>
         <h3 className='text-[#18F0F0] text-xl font-bold'>{price}</h3>
       </div>
     </div>
   </div>
 );
 
-// Define type for packages
-interface Package {
-  Icon: React.ComponentType<{ size: number, className?: string }>;
-  title: string;
-  description: string;
-  price: string;
-  features: string[];
-}
-
-// Main PricePackage Component
 const PricePackage: React.FC = () => {
-  const packages: Package[] = [
+  const packages = [
     {
       Icon: TbWashTemperature6,
       title: 'Standard Package',
@@ -95,20 +81,12 @@ const PricePackage: React.FC = () => {
   return (
     <div className='w-full'>
       <div className='container mx-auto px-4 mt-8'>
-        <div className='text-center pb-10'>
-          <p className=' text-[#18F0F0] lg:text-lg font-bold '>
-            [ What we offer ]
-          </p>
-          <div className='text-center lg:w-1/2 mx-auto py-4'>
-            <h5 className=''>Price Packages</h5>
-            <p className='mt-2'>
-              Our prices are simple and affordable, making them easy on the pocket
-              compared to high street prices.
-            </p>
-          </div>
+        <div className='text-center pb-8'>
+          <h2 className='text-3xl font-bold text-gray-800'>Price Packages</h2>
+          <p className='text-gray-600 mt-2'>Affordable and straightforward pricing for your convenience.</p>
         </div>
 
-        <div className='grid gap-8 lg:grid-cols-3 p-8'>
+        <div className='grid gap-8 lg:grid-cols-3 p-10'>
           {packages.map((pkg, index) => (
             <PackageCard
               key={index}

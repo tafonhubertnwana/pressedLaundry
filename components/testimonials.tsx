@@ -100,12 +100,12 @@ const TestimonialCarousel = () => {
                 <Image src={testimonial.image} alt={`Testimonial image ${index}`} className='object-cover w-full h-full' />
               </div>
               <div className='flex flex-col'>
-                <h5 className='text-lg font-semibold group-hover:text-white transition-colors duration-300'>{testimonial.name}</h5>
-                <p className='text-sm group-hover:text-white transition-colors duration-300'>{testimonial.role}</p>
+                <h5 className='text-lg font-semibold group-hover:text-white'>{testimonial.name}</h5>
+                <p className='text-sm group-hover:text-white'>{testimonial.role}</p>
               </div>
             </div>
             <div className='p-6'>
-              <p className='group-hover:text-white transition-colors duration-300'>{testimonial.testimonial}</p>
+              <p className='group-hover:text-white'>{testimonial.testimonial}</p>
             </div>
           </div>
         ))}
@@ -121,11 +121,11 @@ const Carousel = () => {
         {carouselItems.map((item, index) => (
           <div key={index} className="h-[200px]">
             <div className="group flex space-x-4 p-8 bg-slate-100 rounded-lg shadow-md hover:bg-slate-200 transition-colors duration-300 transform hover:scale-105">
-              <div className='p-4 rounded-full bg-white self-start shadow-gray-300 shadow-lg transition-transform duration-300 transform group-hover:scale-110'>
+              <div className='p-4 rounded-full bg-white self-start shadow-gray-300 shadow-lg'>
                 {item.icon}
               </div>
               <div>
-                <h5 className='py-2 text-lg font-semibold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4 transition-colors duration-300'>{item.title}</h5>
+                <h5 className='py-2 text-lg font-semibold group-hover:text-[#18F0F0] group-hover:underline group-hover:underline-offset-4'>{item.title}</h5>
                 <p>{item.description}</p>
               </div>
             </div>

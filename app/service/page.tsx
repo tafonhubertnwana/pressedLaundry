@@ -77,7 +77,7 @@ const Service: React.FC = () => {
       <div className="w-full">
       
       {/* Banner Section */}
-      <div className='relative mt-36'>
+      <div className='relative mt-20 lg:mt-36'>
         <Image 
           src={banner} 
           alt='Contact banner' 

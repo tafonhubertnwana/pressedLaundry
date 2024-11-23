@@ -29,7 +29,11 @@ const Faq = () => {
           <h1 className='text-white text-2xl md:text-6xl font-bold'>FAQ</h1>
         </div>
       </div>
-
+      <div className={` bg-no-repeat background-animation`}
+          style={{ 
+            backgroundImage: "url('/assets/wrapper03.png')", 
+            // Change this as needed
+          }}>
       <div className="container mx-auto">
         <div className=' mx-4 flex flex-col items-center pt-8'>
           <p className=" md:py-4 text-[#18F0F0] lg:text-lg font-bold">[ Frequently Asked Questions ]</p>
@@ -177,6 +181,7 @@ const Faq = () => {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

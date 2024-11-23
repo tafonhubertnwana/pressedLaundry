@@ -111,3 +111,37 @@ h6{
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+
+/* Add this to your main CSS file */
+@keyframes moveBackground {
+  0% {
+    background-position: left top;
+  }
+  50% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+.background-animation {
+  animation: moveBackground 40s ease-in-out infinite;
+}
+
+@keyframes moveBackgroundLeft {
+  0% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  100% {
+    background-position: right top;
+  }
+}
+.background-animation-left{
+  animation: moveBackgroundLeft 40s ease-in-out infinite;
+}
+

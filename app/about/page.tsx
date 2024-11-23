@@ -92,7 +92,11 @@ const About = () => {
       </div>
     </div>
   </section>
-
+  {/* <div className={` bg-no-repeat background-animation-left `}
+          style={{ 
+            backgroundImage: "url('/assets/wrapper02.png')", 
+            // Change this as needed
+          }}> */}
   <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-6 content-center">
     {[
       { icon: <PiShirtFoldedFill size={40}  className='text-[#18F0F0]'/>, count: "5000+", label: "Shirts Washed" },
@@ -140,7 +144,7 @@ const About = () => {
       </div>
     </div>
   </section>
-
+    {/* </div> */}
   <section className="grid lg:grid-cols-3 gap-6 p-6">
     {[
       { icon: <PiLightbulbFilamentBold size={40} className='text-[#18F0F0]'/>, title: "Personalized Experience", description: "We take utmost care of your clothes, segregating based on the cloth type." },

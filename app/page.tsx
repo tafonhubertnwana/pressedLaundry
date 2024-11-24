@@ -83,29 +83,32 @@ export default function Home() {
 
               </div>
             </div>
-            <div className="flex flex-cols m-6 lg:w-[75%] w-full ">
-              <div className="content-center">
-                <p className='text-[#18F0F0] lg:text-lg font-bold'>More than 5 years of  Experience </p>
-                <h5 className='py-3'>We are Passionate About Laundry</h5>
-                <p className=' w-full p-2 px-4 '>
-                We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about the way you think about laundry!
-                </p>
-                <div className='md:flex py-4'>
-                  <div className='border-r-2 p-4'>
-                    <ul className='py-4'>
-                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]' /></span> <p className='pl-2'>100% Customer Satisfaction</p></li>
-                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Free Collection & Delivery</p></li>
-                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Affordable Prices</p></li>
-                      <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Best Quality</p></li> 
-                    </ul>
-                  </div>
-                  <div className=' group p-4'>
-                    <div className="flex flex-col items-center">
-                      <div  className='p-6 bg-slate-100  rounded-full my-4 shadow-gray-300 shadow-lg'>
-                      < FaPhoneVolume size={30} className='text-[#18F0F0]' /> 
+            <div className='w-full lg:container xl:w-2/3 m-auto'>
+
+              <div className="flex flex-cols ">
+                <div className=" p-3 content-center">
+                  <p className='text-[#18F0F0] lg:text-lg font-bold'>More than 5 years of  Experience </p>
+                  <h5 className='py-3'>We are Passionate About Laundry</h5>
+                  <p className=' w-full  '>
+                  We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about the way you think about laundry!
+                  </p>
+                  <div className='md:flex py-4'>
+                    <div className='lg:border-r-2 p-4'>
+                      <ul className='py-4'>
+                        <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]' /></span> <p className='pl-2'>100% Customer Satisfaction</p></li>
+                        <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Free Collection & Delivery</p></li>
+                        <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Affordable Prices</p></li>
+                        <li className='flex'><span><GiCheckMark  size={20} className='text-[#18F0F0]'/></span> <p className='pl-2'>Best Quality</p></li> 
+                      </ul>
+                    </div>
+                    <div className=' group p-4'>
+                      <div className="flex flex-col items-center">
+                        <div  className='p-6 bg-slate-100  rounded-full my-4 shadow-gray-300 shadow-lg'>
+                        < FaPhoneVolume size={30} className='text-[#18F0F0]' /> 
+                        </div>
+                        <span className='text-sm lg:text-xl font-bold text-center'>Call for Quality Services</span>
+                        <p className="text-sm group-hover:text-[#18F0F0]">+ (237) 670-048-674</p>
                       </div>
-                      <span className='text-sm lg:text-xl font-bold'>Call for Quality Services</span>
-                      <p className="text-sm group-hover:text-[#18F0F0]">+ (237) 670-048-674</p>
                     </div>
                   </div>
                 </div>

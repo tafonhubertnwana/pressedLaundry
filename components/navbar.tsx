@@ -67,12 +67,14 @@ const Navbar: React.FC = () => {
         {/* navbar */}
         <div className="bg-white">
           <div className="flex justify-between p-4">
-            <div className='flex pr-2'>
-              <Image src={logo} alt='logo' />
-              <div className='self-center text-2xl px-2 font-bold'>
-                <span className='text-[#18F0F0]'>Pressed</span><span>Perfect</span>
-              </div>
-            </div>
+              <Link href='/'>
+                <div className='flex pr-2'>
+                    <Image src={logo} alt='logo' />
+                    <div className='self-center text-2xl px-2 font-bold'>
+                      <span className='text-[#18F0F0]'>Pressed</span><span>Perfect</span>
+                    </div>
+                </div>
+              </Link>
             <div className=''>
               <ul className='hidden lg:flex space-x-14 font-bold items-center py-4'>
                 <Link href='/'><li className={isActiveLink('/') ? 'text-[#18F0F0]' : ''}>Home</li></Link>
@@ -100,14 +102,14 @@ const Navbar: React.FC = () => {
           {/* Mobile Navigation */}
           <div
             className={`${
-              nav ? 'fixed left-0 top-0 h-screen w-full bg-black/30 md:hidden dark:bg-slate-800 z-100' : ''
+              nav ? 'fixed left-0 top-0 h-screen w-full bg-black/30 md:hidden  z-100' : ''
             }`}
           >
             <div
               className={`${
                 nav
-                  ? 'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white px-8 py-1 transition-transform ease-in-out duration-300 dark:bg-slate-800 z-100 transform translate-x-0'
-                  : 'md:hidden fixed left-[-100%] top-0 py-5 transition-transform ease-in-out duration-300 dark:bg-slate-800 z-100 transform -translate-x-full'
+                  ? 'md:hidden fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white px-8 py-1 transition-transform ease-in-out duration-300  z-100 transform translate-x-0'
+                  : 'md:hidden fixed left-[-100%] top-0 py-5 transition-transform ease-in-out duration-300  z-100 transform -translate-x-full'
               }`}
             >
               <div className="flex w-full justify-between border-b">
@@ -117,13 +119,13 @@ const Navbar: React.FC = () => {
                 </div>
                 <div
                   onClick={handleNav}
-                  className="self-center rounded-full cursor-pointer dark:bg-slate-400 shadow-gray-300 p-3 shadow-lg"
+                  className="self-center rounded-full cursor-pointer  shadow-gray-300 p-3 shadow-lg"
                 >
                   <LiaTimesSolid size={25} className='font-bold'/>
                 </div>
               </div>
               <div className="py-4 flex flex-col border-b">
-                <ul className="font-bold uppercase dark:text-white">
+                <ul className="font-bold uppercase ">
                   <Link href="/">
                     <li className={`py-4 text-sm ${isActiveLink('/') ? 'text-[#18F0F0]' : ''}`} onClick={() => setNav(false)}>Home</li>
                   </Link>

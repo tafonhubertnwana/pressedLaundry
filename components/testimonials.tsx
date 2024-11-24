@@ -5,7 +5,8 @@ import client from '@/public/assets/testimonials-img03.jpg';
 import { MdEco } from 'react-icons/md';
 import { RiTimerFill } from 'react-icons/ri';
 import { FaMoneyBillWave } from 'react-icons/fa';
-
+import { FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteRight } from "react-icons/fa";
 // Slick slider settings
 const sliderSettings = {
   dots: true,
@@ -89,28 +90,43 @@ const carouselItems = [
 const TestimonialCarousel = () => {
   return (
     <div className="container mx-auto mb-10 mt-8">
-      <Slider {...sliderSettings}>
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className="group hover:bg-[#18F0F0] transition-colors duration-300 h-[320px] items-center p-6 bg-slate-100 rounded-lg shadow-md transform hover:scale-105"
-          >
-            <div className='flex items-center space-x-4 pt-3'>
-              <div className='w-24 h-24 overflow-hidden rounded-full flex-shrink-0'>
-                <Image src={testimonial.image} alt={`Testimonial image ${index}`} className='object-cover w-full h-full' />
-              </div>
-              <div className='flex flex-col'>
-                <h5 className='text-lg font-semibold group-hover:text-white'>{testimonial.name}</h5>
-                <p className='text-sm group-hover:text-white'>{testimonial.role}</p>
-              </div>
-            </div>
-            <div className='p-6'>
-              <p className='group-hover:text-white'>{testimonial.testimonial}</p>
-            </div>
+  <Slider {...sliderSettings}>
+    {testimonials.map((testimonial, index) => (
+      <div
+        key={index}
+        className="group relative hover:bg-[#18F0F0]  h-[350px] p-6 bg-slate-100 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+      >
+        <div className="flex items-center space-x-4 pt-3">
+          <div className="w-24 h-24 overflow-hidden rounded-full flex-shrink-0">
+            <Image
+              src={testimonial.image}
+              alt={`Testimonial image ${index}`}
+              className="object-cover w-full h-full"
+            />
           </div>
-        ))}
-      </Slider>
-    </div>
+          <div className="flex flex-col">
+            <h5 className="text-lg font-semibold group-hover:text-white transition-colors duration-300">
+              {testimonial.name}
+            </h5>
+            <p className="text-sm text-gray-500 group-hover:text-white transition-colors duration-300">
+              {testimonial.role}
+            </p>
+          </div>
+        </div>
+        <div className="relative p-6 text-center">
+          {/* Centered and Enlarged FaQuoteLeft */}
+          <FaQuoteLeft className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 text-3xl text-[#18F0F0] group-hover:text-white transition-colors duration-300" />
+          <p className="text-gray-600 group-hover:text-white transition-colors duration-300">
+            {testimonial.testimonial}
+          </p>
+          {/* FaQuoteRight Positioned at the End */}
+          <FaQuoteRight className="absolute bottom-[-30px] right-8 text-3xl text-[#18F0F0] group-hover:text-white transition-colors duration-300" />
+        </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
   );
 };
 

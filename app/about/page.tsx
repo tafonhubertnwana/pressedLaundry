@@ -24,7 +24,7 @@ const About = () => {
   return (
     <>
       <div className="w-full">
-        <div className='relative mt-36'>
+        <div className='relative mt-20 lg:mt-36'>
           <Image 
             src={banner} 
             alt='banner' 

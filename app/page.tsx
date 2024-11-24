@@ -51,6 +51,18 @@ export default function Home() {
   return (
     <>
       <div className="w-full">
+      <div className="relative mt-20 lg:mt-36">
+  <div
+    className="w-full h-[150px] md:h-[300px] bg-cover bg-center"
+    style={{
+      backgroundImage: `url(${banner.src})`,
+    }}
+  ></div>
+  <div className="absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6">
+    <h3 className="text-white text-sm md:text-base">Laundry Service</h3>
+    <h5 className="text-white text-2xl md:text-6xl font-bold">We care for the clothes you wear</h5>
+  </div>
+</div>
         <div className='relative mt-20 lg:mt-36'>
           <Image src={banner} alt='banner' className='lg:w-full '/>
           <div className='absolute top-[20%] left-[15%]'>
@@ -81,7 +93,7 @@ export default function Home() {
               <div className="content-center">
                 <p className='text-[#18F0F0] lg:text-lg font-bold'>More than 5 years of  Experience </p>
                 <h5 className='py-3'>We are Passionate About Laundry</h5>
-                <p className=' w-full p-2'>
+                <p className=' w-full p-2 px-4 '>
                 We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics. Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about the way you think about laundry!
                 </p>
                 <div className='md:flex py-4'>

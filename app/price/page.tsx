@@ -30,13 +30,20 @@ const Price: React.FC = () => {
   return (
     <div>
       {/* Banner Section */}
+       
       <div className="relative mt-20 lg:mt-36">
-        <Image src={banner} alt="banner" className="lg:w-full" />
-        <div className="absolute top-[20%] left-[15%]">
-          <h5 className="text-white py-4">Home / Price</h5>
-          <h1 className="text-white">Price</h1>
-        </div>
-      </div>
+  <div
+    className="w-full h-[150px] md:h-[300px] bg-cover bg-center"
+    style={{
+      backgroundImage: `url(${banner.src})`,
+    }}
+  ></div>
+  <div className="absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6">
+    <h5 className="text-white text-sm md:text-base">Home / Price</h5>
+    <h1 className="text-white text-2xl md:text-6xl font-bold">Price</h1>
+  </div>
+</div>
+      
 
       {/* Price Package Placeholder */}
       <div className="mt-10">

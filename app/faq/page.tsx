@@ -15,20 +15,19 @@ const FAQItem = ({ title, content }: { title: string, content: string }) => (
 const Faq = () => {
   return (
     <div className='w-full'>
-      <div className='relative mt-20 lg:mt-36'>
-        <Image 
-          src={banner} 
-          alt='banner' 
-          className='w-full object-cover'
-          layout='responsive'
-          width={1200}
-          height={600}
-        />
-        <div className='absolute top-0 left-1/4 md:top-1/3 md:left-1/10 p-4 md:p-6'>
-          <h5 className='text-white text-sm md:text-base'>Home / Faq</h5>
-          <h1 className='text-white text-2xl md:text-6xl font-bold'>FAQ</h1>
-        </div>
-      </div>
+       <div className="relative mt-20 lg:mt-36">
+  <div
+    className="w-full h-[150px] md:h-[300px] bg-cover bg-center"
+    style={{
+      backgroundImage: `url(${banner.src})`,
+    }}
+  ></div>
+  <div className="absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6">
+    <h5 className="text-white text-sm md:text-base">Home / Faq</h5>
+    <h1 className="text-white text-2xl md:text-6xl font-bold">FAQ</h1>
+  </div>
+</div>
+    
       <div className={` bg-no-repeat background-animation`}
           style={{ 
             backgroundImage: "url('/assets/wrapper03.png')", 

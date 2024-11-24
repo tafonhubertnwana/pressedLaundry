@@ -10,20 +10,19 @@ const Contact = () => {
   return (
     <div className="w-full">
       {/* Banner Section */}
-      <div className='relative mt-20 lg:mt-36'>
-        <Image 
-          src={banner} 
-          alt='Contact banner' 
-          className='w-full object-cover'
-          layout='responsive'
-          width={1200}
-          height={600}
-        />
-        <div className='absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6'>
-          <h5 className='text-white text-sm md:text-base'>Home / Contact</h5>
-          <h1 className='text-white text-2xl md:text-6xl font-bold'>Contact</h1>
-        </div>
-      </div>
+      <div className="relative mt-20 lg:mt-36">
+  <div
+    className="w-full h-[150px] md:h-[300px] bg-cover bg-center"
+    style={{
+      backgroundImage: `url(${banner.src})`,
+    }}
+  ></div>
+  <div className="absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6">
+    <h5 className="text-white text-sm md:text-base">Home / Contact</h5>
+    <h1 className="text-white text-2xl md:text-6xl font-bold">Contact</h1>
+  </div>
+</div>
+      
       <div className="w-full ">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1989.6231152755204!2d9.278558608653139!3d4.17193407025065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106131f8905d3471%3A0x672a961c0448f3e8!2sBuea%20Central%20Market!5e0!3m2!1sen!2scm!4v1732229468908!5m2!1sen!2scm"

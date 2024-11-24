@@ -59,17 +59,11 @@ export default function Home() {
     }}
   ></div>
   <div className="absolute top-[20%] left-[15%] md:top-[30%] md:left-[10%] p-4 md:p-6">
-    <h3 className="text-white text-sm md:text-base">Laundry Service</h3>
-    <h5 className="text-white text-2xl md:text-6xl font-bold">We care for the clothes you wear</h5>
+    <h3 className="text-white ">Laundry Service</h3>
+    <h5 className="text-white text-sm md:text-base font-bold">We care for the clothes you wear</h5>
   </div>
 </div>
-        <div className='relative mt-20 lg:mt-36'>
-          <Image src={banner} alt='banner' className='lg:w-full '/>
-          <div className='absolute top-[20%] left-[15%]'>
-            <h1 className='text-white py-4'>Laundry Service</h1>
-            <h5 className='text-white'>We care for the clothes you wear</h5>
-          </div>
-        </div>
+       
         <div className="container m-auto">
           <div className="grid lg:grid-cols-2 gap-0 mb-[5%] mt-8">
             <div className='relative'>

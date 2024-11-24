@@ -150,7 +150,6 @@ const Navbar: React.FC = () => {
                 <ul className='py-4'>
                   <Link href='/'><li className='flex py-2'><FaMapLocationDot size={20} className='text-[#18F0F0]' /> <span className='text-black px-4'>Central-Market, Buea</span></li></Link>
                   <Link href='/'><li className='flex py-2'><RiTimerFill size={20} className='text-[#18F0F0]' /><span className='text-black px-4'>Mon-Fri:8am - 5pm <br/> Sat-Sun:10am - 5pm</span></li></Link>
-                  <Link href='/'><li className='flex py-2'><IoIosMail size={20} className='text-[#18F0F0]' /><span className='text-black px-4'>tafonsoftwarespecialist@gmail.com</span></li></Link>
                   <Link href='/'><li className='flex py-2'><FaPhoneVolume size={20} className='text-[#18F0F0]' /><span className='text-black px-4'>+(237) 679-048-674</span></li></Link>
                 </ul>
               </div>

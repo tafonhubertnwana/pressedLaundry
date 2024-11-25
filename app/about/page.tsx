@@ -15,7 +15,7 @@ import { HiClipboardDocumentList } from "react-icons/hi2";
 import { BsPersonHearts } from "react-icons/bs";
 
 import Link from 'next/link'
-import TeamCarousel from '@/components/aboutCarousel'
+import Team from '@/components/teams'
 
 
 
@@ -195,35 +195,8 @@ const About = () => {
             </div>
           </div>
           <div>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div className="flex flex-col items-center transition-transform transform hover:scale-105">
-      <div className='w-64 h-64 overflow-hidden rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300'>
-        <Image src={team} alt='About-us-img-4' className="object-cover w-full h-full" />
-      </div>
-      <div className='text-center pb-10 pt-4'>
-        <h5 className='text-lg font-semibold'>John Doe</h5>
-        <span className='text-sm text-gray-600'>Operational Manager</span>
-      </div>
-    </div>
-    <div className="flex flex-col items-center transition-transform transform hover:scale-105">
-      <div className='w-64 h-64 overflow-hidden rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300'>
-        <Image src={team} alt='About-us-img-4' className="object-cover w-full h-full" />
-      </div>
-      <div className='text-center pb-10 pt-4'>
-        <h5 className='text-lg font-semibold'>Rozi</h5>
-        <span className='text-sm text-gray-600'>Service Manager</span>
-      </div>
-    </div>
-    <div className="flex flex-col items-center transition-transform transform hover:scale-105">
-      <div className='w-64 h-64 overflow-hidden rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300'>
-        <Image src={team} alt='About-us-img-4' className="object-cover w-full h-full" />
-      </div>
-      <div className='text-center pb-10 pt-4'>
-        <h5 className='text-lg font-semibold'>Levi</h5>
-        <span className='text-sm text-gray-600'>Wash Expert</span>
-      </div>
-    </div>
-  </div>
+            
+  <Team />
 </div> 
           {/* <div>
 
